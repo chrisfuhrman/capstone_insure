@@ -48,7 +48,7 @@
 		</div>
 		<div class="input-group col-sm-4">
 			<span class="input-group-addon"><i class="fa fa-male"></i></span>		
-			{{ Form::checkbox('female', '2', array('class' => 'form-control', 'id' => 'gender' 'name' => 'female')) }}
+			{{ Form::checkbox('female', '2', array('class' => 'form-control', 'id' => 'gender', 'name' => 'female')) }}
 		</div>
 	</div>
 	{{ $errors->first('gender', '<span class="help-block">:message</span>') }}
@@ -206,7 +206,7 @@ Street______________________________________ -->
 		</div>
 		<div class="input-group col-sm-4">
 			<span class="input-group-addon"><i class="fa fa-male"></i></span>		
-			{{ Form::checkbox('no', '4', array('class' => 'form-control', 'id' => 'tobacco' 'name' => 'no')) }}
+			{{ Form::checkbox('no', '4', array('class' => 'form-control', 'id' => 'tobacco', 'name' => 'no')) }}
 		</div>
 	</div>
 	{{ $errors->first('tobacco', '<span class="help-block">:message</span>') }}
@@ -248,7 +248,7 @@ Street______________________________________ -->
 		</div>
 		<div class="input-group col-sm-4">
 			<span class="input-group-addon"><i class="fa fa-male"></i></span>		
-			{{ Form::checkbox('no', '4', array('class' => 'form-control', 'id' => 'tobacco' 'name' => 'no')) }}
+			{{ Form::checkbox('no', '4', array('class' => 'form-control', 'id' => 'tobacco', 'name' => 'no')) }}
 		</div>
 		<div class="input-group col-sm-4">
 			<span class="input-group-addon"><i class="fa fa-male"></i></span>
@@ -256,7 +256,7 @@ Street______________________________________ -->
 		</div>
 		<div class="input-group col-sm-4">
 			<span class="input-group-addon"><i class="fa fa-male"></i></span>		
-			{{ Form::checkbox('no', '4', array('class' => 'form-control', 'id' => 'tobacco' 'name' => 'no')) }}
+			{{ Form::checkbox('no', '4', array('class' => 'form-control', 'id' => 'tobacco', 'name' => 'no')) }}
 		</div>
 	</div>	
 	{{ $errors->first('tobacco', '<span class="help-block">:message</span>') }}
@@ -325,7 +325,7 @@ Street______________________________________ -->
 <!--  No -->
 		<div class="input-group col-sm-4">
 			<span class="input-group-addon"><i class="fa fa-male"></i></span>		
-			{{ Form::checkbox('no', '4', array('class' => 'form-control', 'id' => 'tobacco' 'name' => 'no')) }}
+			{{ Form::checkbox('no', '4', array('class' => 'form-control', 'id' => 'tobacco', 'name' => 'no')) }}
 		</div>
 	</div>
 	{{ $errors->first('tobacco', '<span class="help-block">:message</span>') }}
