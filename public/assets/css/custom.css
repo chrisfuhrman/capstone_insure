@@ -1,0 +1,158 @@
+/*
+  ========================================
+  Quote Section
+  ========================================
+*/
+
+#state, 
+#gender, 
+#DOB, 
+#coverage-amount, 
+#coverage-duration, 
+#smoking-status, 
+#health-class {
+	margin-bottom: 7px;
+}
+
+.white-tooltip + .tooltip > .tooltip-inner {
+	background-color: #fff;
+	color: black;
+	text-align: left;
+}
+
+h1 {
+	color: black;
+}
+
+.quote-section {
+	background-color: rgb(29, 218, 235);
+	/*rgba(52, 152, 219,1.0);*/
+	padding-top: 75px;
+		/*rgba(44, 62, 80,1.0);*/
+}
+
+#quote-header {
+	text-align: center;
+}
+
+#quote-outer-wrapper {
+	border-radius: 10px;
+	background-color: #fff;
+	margin: 10px;
+}
+
+#quote-wrapper-form {
+	margin: 15px;
+}
+
+.input-tag {
+	background-color: #CBE8CA;
+}
+#input-smoker {
+	display: block;
+}
+
+#input-gender {
+	display: block;
+}
+#input-dob {
+	display: block;
+}
+
+#input-health {
+	margin-right: 20px;
+}
+
+label {
+	font-size: 1.2em;
+}
+
+#quote-health-group {
+	margin-bottom: 25px;
+}
+
+#div-quote-btn {
+	text-align: center;
+}
+
+
+/*
+  ========================================
+  Forms
+  ========================================
+*/
+
+
+
+/*
+  ========================================
+  Footer
+  ========================================
+*/
+
+#footer {
+	background-color: rgba(126, 125, 133, .5);
+	text-align: center;
+	/*height: 250px;*/
+	margin-bottom: 0;
+	color: white;
+	padding-top: 15px;
+
+
+}
+
+#footer-col-1 {
+	background-color: red;
+}
+#footer-col-2 {
+	background-color: yellow;
+}
+#footer-col-3 {
+	background-color: orange;
+}
+.footer-a {
+	background-color: blue;
+}
+
+
+
+.footer-links>li>a {
+	list-style: none;
+	color: #fff;
+}
+
+.footer-links {
+	list-style: none;
+	text-align: left;
+}
+
+#sub-footer {
+	background-color: #b5b8c4;
+	text-align: center;
+	margin-bottom: 0;
+	color: white;
+}
+
+/*
+  ========================================
+  Misc
+  ========================================
+*/
+
+.container-form {
+	background-color: rgba(250, 250, 250, 1);
+	border: 1px solid #e7e7e7;
+	box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.05);
+	border-radius: 4px;
+	padding: 19px;
+	margin-bottom: 35px;
+	margin-top: 35px;
+}
+
+.centered
+{
+    text-align:center;
+}
+
+
+

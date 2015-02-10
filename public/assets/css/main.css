@@ -1,0 +1,213 @@
+/*Remove default navbar border-radius*/
+* {
+	border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+}
+
+body {
+	background-image: url('/assets/img/satinweave.png');
+}
+
+
+
+/*
+  ========================================
+  Navbar
+  ========================================
+*/
+
+.top-nav {
+	color: black;
+
+}
+
+.navbar {
+
+	margin-top: 50px;
+	margin-bottom: 0px;
+	padding: 15px;
+
+}
+
+/*changes the navbar background color */
+.navbar-default {
+	background-color: rgba(62, 169, 245, 1);
+	border: none;
+}
+/*changes navbar link colors*/
+.navbar-default .navbar-nav > li > a {
+	color: #fff;
+}
+/*Changes navbar-right link color*/
+.navbar-default .navbar-right > li > a {
+	color: #fff;
+}
+/*changes navbar hover color*/
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color: #fff;
+}
+/*changes color of navbar dropdown link when clicked
+or background color for dropdown when active*/
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+	color: #133AFF;
+	background-color: #13B4FF;
+}
+/*changes the border color for the toggle menu icon bars*/
+.navbar-default .navbar-toggle {
+	border-color: #5daafa;
+}
+/*on hover, changes the background div for the toggle menu icon bars*/
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: #5daafa;
+}
+/*changes the color of the toggle menu icon bars*/
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #f9fdff;
+}
+/* BEGIN NAVBAR RIGHT */
+
+#right-dropdown {
+	position: ;
+	margin-right: 10px;
+}
+
+
+
+/*END NAVBAR RIGHT*/
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+	border-color: #f9fdff;
+}
+.navbar-default .navbar-link {
+	color: #f9fdff;
+}
+.navbar-default .navbar-link:hover {
+	color: #58f9bf;
+}
+
+@media (max-width: 767px) {
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+		color: #f9fdff;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+		color: #58f9bf;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+		color: #58f9bf;
+		background-color: #5daafa;
+	}
+}
+
+
+#logged-user {
+	display: block;
+	color: #fff;
+	margin: -30px 0 -30px;
+
+}
+#sign-out {
+	margin-left: 5px;
+}
+/*right hand drop down menu*/
+.dropdown-menu {
+	padding: 15px;
+	/*border: 2px solid red;*/
+	border-radius: 100px;
+}
+.hide-this {
+	display: none;
+}
+
+#login-or {
+	display: block;
+	text-align: center;
+	font-size: 1.5em;
+}
+.glyphicon-user, .glyphicon-log-in, .dropdown-toggle, .glyphicon-log-out {
+	font-size: 16px;
+	margin-right: 10px;
+}
+
+.divider {
+	margin: 0px;
+}
+
+
+
+/*
+  ========================================
+  Hero Container Home Page
+  ========================================
+*/
+#hero-container {
+	background-image: url('/assets/img/family04.jpg');
+	padding-top: 30px;
+	padding-bottom: 20px;
+	height: 400px;
+}
+#hero-headline {
+	font-size: 50px;
+	color: #fff;
+
+	padding-top: 50px;
+	width: 750px;
+
+}
+#hero-subheadline {
+	font-size: 18px;
+	color: #fff;
+}
+
+
+
+/*
+  ========================================
+  Post Display
+  ========================================
+*/
+#next-container {
+	background-color: #04689b;
+}
+
+/*
+  ========================================
+  Footer
+  ========================================
+*/
+
+#footer-main {
+	background-color: rgba(46, 127, 209, 1);
+	margin-bottom: 1px;
+}
+.footer-header {
+	color: #fff;
+}
+/*
+  ========================================
+  Misc
+  ========================================
+*/
+
+
+
+.centered
+{
+    text-align:center;
+}
+
+.clear-fix {
+	clear: both;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Open Sans',sans-serif;
+	/*text-align: center;*/
+}
+h1 
+h3 {font-size: 18px;}
