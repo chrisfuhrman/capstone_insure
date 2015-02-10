@@ -162,6 +162,17 @@ Street______________________________________ -->
 	{{ $errors->first('wk_phone', '<span class="help-block">:message</span>') }}
 </div>
 
+<div class="form-group">
+	{{ Form::label('hm_phone', 'Home Phone:', array('class' => 'control-label')) }}
+	<div class="controls">
+		<div class="input-group col-sm-4">
+			<span class="input-group-addon"><i class="fa fa-male"></i></span>
+			{{ Form::text('hm_phone', Input::old('hm_phone'), array('class' => 'form-control', 'placeholder' => '123-456-7890', 'id' => 'phone', 'name' => 'hm_phone')) }}
+		</div>
+	</div>
+	{{ $errors->first('hm_phone', '<span class="help-block">:message</span>') }}
+</div>
+
 <!-- 7. State/Country of Birth -->
 
 <div class="form-group">
