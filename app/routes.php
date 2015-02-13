@@ -13,7 +13,28 @@
 
 Route::get('', ['as' => 'home', 'uses' => 'HomeController@showHome']);
 
-Route::get('app', ['as' => 'app', 'uses' => 'ApplicationController@showLifeApplication']);
+Route::get('app',   ['as' => 'app',   'uses' => 'PolicyAppController@showLifeAppSecA']);
+
+Route::get('app2',  ['as' => 'app2',  'uses' => 'PolicyAppController@showLifeAppSecB']);
+
+Route::get('app3',  ['as' => 'app3',  'uses' => 'PolicyAppController@showLifeAppSecC']);
+
+Route::get('app4',  ['as' => 'app4',  'uses' => 'PolicyAppController@showLifeAppSecE']);
+
+Route::get('app5',  ['as' => 'app5',  'uses' => 'PolicyAppController@showLifeAppSecF']);
+
+Route::get('app6',  ['as' => 'app6',  'uses' => 'PolicyAppController@showLifeAppSecG']);
+
+Route::get('app7',  ['as' => 'app7',  'uses' => 'PolicyAppController@showLifeAppSecH']);
+
+Route::get('app8',  ['as' => 'app8',  'uses' => 'PolicyAppController@showLifeAppSecI']);
+
+Route::get('app9',  ['as' => 'app9',  'uses' => 'PolicyAppController@showLifeAppSecJ']);
+
+Route::get('app10', ['as' => 'app10', 'uses' => 'PolicyAppController@showLifeAppSecK']);
+
+Route::get('quote', ['as' => 'lifeQuote', 'uses' => 'QuoteController@showLifeQuote']);
+
 // Routes for Life RFQ
 Route::get('life-quote', ['as' => 'lifeRFQ', 'uses' => 'RFQController@showLifeRFQ']);
 Route::get('life-quote-health-questionnaire', ['as' => 'lifeRFQquestionnaire', 'uses' => 'RFQController@showLifeHealthQuestionnaire']);
