@@ -23,7 +23,7 @@ body {
 
 .navbar {
 
-	margin-top: 50px;
+	margin-top: 20px;
 	margin-bottom: 0px;
 	padding: 15px;
 
@@ -128,9 +128,9 @@ or background color for dropdown when active*/
 	margin-right: 10px;
 }
 
-.divider {
+/*.divider {
 	margin: 0px;
-}
+}*/
 
 
 
@@ -166,7 +166,7 @@ or background color for dropdown when active*/
   ========================================
 */
 #next-container {
-	background-color: #04689b;
+	background-color: #004474;
 }
 
 /*
@@ -211,3 +211,57 @@ h6 {
 }
 h1 
 h3 {font-size: 18px;}
+
+/* 
+	===============================
+	Thumbnails
+	===============================
+*/
+
+.container-darker {
+	background-color: #233163;
+	max-width: 1280px;
+	padding-top: 35px;
+	padding-bottom: 45px;
+	margin: 0px;
+}
+
+.thumbnail-darker {
+	background-color: #233163;
+	border-color: #233163;
+}
+
+.white {
+	color: white;
+}
+
+.divider-1{
+    position:absolute;
+    left:25%;
+    top:10%;
+    bottom:10%;
+    border-left:1px solid #008CBA;
+}
+
+.divider-2{
+    position:absolute;
+    left:50%;
+    top:10%;
+    bottom:10%;
+    border-left:1px solid #008CBA;
+}
+
+
+.divider-3{
+    position:absolute;
+    left: 50%;
+    top:10%;
+    bottom:10%;
+    border-left:1px solid #008CBA;
+}
+
+.align-button {
+	margin-left: 55px;
+}
+
+
