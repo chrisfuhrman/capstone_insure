@@ -3,80 +3,18 @@
 <a class="btn dropdown-toggle" data-toggle="dropdown" href="ui-sliders-progress.html#">
 @stop
 
-@section('section2')
+@section('child-url')
  	<a href="ui-sliders-progress.html#">
 @stop
-	
-@section('section3')
-	<a href="ui-sliders-progress.html#">
-@stop		
-@section('section4')
-	<a href="ui-sliders-progress.html#">
+
+@section('child-url')
+ 	<a href="ui-sliders-progress.html#">
 @stop
-@section('section5')
-	<a href="ui-sliders-progress.html#">
-@stop
-@section('section6')
-	<a href="ui-sliders-progress.html#">
-@stop
-	
-							<li>
-                                <a href="ui-sliders-progress.html#">
-									<span class="icon green"><i class="fa fa-comment"></i></span>
-									<span class="message">New comment</span>
-									<span class="time">16 min</span> 
-                                </a>
-                            </li>
-							<li>
-                                <a href="ui-sliders-progress.html#">
-									<span class="icon blue"><i class="fa fa-user"></i></span>
-									<span class="message">New user registration</span>
-									<span class="time">36 min</span> 
-                                </a>
-                            </li>
-							<li>
-                                <a href="ui-sliders-progress.html#">
-									<span class="icon yellow"><i class="fa fa-shopping-cart"></i></span>
-									<span class="message">2 items sold</span>
-									<span class="time">1 hour</span> 
-                                </a>
-                            </li>
-							<li class="warning">
-                                <a href="ui-sliders-progress.html#">
-									<span class="icon red"><i class="fa fa-user"></i></span>
-									<span class="message">User deleted account</span>
-									<span class="time">2 hour</span> 
-                                </a>
-                            </li>
-							<li class="warning">
-                                <a href="ui-sliders-progress.html#">
-									<span class="icon red"><i class="fa fa-shopping-cart"></i></span>
-									<span class="message">Transaction was canceled</span>
-									<span class="time">6 hour</span> 
-                                </a>
-                            </li>
-							<li>
-                                <a href="ui-sliders-progress.html#">
-									<span class="icon green"><i class="fa fa-comment"></i></span>
-									<span class="message">New comment</span>
-									<span class="time">yesterday</span> 
-                                </a>
-                            </li>
-							<li>
-                                <a href="ui-sliders-progress.html#">
-									<span class="icon blue"><i class="fa fa-user"></i></span>
-									<span class="message">New user registration</span>
-									<span class="time">yesterday</span> 
-                                </a>
-                            </li>
-                            <li class="dropdown-menu-sub-footer">
-                        		<a>View all notifications</a>
-							</li>	
-						</ul>
-					</li>
-					<!-- start: Notifications Dropdown -->
-					<li class="dropdown hidden-xs">
-						<a class="btn dropdown-toggle" data-toggle="dropdown" href="ui-sliders-progress.html#">
+
+<href="ui-sliders-progress.html#">
+
+                      
+					
 							<i class="fa fa-tasks"></i>
 						</a>
 						<ul class="dropdown-menu tasks">

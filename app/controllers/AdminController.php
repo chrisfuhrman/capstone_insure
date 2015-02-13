@@ -5,7 +5,7 @@ class AdminController extends BaseController
 
 	public function showCompanyDashboard() {
 		
-		return View::make('admin_panel.dashboard');
+		return View::make('admin_panel.dashboard-layout');
 
 	}
 
