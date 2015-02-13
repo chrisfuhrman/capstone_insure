@@ -9,7 +9,7 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="/">
-					<img src="/assets/img/menetonea.png">
+					<img class ="left" src="/assets/img/menetonea.png">
 				</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
