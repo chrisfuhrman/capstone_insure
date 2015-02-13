@@ -64,49 +64,49 @@
 								<span>You have 11 notifications</span>
 							</li>	
                         	<li>
-                        	@yield('section2')
+                        	@yield('child-url')
 									<span class="icon blue"><i class="fa fa-user"></i></span>
 									<span class="message">New user registration</span>
 									<span class="time">1 min</span> 
                                 </a>
                             </li>
 							<li>
-                                <a href="index.html#">
+                        	@yield('child-url')
 									<span class="icon green"><i class="fa fa-comment"></i></span>
 									<span class="message">New comment</span>
 									<span class="time">7 min</span> 
                                 </a>
                             </li>
 							<li>
-                                <a href="index.html#">
+							@yield('child-url')
 									<span class="icon green"><i class="fa fa-comment"></i></span>
 									<span class="message">New comment</span>
 									<span class="time">8 min</span> 
                                 </a>
                             </li>
 							<li>
-                                <a href="index.html#">
+							@yield('child-url')
 									<span class="icon green"><i class="fa fa-comment"></i></span>
 									<span class="message">New comment</span>
 									<span class="time">16 min</span> 
                                 </a>
                             </li>
 							<li>
-                                <a href="index.html#">
+							@yield('child-url')
 									<span class="icon blue"><i class="fa fa-user"></i></span>
 									<span class="message">New user registration</span>
 									<span class="time">36 min</span> 
                                 </a>
                             </li>
 							<li>
-                                <a href="index.html#">
+							@yield('child-url')
 									<span class="icon yellow"><i class="fa fa-shopping-cart"></i></span>
 									<span class="message">2 items sold</span>
 									<span class="time">1 hour</span> 
                                 </a>
                             </li>
 							<li class="warning">
-                                <a href="index.html#">
+							@yield('child-url')
 									<span class="icon red"><i class="fa fa-user"></i></span>
 									<span class="message">User deleted account</span>
 									<span class="time">2 hour</span> 

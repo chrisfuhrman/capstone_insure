@@ -52,3 +52,5 @@ Route::get('auth/linkedin', 'AuthController@loginWithLinkedin');
 
 Route::get('theme', ['as' => 'theme', 'uses' => 'ThemeController@showTheme']);
 Route::get('admin', ['as' => 'admin', 'uses' => 'AdminController@showCompanyDashboard']);
+
+Route::get('test', ['as' => 'test', 'uses' => 'TestController@showTest']);

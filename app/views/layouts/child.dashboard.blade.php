@@ -1,29 +1,25 @@
-					@section('section1')
-					<li class="dropdown hidden-xs">
-						<a class="btn dropdown-toggle" data-toggle="dropdown" href="ui-sliders-progress.html#">
-						@stop
+@section('section1')
+<li class="dropdown hidden-xs">
+<a class="btn dropdown-toggle" data-toggle="dropdown" href="ui-sliders-progress.html#">
+@stop
+
 @section('section2')
  	<a href="ui-sliders-progress.html#">
 @stop
-									<span class="icon blue"><i class="fa fa-user"></i></span>
-									<span class="message">New user registration</span>
-									<span class="time">1 min</span> 
-                                </a>
-                            </li>
-							<li>
-                                <a href="ui-sliders-progress.html#">
-									<span class="icon green"><i class="fa fa-comment"></i></span>
-									<span class="message">New comment</span>
-									<span class="time">7 min</span> 
-                                </a>
-                            </li>
-							<li>
-                                <a href="ui-sliders-progress.html#">
-									<span class="icon green"><i class="fa fa-comment"></i></span>
-									<span class="message">New comment</span>
-									<span class="time">8 min</span> 
-                                </a>
-                            </li>
+	
+@section('section3')
+	<a href="ui-sliders-progress.html#">
+@stop		
+@section('section4')
+	<a href="ui-sliders-progress.html#">
+@stop
+@section('section5')
+	<a href="ui-sliders-progress.html#">
+@stop
+@section('section6')
+	<a href="ui-sliders-progress.html#">
+@stop
+	
 							<li>
                                 <a href="ui-sliders-progress.html#">
 									<span class="icon green"><i class="fa fa-comment"></i></span>
