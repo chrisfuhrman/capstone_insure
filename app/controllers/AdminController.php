@@ -1,6 +1,6 @@
 <?php
 
-class CompanyController extends BaseController
+class AdminController extends BaseController
 {
 
 	public function showCompanyDashboard() {

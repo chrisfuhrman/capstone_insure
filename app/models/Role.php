@@ -1,9 +1,23 @@
 <?php
 
-class Role extends Eloquent {
+class Role extends BaseModel {
 
-    public function users() {
+
+    protected $table = 'roles';
+
+	// Add your validation rules here
+
+	protected $fillable = 
+	[
+		'user',
+		'admin',
+		'marketing',
+		'customer_support',
+		'executive'
+	];
+
+	 public function users() {
         return $this->belongsToMany('User');
     }
 
-}
+}	

@@ -21,7 +21,6 @@
 	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 		<!-- Favicon -->
 	<link rel="icon" href="/assets/favicon.ico">
-
-
+	<link rel="stylesheet" href="/assets/css/chris-css.css">
 </head>
 <body>
