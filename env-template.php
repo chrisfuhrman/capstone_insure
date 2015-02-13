@@ -4,5 +4,8 @@ return array(
 	'DB_HOST' => '',
 	'DB_NAME' => '',
 	'DB_USER' => '',
-	'DB_PASS' => ''
+	'DB_PASS' => '',
+	'GOOGLE_CLIENT_ID' => '',
+	'GOOGLE_CLIENT_SECRET' => ''
+
 );

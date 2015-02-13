@@ -22,9 +22,7 @@
 		</div>
 
 
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, esse obcaecati. Iure est officia dolorum, vodelectus facere sed laudantium suscipit quo?</p>
-
-		</div>
+	</div>
 
 		<!-- delete this eventually -->
 		<div class="row col-sm-12 col-md-12 col-lg-12">
@@ -38,7 +36,7 @@
 		<div class="row col-sm-12">
 			<h1>No more pushy insurance sales agent!</h1>
 			<h3>Get insurance comparison quotes in minutes.</h3>
-			<a href="quote" class="btn btn-primary btn-lg" type="button">Get Your No Hassle Quote</a>
+			<a href="route('life-quote')" class="btn btn-primary btn-lg" type="button">Get Your No Hassle Quote</a>
 
 		</div>
 	</div>

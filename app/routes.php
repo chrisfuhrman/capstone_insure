@@ -14,10 +14,10 @@
 Route::get('', ['as' => 'home', 'uses' => 'HomeController@showHome']);
 
 Route::get('app', ['as' => 'app', 'uses' => 'ApplicationController@showLifeApplication']);
-
-Route::get('quote', ['as' => 'lifeQuote', 'uses' => 'QuoteController@showLifeQuote']);
-
-Route::get('company', ['as' => 'company', 'uses' => 'CompanyController@showCompanyDashboard']);
+// Routes for Life RFQ
+Route::get('life-quote', ['as' => 'lifeRFQ', 'uses' => 'RFQController@showLifeRFQ']);
+Route::get('life-quote-health-questionnaire', ['as' => 'lifeRFQquestionnaire', 'uses' => 'RFQController@showLifeHealthQuestionnaire']);
+Route::get('life-quote-results', ['as' => 'lifeRFQResults', 'uses' => 'RFQResultsController@showLifeResults']);
 
 // Route::get('', ['as' => '', 'uses' => '']);
 
@@ -28,3 +28,6 @@ Route::get('logout', 'AuthController@doLogout');
 // OAuth Routes
 Route::get('auth/google', 'AuthController@loginWithGoogle');
 Route::get('auth/linkedin', 'AuthController@loginWithLinkedin');
+
+Route::get('theme', ['as' => 'theme', 'uses' => 'ThemeController@showTheme']);
+Route::get('admin', ['as' => 'admin', 'uses' => 'AdminController@showCompanyDashboard']);
