@@ -167,6 +167,7 @@ or background color for dropdown when active*/
 */
 #next-container {
 	background-color: #004474;
+	padding: 50px;
 }
 
 /*
@@ -228,40 +229,39 @@ h3 {font-size: 18px;}
 
 .thumbnail-darker {
 	background-color: #233163;
-	border-color: #233163;
+	border-color: #27366E;
 }
 
 .white {
 	color: white;
 }
 
-.divider-1{
-    position:absolute;
-    left:25%;
-    top:10%;
-    bottom:10%;
-    border-left:1px solid #008CBA;
+.thumbnail::hover {
+	background-color: rgba (0, 102, 135, 0.5);
 }
 
-.divider-2{
-    position:absolute;
-    left:50%;
-    top:10%;
-    bottom:10%;
-    border-left:1px solid #008CBA;
-}
-
-
-.divider-3{
-    position:absolute;
-    left: 50%;
-    top:10%;
-    bottom:10%;
-    border-left:1px solid #008CBA;
-}
 
 .align-button {
 	margin-left: 55px;
 }
 
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    position: relative;
+}
 
+.left {
+    position: absolute;
+    left: 0px;
+    margin-left: 40px;
+}
+
+.margin {
+	margin-top: 10px;
+}
+
+.blue {
+	color: #233163;
+}
