@@ -20,23 +20,13 @@ class LifeRFQTableSeeder extends Seeder {
             	$gender = 'f';
             }
 
-			$smoking_status = $faker->numberBetween($min = 0, $max = 1);
-			if ($smoking_status == 0) {
-            	$smoking_status = 'non-smoker';
+			$smoker = $faker->numberBetween($min = 0, $max = 1);
+			if ($smoker == 0) {
+            	$smoker = 'no';
             } else {
-            	$smoking_status = 'smoker';
+            	$smoker = 'yes';
             }
 
-			$health_class = $faker->numberBetween($min = 0, $max = 3);
-			if ($health_class == 0) {
-            	$health_class = 'preferred plus';
-            } elseif ($health_class == 1) {
-            	$health_class = 'preferred';
-			} elseif ($health_class == 2) {
-            	$health_class = 'regular plus';
-	        } else {
-            	$health_class = 'regular';
-            }
 
 			LifeRFQ::create([
 
@@ -44,10 +34,10 @@ class LifeRFQTableSeeder extends Seeder {
 		        'dob' => $faker->dateTimeThisCentury->format('Y-m-d'),
 	            'coverage_amount' => $faker->numberBetween($min = 250000, $max = 2000000),
 	        	'coverage_duration' => $faker->numberBetween($min = 10, $max = 30),
-	        	'smoking_status' => $smoking_status,
-	            'health_class' => $health_class
-
-				// 'life_rfq_id' => $faker->numberBetween($min = 1, $max = 20)
+	        	'smoker' => $smoker,
+				'cholesterol' => $faker->numberBetween($min = 0, $max = 1),
+				'blood_pressure' => $faker->numberBetween($min = 0, $max = 1),
+				'drugs' => $faker->numberBetween($min = 0, $max = 1)
 
 			]);
 

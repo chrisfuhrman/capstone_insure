@@ -7,3 +7,7 @@
 	font-weight: bold;
 	font-family: 'Open Sans', sans-serif;
 }
+
+.hide-this {
+	display: none;
+}

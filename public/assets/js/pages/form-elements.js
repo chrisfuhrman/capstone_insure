@@ -28,6 +28,7 @@ $(document).ready(function(){
 	$("#ssn2").mask("999-99-9999");
 	$("#ssn3").mask("999-99-9999");
 	$("#ssn4").mask("999-99-9999");
+	$('#zip').mask('99999');
 	
 	$.mask.definitions['~']='[+-]';
 	$("#eyescript").mask("~9.99 ~9.99 999");
