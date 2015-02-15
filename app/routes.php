@@ -61,3 +61,18 @@ Route::get('theme', ['as' => 'theme', 'uses' => 'ThemeController@showTheme']);
 Route::get('admin', ['as' => 'admin', 'uses' => 'AdminController@showCompanyDashboard']);
 
 Route::get('test', ['as' => 'test', 'uses' => 'TestController@showTest']);
+
+// Following Routes added by Marissa for the Extras pages
+
+Route::get('products', ['as' => 'products', 'uses' => 'ExtrasController@showProducts']);
+
+Route::get('learning', ['as' => 'learning', 'uses' => 'ExtrasController@showLearning']);
+
+Route::get('calculator', ['as' => 'calculator', 'uses' => 'ExtrasController@showCalculator']);
+
+Route::get('contact', ['as' => 'contact', 'uses' => 'ExtrasController@showContact']);
+
+
+
+
+

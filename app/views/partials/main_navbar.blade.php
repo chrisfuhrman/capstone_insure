@@ -14,9 +14,8 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-left">
-					<li><a href="">Products</a></li>
-					<li><a href="/quote">Quotes</a></li>
-					<li><a href="">Calculators</a></li>
+					<li><a href="">Why Choose Us?</a></li>
+					<li><a href="">Our Commitment</a></li>
 
 				</ul>
 				<ul class="nav navbar-nav navbar-right">

@@ -3,20 +3,20 @@
 @section('content')
 <!-- SECTION: QUOTE -->
 <div class="quote-section">
-	<div class="container">
+	<div class="container container-darker-2">
 
-<div class="container">
-<div id="content" class="col-lg-10 col-sm-11">
+<div class="container container-quote">
+<!-- <div id="content" class="col-lg-10 col-sm-11"> -->
 <div class="row">
 	<div class="col-lg-12">
 		<div class="box">
 			<div class="box-header">
-			<h2 id="quote-header">Check out our simple and clear life insurance price comparison tool below.</h2>
+			<h2 id="quote-header">Check out our simple and clear life insurance price comparison tool below:</h2>
 			</div>
 
 
 			<div class="box-content">
-				<form class="form-horizontal">
+				<form class="form-horizontal form-no-padding">
 					<!-- Name -->
 					<div class="form-group">
 						<label class="control-label" for="name">Name</label>
@@ -95,15 +95,17 @@
 					<div class="controls">
 						<label class="control-label" for="name">Gender</label>
 						<div class="input-group col-sm-4">
-	    				<div class="btn-group btn-toggle" data-toggle="buttons">
-							<span class="input-group-addon"><i class="fa fa-user"></i></span>
-							<label class="btn btn-mini btn-default" for="">
-							<input type="radio" name="q1" value="yes">Male</input>
-							</label>
-		  					<label class="btn btn-mini btn-info" for="">
-							<input type="radio" name="q1" value="no">Female</input>
-							</label>
-						</div>
+		    				<div class="wrap">
+		    					<div class="btn-group btn-toggle" data-toggle="buttons">
+									<span class="input-group-addon gender-icon"><i class="fa fa-user"></i></span>
+									<label class="btn btn-mini btn-default" for="">
+									<input type="radio" name="q1" value="yes">Male</input>
+									</label>
+				  					<label class="btn btn-mini btn-info" for="">
+									<input type="radio" name="q1" value="no">Female</input>
+									</label>
+								</div>
+							</div>
 						</div>
 					</div>
 					</div>
@@ -175,7 +177,7 @@
 
 									
 			<div class="form-actions">
-				<a href="{{{ route('lifeRFQquestionnaire') }}}" type="submit" class="btn btn-primary">Next</a>
+				<a href="{{{ route('lifeRFQquestionnaire') }}}" type="submit" class="btn btn-success">Next</a>
 			</div>
 				</form>   
 			</div>
@@ -183,7 +185,8 @@
 	</div><!--/col-->
 
 </div><!--/row-->		
-</div><!-- end: Content -->
+<!-- </div> -->
+<!-- end: Content -->
 </div>
 
 

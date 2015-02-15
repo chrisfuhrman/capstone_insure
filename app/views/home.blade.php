@@ -46,50 +46,59 @@
 	<div class="col-md-12">
 		<div class="container">
 			<div class="row">
-			  <div class="col-md-3">
-			    <div class="thumbnail thumbnail-darker">
-			      <h1 class="text-center"><i class="fa fa-usd fa-4 white"></i></h1>
-			      <div class="caption">
-			        <h3 class="white margin text-center">Products</h3>
-			        <p class="blue">.</p>
-			        <p class="text-center"><a href="#" class="btn btn-primary" role="button">Our Insurance Carriers</a>
-			      </div>
-			    </div>
-			  </div>
-						<div class="divider-1"></div>
-			  <div class="col-md-3">
-			    <div class="thumbnail thumbnail-darker">
-			      <h1 class="text-center"><i class="fa fa-pencil white"></i></h1>
-			      <div class="caption">
-			        <h3 class="white margin text-center">Learning Center</h3>
-			    	<p class="blue">.</p>
-			        <p class="text-center"><a href="#" class="btn btn-primary" role="button">Enter to Learn More</a>
-			      </div>
-			    </div>
-			  </div>
-			
-						<div class="divider-2"></div>
-			  <div class="col-md-3">
-			    <div class="thumbnail thumbnail-darker">
-			      <h1 class="text-center"><i class="fa fa-calculator white"></i></h1>
-			      <div class="caption">
-			        <h3 class="white margin text-center">Calculators</h3>
-			        <p class="blue">.</p>
-			        <p class="text-center"><a href="#" class="btn btn-primary" role="button">Assess Your Insurance Needs</a>
-			      </div>
-			    </div>
-			  </div> 
-			  			<div class="divider-3"></div>
-			  <div class="col-md-3"> 
-			    <div class="thumbnail thumbnail-darker">
-			      <h1 class="text-center"><i class="fa fa-envelope-o white"></i></h1>
-			      <div class="caption">
-			        <h3 class="white margin text-center">Contact Us</h3>
-			        <p class="blue">.</p>
-			        <p class="text-center"><a href="#" class="btn btn-primary" role="button">Send Us A Message</a>
-			      </div>
-			    </div>
-			  </div>
+				
+				<a href="#">
+				  <div class="col-md-3 ">
+					<div class="thumbnail thumbnail-darker box">
+					  <h1 class="text-center"><i class="fa fa-usd fa-4 white"></i></h1>
+					  <div class="caption">
+						<h3 class="white margin text-center">Products</h3>
+						<p class="blue">.</p>
+						<p class="text-center"><a href="#" class="btn btn-primary" role="button">Our Insurance Carriers</a>
+					  </div>
+					</div>
+				  </div>
+				</a>
+
+				<a href="#">
+				  <div class="col-md-3 ">
+					<div class="thumbnail thumbnail-darker box">
+					  <h1 class="text-center"><i class="fa fa-pencil white"></i></h1>
+					  <div class="caption">
+						<h3 class="white margin text-center">Learning Center</h3>
+						<p class="blue">.</p>
+						<p class="text-center"><a href="#" class="btn btn-primary" role="button">Enter to Learn More</a>
+					  </div>
+					</div>
+				  </div>
+				</a>
+				
+				<a href="#">
+				  <div class="col-md-3">
+					<div class="thumbnail thumbnail-darker box">
+					  <h1 class="text-center"><i class="fa fa-calculator white"></i></h1>
+					  <div class="caption">
+						<h3 class="white margin text-center">Calculators</h3>
+						<p class="blue">.</p>
+						<p class="text-center"><button class="btn btn-primary" role="button">Assess Your Insurance Needs</button>
+					  </div>
+					</div>
+				  </div> 
+				</a>
+
+				<a href="#">
+				  <div class="col-md-3"> 
+					<div class="thumbnail thumbnail-darker box">
+					  <h1 class="text-center"><i class="fa fa-envelope-o white"></i></h1>
+					  <div class="caption">
+						<h3 class="white margin text-center">Contact Us</h3>
+						<p class="blue">.</p>
+						<p class="text-center"><a href="#" class="btn btn-primary" role="button">Send Us A Message</a>
+					  </div>
+					</div>
+				  </div>
+				</a>
+
 			</div>
 		</div>
 	</div>

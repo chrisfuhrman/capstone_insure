@@ -1,12 +1,11 @@
 <!-- Main Footer -->
-<section id="footer" class="three-column">
+<section id="footer-main" class="three-column">
 	<div class="container">
 		<div class="row">
 
 			<div class="col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1">
 				<h4>More Information</h4>
 				<ul class="footer-links">
-					<li><a href="http://cnn.com">Contact Us</a></li>
 					<li><a href="http://cnn.com">Support</a></li>
 					<li><a href="http://cnn.com">Press</a></li>
 					<li><a href="http://cnn.com">Developers</a></li>
