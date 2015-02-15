@@ -8,6 +8,7 @@ class RFQ extends BaseModel {
 	[
 		'zip',
 		'insurance_type',
+		'insurance_id',
 		'user_id'
 	];
 

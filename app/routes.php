@@ -37,10 +37,17 @@ Route::get('quote', ['as' => 'lifeQuote', 'uses' => 'QuoteController@showLifeQuo
 
 // Routes for Life RFQ
 Route::get('life-quote', ['as' => 'lifeRFQ', 'uses' => 'RFQController@showLifeRFQ']);
-Route::get('life-quote-health-questionnaire', ['as' => 'lifeRFQquestionnaire', 'uses' => 'RFQController@showLifeHealthQuestionnaire']);
-Route::get('life-quote-results', ['as' => 'lifeRFQResults', 'uses' => 'RFQResultsController@showLifeResults']);
+Route::post('life-quote', ['as' => 'lifeRFQ', 'uses' => 'RFQController@showLifeRFQ']);
 
-// Route::get('', ['as' => '', 'uses' => '']);
+// Route::get('life-quote-health-questionnaire', ['as' => 'lifeRFQquestionnaire', 'uses' => 'RFQController@showLifeHealthQuestionnaire']);
+// Route::post('life-quote-health-questionnaire', ['as' => 'lifeRFQquestionnaire', 'uses' => 'RFQController@showLifeHealthQuestionnaire']);
+
+
+Route::resource('LifeRFQ', 'LifeRFQController');
+Route::resource('RFQResults', 'RFQResultsController');
+
+// Route::get('life-quote-results', ['as' => 'lifeRFQResults', 'uses' => 'RFQResultsController@showLifeResults']);
+
 
 // Authentication Routes
 Route::get('login', 'AuthController@showLogin');

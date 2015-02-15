@@ -11,126 +11,93 @@
 	<div class="col-lg-12">
 		<div class="box">
 			<div class="box-header">
-			<h2 id="quote-header">Please fill out this brief health survey to receive the most accurate life insurance estimate</h2>
+				<h2 id="quote-header">Please fill out this brief health survey to receive the most accurate life insurance estimate</h2>
+				<h5>We are about to ask you a few health questions in order to provie you with the most accurate quote that we can.  Insurance companies will do a full medical review if you decide to submit an application for life insurance (so please don't hide anything on your record).  This is standard practice when applying for the most competively priced insurance policies.</h5>
 			</div>
 
-		<form class="form-horizontal">
+<!-- 'class' => 'form-horizontal' -->
+			{{ Form::open(['action' => 'LifeResultsController@index']) }}
 
-			<ol>
-				<!-- Question # 1 -->
-				<li>Is your cholesterol above 40000?</li>
-				<div class="form-group">
+				<ol>
+					<!-- Question # 1 -->
+					<li>Do you smoke?</li>
+					<div class="form-group">
 					<div class="controls">
 						<label class="control-label" for="name">Gender</label>
 						<div class="input-group col-sm-4">
-							<div class="btn-group btn-toggle"> 
-				            	<input type="submit" class="btn btn-sm btn-default" name="q1_yes" value="Yes">
-				            	<input type="submit" class="btn btn-sm btn-primary active" name="q1_no" value="No">
-		    					<!-- <button class="btn btn-sm btn-default">Yes</button> -->
-		    					<!-- <button class="btn btn-sm btn-primary active">No</button> -->
-							</div>
+	    				<div class="btn-group btn-toggle" data-toggle="buttons">
+							<label class="btn btn-mini btn-default" for="">
+								{{Form::radio('q1', 'yes') }} Yes
+							</label>
+		  					<label class="btn btn-mini btn-info" for="">
+	  							{{Form::radio('q1', 'no') }} No
+							</label>
+						</div>
 						</div>
 					</div>
-				</div>
-
-				<!-- Question # 2 -->
-				<li>Is your cholesterol above 40000?</li>
-				<div class="form-group">
+					</div>
+					<!-- Question # 2 -->
+					<li>Have you ever consulted a medical professional, been diagnosed or treated for <strong>high Cholesterol</strong>?</li>
+					<div class="form-group">
 					<div class="controls">
 						<label class="control-label" for="name">Gender</label>
 						<div class="input-group col-sm-4">
-							<div class="btn-group btn-toggle"> 
-				            	<input type="submit" class="btn btn-sm btn-default" name="q1_yes" value="Yes">
-				            	<input type="submit" class="btn btn-sm btn-primary active" name="q1_no" value="No">
-		    					<!-- <button class="btn btn-sm btn-default">Yes</button> -->
-		    					<!-- <button class="btn btn-sm btn-primary active">No</button> -->
-							</div>
+	    				<div class="btn-group btn-toggle" data-toggle="buttons">
+							<label class="btn btn-mini btn-default" for="">
+								{{Form::radio('q2', 'yes') }} Yes
+							</label>
+		  					<label class="btn btn-mini btn-info" for="">
+	  							{{Form::radio('q2', 'no') }} No
+							</label>
+						</div>
 						</div>
 					</div>
-				</div>
-				<!-- Question # 3 -->
-				<li>Is your cholesterol above 40000?</li>
-				<div class="form-group">
+					</div>
+					<!-- Question # 3 -->
+					<li>Have you ever consulted a medical professional, been diagnosed or treated for <strong>high blood pressure</strong>?</li>
+					<div class="form-group">
 					<div class="controls">
 						<label class="control-label" for="name">Gender</label>
 						<div class="input-group col-sm-4">
-							<div class="btn-group btn-toggle"> 
-				            	<input type="submit" class="btn btn-sm btn-default" name="q1_yes" value="Yes">
-				            	<input type="submit" class="btn btn-sm btn-primary active" name="q1_no" value="No">
-		    					<!-- <button class="btn btn-sm btn-default">Yes</button> -->
-		    					<!-- <button class="btn btn-sm btn-primary active">No</button> -->
-							</div>
+	    				<div class="btn-group btn-toggle" data-toggle="buttons">
+							<label class="btn btn-mini btn-default" for="">
+								{{Form::radio('q3', 'yes') }} Yes
+							</label>
+		  					<label class="btn btn-mini btn-info" for="">
+	  							{{Form::radio('q3', 'no') }} No
+							</label>
+						</div>
 						</div>
 					</div>
-				</div>
-				<!-- Question # 4 -->
-				<li>Is your cholesterol above 40000?</li>
-				<div class="form-group">
+					</div>
+					<!-- Question # 4 -->
+					<li>In the past five years, have you been diagnosed, treated for, or been advised to be treated for alcohol or drug dependence or abuse?</li>
+					<div class="form-group">
 					<div class="controls">
 						<label class="control-label" for="name">Gender</label>
 						<div class="input-group col-sm-4">
-							<div class="btn-group btn-toggle"> 
-				            	<input type="submit" class="btn btn-sm btn-default" name="q1_yes" value="Yes">
-				            	<input type="submit" class="btn btn-sm btn-primary active" name="q1_no" value="No">
-		    					<!-- <button class="btn btn-sm btn-default">Yes</button> -->
-		    					<!-- <button class="btn btn-sm btn-primary active">No</button> -->
-							</div>
+	    				<div class="btn-group btn-toggle" data-toggle="buttons">
+							<label class="btn btn-mini btn-default" for="">
+								{{Form::radio('q4', 'yes') }} Yes
+							</label>
+		  					<label class="btn btn-mini btn-info" for="">
+	  							{{Form::radio('q4', 'no') }} No
+							</label>
+						</div>
 						</div>
 					</div>
-				</div>
-				<!-- Question # 5 -->
-				<li>Is your cholesterol above 40000?</li>
-				<div class="form-group">
-					<div class="controls">
-						<label class="control-label" for="name">Gender</label>
-						<div class="input-group col-sm-4">
-							<div class="btn-group btn-toggle"> 
-				            	<input type="submit" class="btn btn-sm btn-default" name="q1_yes" value="Yes">
-				            	<input type="submit" class="btn btn-sm btn-primary active" name="q1_no" value="No">
-		    					<!-- <button class="btn btn-sm btn-default">Yes</button> -->
-		    					<!-- <button class="btn btn-sm btn-primary active">No</button> -->
-							</div>
-						</div>
 					</div>
-				</div>
-			</ol>
+				</ol>
+				
+				{{Form::submit('Next', ['class' => 'btn btn-primary']) }}
 
-			<div class="form-actions">
-				<a href="{{{ route('lifeRFQResults') }}}" type="submit" class="btn btn-primary">Submit</a>
-			</div>
-			<div>
-				<h3>Or</h3>
-				<h3>choose your health classification manually</h3>
-			</div>
-
-
-			<div class="form-group">
-				<label class="control-label" for="health classification">Health</label>
-				<div class="controls">
-					<div class="input-group col-sm-4">
-						<span class="input-group-addon"><i class="fa fa-heartbeat"></i></span>
-						<select class="form-control input-tag" id="input-health">
-							<option disabled selected></option>
-							<option>Preferred + (Excellent)</option>
-							<option>Preferred</option>
-							<option>Standard Plus</option>
-							<option>Standard</option>
-						</select>							
-					</div>
-				</div>
-			</div>	
-									
-			<div class="form-actions">
-				<a href="{{{ route('lifeRFQResults') }}}" type="submit" class="btn btn-primary">Submit</a>
-			</div>
-		</form>   
-			</div>
+			{{ Form::close() }}
 		</div>
 	</div><!--/col-->
 
 </div><!--/row-->		
 </div><!-- end: Content -->
-</div>
+</div><!-- end: container-->		
 
 
 @stop

@@ -45,7 +45,7 @@
 								</a>
 
 								<a href="auth/google">
-									<img class="hide-this" id="google-login-hover" src="assets/img/google/Red-signin_Long_press_32dp.png"/>
+									<img class="hide-this" id="google-login-hover" src="/assets/img/google/Red-signin_Long_press_32dp.png"/>
 								</a>
 
 							</div>

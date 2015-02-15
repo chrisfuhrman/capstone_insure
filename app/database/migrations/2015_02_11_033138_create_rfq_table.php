@@ -16,6 +16,7 @@ class CreateRFQTable extends Migration {
 		Schema::create('rfq', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->string('first_name');
             $table->string('zip');
 			$table->timestamps();
 
