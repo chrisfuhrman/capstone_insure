@@ -36,7 +36,7 @@
 		<div class="row col-sm-12">
 			<h1 class="white">No more pushy insurance sales agent!</h1>
 			<h3 class="white">Get insurance comparison quotes in minutes.</h3>
-			<a href="{{{ route ('lifeRFQ') }}}" class="btn btn-success btn-lg" type="button">Get Your No Hassle Quote</a>
+			<a href="{{{ action('LifeRFQController@create') }}}" class="btn btn-success btn-lg" type="button">Get Your No Hassle Quote</a>
 		</div>
 	</div>
 </div>
