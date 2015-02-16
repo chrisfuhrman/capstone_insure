@@ -158,14 +158,14 @@
 				<div class="business_remove">
 
 					<div class="form-group">
-						{{ Form::label('other_owner_date_of_birth', 'Date of Birth:', array('class' => 'control-label')) }}
+						{{ Form::label('other_owner_dob', 'Date of Birth:', array('class' => 'control-label')) }}
 						<div class="controls">
 							<div class="input-group col-sm-4">
 								<span class="input-group-addon"><i class="fa fa-male"></i></span>
-								{{ Form::text('other_owner_date_of_birth', Input::old('other_owner_date_of_birth'), array('class' => 'form-control', 'placeholder' => 'MM/DD/YYYY', 'id' => 'date2', 'name' => 'other_owner_date_of_birth')) }}
+								{{ Form::text('other_owner_dob', Input::old('other_owner_dob'), array('class' => 'form-control', 'placeholder' => 'MM/DD/YYYY', 'id' => 'date2', 'name' => 'other_owner_dob')) }}
 							</div>
 						</div>
-						{{ $errors->first('other_owner_date_of_birth', '<span class="help-block">:message</span>') }}
+						{{ $errors->first('other_owner_dob', '<span class="help-block">:message</span>') }}
 					</div>
 
 				</div>
