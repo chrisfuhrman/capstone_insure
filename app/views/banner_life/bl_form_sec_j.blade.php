@@ -29,14 +29,14 @@
 <!-- b. How was the need for the face amount determined? -->
 
 			<div class="form-group">
-				{{ Form::label('face_amount', 'How was the need for the face amount determined?', array('class' => 'control-label')) }}
+				{{ Form::label('face_amount_reason', 'How was the need for the face amount determined?', array('class' => 'control-label')) }}
 				<div class="controls">
 					<div class="input-group col-sm-4">
 						<span class="input-group-addon"><i class="fa fa-male"></i></span>
-						{{ Form::text('face_amount', Input::old('face_amount'), array('class' => 'form-control', 'placeholder' => 'Total bills, family size, etc', 'id' => 'face_amount', 'name' => 'face_amount')) }}
+						{{ Form::text('face_amount_reason', Input::old('face_amount_reason'), array('class' => 'form-control', 'placeholder' => 'Total bills, family size, etc', 'id' => 'face_amount_reason', 'name' => 'face_amount_reason')) }}
 					</div>
 				</div>
-				{{ $errors->first('face_amount', '<span class="help-block">:message</span>') }}
+				{{ $errors->first('face_amount_reason', '<span class="help-block">:message</span>') }}
 			</div>
 
 <!-- c. In the last 5 years, has the Proposed Insured filed for bankruptcy or had any charge off of bad debts?   -->
