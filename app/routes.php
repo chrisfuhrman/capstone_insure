@@ -50,9 +50,9 @@ Route::resource('life-quote-results', 'RFQResultsController');
 
 
 // Authentication Routes
-Route::get('login', 'AuthController@showLogin');
-Route::post('login', 'AuthController@doLogin');
-Route::get('logout', 'AuthController@doLogout');
+Route::get('login', 'SessionsController@create');
+Route::get('logout', 'SessionsController@destroy');
+Route::resource('sessions', 'SessionsController');
 // OAuth Routes
 Route::get('auth/google', 'AuthController@loginWithGoogle');
 Route::get('auth/linkedin', 'AuthController@loginWithLinkedin');
@@ -72,6 +72,13 @@ Route::get('calculator', ['as' => 'calculator', 'uses' => 'ExtrasController@show
 
 Route::get('contact', ['as' => 'contact', 'uses' => 'ExtrasController@showContact']);
 
+
+// User Dashboard
+Route::get('dashboard', function() {
+
+	return "Welcome " . Auth::user()->first_name;
+
+})->before('auth');
 
 
 
