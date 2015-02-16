@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder {
 		$this->call('RFQTableSeeder');
 		$this->call('LifeRFQTableSeeder');
 		$this->call('RFQResultsTableSeeder');
+		$this->call('PolicyAppsTableSeeder');
 
 	}
 

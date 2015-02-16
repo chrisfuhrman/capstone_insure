@@ -1,5 +1,4 @@
-<!-- SECTION D TRUST INFORMATION (If trust is Beneficiary and/or Owner).
- -->
+<!-- SECTION D TRUST INFORMATION (If trust is Beneficiary and/or Owner) -->
 
 <!-- Exact Name of Trust   -->
 <!-- Name   -->
@@ -37,37 +36,13 @@
 		<div class="controls">
 			<div class="input-group col-sm-4">
 				<span class="input-group-addon"><i class="fa fa-male"></i></span>
-				{{ Form::text('trustee_name', Input::old('trustee_name'), array('class' => 'form-control', 'placeholder' => '1st Trustee Name', 'id' => 'trustee_name', 'name' => 'trustee_name')) }}
+				{{ Form::textarea('trustee_name', Input::old('trustee_name'), array('class' => 'form-control', 'placeholder' => 'Current Trustee(s) - Full Names', 'id' => 'trustee_name', 'name' => 'trustee_name')) }}
 			</div>
 		</div>
 		{{ $errors->first('trustee_name', '<span class="help-block">:message</span>') }}
 	</div>	
 
-<!-- Current Trustee(s)  -->
 
-	<div class="form-group">
-		{{ Form::label('trustee_name2', 'First Name:', array('class' => 'control-label')) }}
-		<div class="controls">
-			<div class="input-group col-sm-4">
-				<span class="input-group-addon"><i class="fa fa-male"></i></span>
-				{{ Form::text('trustee_name2', Input::old('trustee_name2'), array('class' => 'form-control', 'placeholder' => '2nd Trustee Name', 'id' => 'trustee_name2', 'name' => 'trustee_name2')) }}
-			</div>
-		</div>
-		{{ $errors->first('trustee_name2', '<span class="help-block">:message</span>') }}
-	</div>	
-
-<!-- Current Trustee(s)  -->
-
-	<div class="form-group">
-		{{ Form::label('trustee_name3', 'First Name:', array('class' => 'control-label')) }}
-		<div class="controls">
-			<div class="input-group col-sm-4">
-				<span class="input-group-addon"><i class="fa fa-male"></i></span>
-				{{ Form::text('trustee_name3', Input::old('trustee_name3'), array('class' => 'form-control', 'placeholder' => ' 3rd Trustee Name', 'id' => 'trustee_name3', 'name' => 'trustee_name3')) }}
-			</div>
-		</div>
-		{{ $errors->first('trustee_name3', '<span class="help-block">:message</span>') }}
-	</div>	
 
 <!-- Date of Trust  -->
 

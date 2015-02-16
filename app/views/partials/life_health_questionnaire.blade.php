@@ -27,7 +27,7 @@
 				{{Form::radio('cholesterol', 'yes') }} Yes
 			</label>
 				<label class="btn btn-mini btn-info" for="">
-					{{Form::radio('cholesterol', 'no', true) }} No
+				{{Form::radio('cholesterol', 'no', true) }} No
 			</label>
 		</div>
 		</div>
@@ -44,7 +44,7 @@
 				{{Form::radio('blood_pressure', 'yes') }} Yes
 			</label>
 				<label class="btn btn-mini btn-info" for="">
-					{{Form::radio('blood_pressure', 'no', true) }} No
+				{{Form::radio('blood_pressure', 'no', true) }} No
 			</label>
 		</div>
 		</div>
@@ -61,7 +61,7 @@
 				{{Form::radio('drugs', 'yes') }} Yes
 			</label>
 				<label class="btn btn-mini btn-info" for="">
-					{{Form::radio('drugs', 'no', true) }} No
+				{{Form::radio('drugs', 'no', true) }} No
 			</label>
 		</div>
 		</div>

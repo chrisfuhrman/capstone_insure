@@ -2,19 +2,26 @@
 
 @section('content')
 
+<!-- SECTION B BENEFICIARY -->
+
 <h1>BENEFICIARY</h1>
 
 <div class="row">
 	<div class="col-lg-12">
 		<div class="box">
- 
 
 			<div class="form-group">
-				{{ HTML::decode(Form::label('beneficiary_trust', '<h3>If Beneficiary is a trust, check box:</h3>', array('class' => 'control-label'))) }}
+				<div>
+					{{ HTML::decode(Form::label('beneficiary_trust', '<h3>If Beneficiary is a trust, check box:</h3>', array('class' => 'control-label'))) }}
+				</div>
 				<div class="controls">
 					<div class="input-group col-sm-4">
 						<span class="input-group-addon"><i class="fa fa-male"></i></span>
-						{{ Form::checkbox('beneficiary_trust', 'yes', null, array('class' => 'form-control', 'id' => 'beneficiary_trust', 'name' => 'beneficiary_trust')) }}
+						<label class="switch">
+							{{ Form::checkbox('beneficiary_trust', 'yes', null, array('class' => 'form-control', 'id' => 'beneficiary_trust', 'name' => 'beneficiary_trust')) }}
+						    <span class="switch-label" data-on="Yes" data-off="No"></span>
+						    <span class="switch-handle"></span>
+					    </label>
 					</div>
 				</div>
 				{{ $errors->first('beneficiary_trust', '<span class="help-block">:message</span>') }}
@@ -31,7 +38,7 @@
 
 				<h3>Primary</h3>
 
-				 
+				 <!-- Primary #1 -->
 				<!-- Name   -->
 
 				<div class="form-group">
@@ -89,40 +96,41 @@
 				<!-- Date of Birth  -->
 
 				<div class="form-group">
-					{{ Form::label('primary_date_of_birth', 'Date of Birth:', array('class' => 'control-label')) }}
+					{{ Form::label('primary_dob', 'Date of Birth:', array('class' => 'control-label')) }}
 					<div class="controls">
 						<div class="input-group col-sm-4">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
-							{{ Form::text('primary_date_of_birth', Input::old('primary_date_of_birth'), array('class' => 'form-control', 'placeholder' => 'MM/DD/YYYY', 'id' => 'date', 'name' => 'primary_date_of_birth')) }}
+							{{ Form::text('primary_dob', Input::old('primary_dob'), array('class' => 'form-control', 'placeholder' => 'MM/DD/YYYY', 'id' => 'date', 'name' => 'primary_dob')) }}
 						</div>
 					</div>
-					{{ $errors->first('primary_date_of_birth', '<span class="help-block">:message</span>') }}
+					{{ $errors->first('primary_dob', '<span class="help-block">:message</span>') }}
 				</div>
 
+				<!-- Primary #2 -->
 				<!-- Name -->
 
 				<div class="form-group">
-					{{ Form::label('primary_name2', 'Name:', array('class' => 'control-label')) }}
+					{{ Form::label('primary_2_name', 'Name:', array('class' => 'control-label')) }}
 					<div class="controls">
 						<div class="input-group col-sm-4">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
-							{{ Form::text('primary_name2', Input::old('primary_name2'), array('class' => 'form-control', 'placeholder' => 'Name', 'id' => 'primary_name2', 'name' => 'primary_name2')) }}
+							{{ Form::text('primary_2_name', Input::old('primary_2_name'), array('class' => 'form-control', 'placeholder' => 'Name', 'id' => 'primary_2_name', 'name' => 'primary_2_name')) }}
 						</div>
 					</div>
-					{{ $errors->first('primary_name2', '<span class="help-block">:message</span>') }}
+					{{ $errors->first('primary_2_name', '<span class="help-block">:message</span>') }}
 				</div>
 
 				<!-- Relationship -->
 
 				<div class="form-group">
-					{{ Form::label('primary_relationship2', 'Relationship:', array('class' => 'control-label')) }}
+					{{ Form::label('primary_2_relationship', 'Relationship:', array('class' => 'control-label')) }}
 					<div class="controls">
 						<div class="input-group col-sm-4">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
-							{{ Form::text('primary_relationship2', Input::old('primary_relationship2'), array('class' => 'form-control', 'placeholder' => 'Relationship', 'id' => 'primary_relationship2', 'name' => 'primary_relationship2')) }}
+							{{ Form::text('primary_2_relationship', Input::old('primary_2_relationship'), array('class' => 'form-control', 'placeholder' => 'Relationship', 'id' => 'primary_2_relationship', 'name' => 'primary_2_relationship')) }}
 						</div>
 					</div>
-					{{ $errors->first('primary_relationship2', '<span class="help-block">:message</span>') }}
+					{{ $errors->first('primary_2_relationship', '<span class="help-block">:message</span>') }}
 				</div>
 
 				<!-- % Share  -->
@@ -130,40 +138,53 @@
 				<h5>Share percentage totals must equal 100%</h5>
 
 				<div class="form-group">
-					{{ Form::label('primary_share2', 'Percent of Share:', array('class' => 'control-label')) }}
+					{{ Form::label('primary_2_share', 'Percent of Share:', array('class' => 'control-label')) }}
 					<div class="controls">
 						<div class="input-group col-sm-4">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
-							{{ Form::text('primary_share2', Input::old('primary_share2'), array('class' => 'form-control', 'placeholder' => 'Ex: 50', 'id' => 'primary_share2', 'name' => 'primary_share2')) }}
+							{{ Form::text('primary_2_share', Input::old('primary_2_share'), array('class' => 'form-control', 'placeholder' => 'Ex: 50', 'id' => 'primary_2_share', 'name' => 'primary_2_share')) }}
 						</div>
 					</div>
-					{{ $errors->first('primary_share2', '<span class="help-block">:message</span>') }}
+					{{ $errors->first('primary_2_share', '<span class="help-block">:message</span>') }}
 				</div>
 
 				<!-- SSN -->
 
 				<div class="form-group">
-					{{ Form::label('primary_ssn2', 'Social Security:', array('class' => 'control-label')) }}
+					{{ Form::label('primary_2_ssn', 'Social Security:', array('class' => 'control-label')) }}
 					<div class="controls">
 						<div class="input-group col-sm-4">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
-							{{ Form::text('primary_ssn2', Input::old('primary_ssn2'), array('class' => 'form-control', 'placeholder' => '999-99-9999', 'id' => 'ssn2', 'name' => 'primary_ssn2')) }}
+							{{ Form::text('primary_2_ssn', Input::old('primary_2_ssn'), array('class' => 'form-control', 'placeholder' => '999-99-9999', 'id' => 'ssn2', 'name' => 'primary_2_ssn')) }}
 						</div>
 					</div>
-					{{ $errors->first('primary_ssn2', '<span class="help-block">:message</span>') }}
+					{{ $errors->first('primary_2_ssn', '<span class="help-block">:message</span>') }}
 				</div>
 
 				<!-- Date of Birth  -->
 
 				<div class="form-group">
-					{{ Form::label('primary_date_of_birth2', 'Date of Birth:', array('class' => 'control-label')) }}
+					{{ Form::label('primary_2_dob', 'Date of Birth:', array('class' => 'control-label')) }}
 					<div class="controls">
 						<div class="input-group col-sm-4">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
-							{{ Form::text('primary_date_of_birth2', Input::old('primary_date_of_birth2'), array('class' => 'form-control', 'placeholder' => 'MM/DD/YYYY', 'id' => 'date2', 'name' => 'primary_date_of_birth2')) }}
+							{{ Form::text('primary_2_dob', Input::old('primary_2_dob'), array('class' => 'form-control', 'placeholder' => 'MM/DD/YYYY', 'id' => 'date2', 'name' => 'primary_2_dob')) }}
 						</div>
 					</div>
-					{{ $errors->first('primary_date_of_birth2', '<span class="help-block">:message</span>') }}
+					{{ $errors->first('primary_2_dob', '<span class="help-block">:message</span>') }}
+				</div>
+
+				<!-- Optional Remarks -->
+
+				<div class="form-group">
+					{{ Form::label('primary_remarks', 'Additional Remarks:', array('class' => 'control-label')) }}
+					<div class="controls">
+						<div class="input-group col-sm-4">
+							<span class="input-group-addon"><i class="fa fa-male"></i></span>
+							{{ Form::textarea('primary_remarks', Input::old('primary_remarks'), array('class' => 'form-control', 'placeholder' => 'Remarks', 'id' => 'primary_remarks', 'name' => 'primary_remarks', 'rows' => '5')) }}
+						</div>
+					</div>
+					{{ $errors->first('primary_remarks', '<span class="help-block">:message</span>') }}
 				</div>
 
 
@@ -231,40 +252,40 @@
 				<!-- Date of Birth  -->
 
 				<div class="form-group">
-					{{ Form::label('contingent_date_of_birth', 'Date of Birth:', array('class' => 'control-label')) }}
+					{{ Form::label('contingent_dob', 'Date of Birth:', array('class' => 'control-label')) }}
 					<div class="controls">
 						<div class="input-group col-sm-4">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
-							{{ Form::text('contingent_date_of_birth', Input::old('contingent_date_of_birth'), array('class' => 'form-control', 'placeholder' => 'MM/DD/YYYY', 'id' => 'date3', 'name' => 'contingent_date_of_birth')) }}
+							{{ Form::text('contingent_dob', Input::old('contingent_dob'), array('class' => 'form-control', 'placeholder' => 'MM/DD/YYYY', 'id' => 'date3', 'name' => 'contingent_dob')) }}
 						</div>
 					</div>
-					{{ $errors->first('contingent_date_of_birth', '<span class="help-block">:message</span>') }}
+					{{ $errors->first('contingent_dob', '<span class="help-block">:message</span>') }}
 				</div>
 
+				<!-- Contingent #2 -->
 				<!-- Name -->
-
 				<div class="form-group">
-					{{ Form::label('contingent_name2', 'Name:', array('class' => 'control-label')) }}
+					{{ Form::label('contingent_2_name', 'Name:', array('class' => 'control-label')) }}
 					<div class="controls">
 						<div class="input-group col-sm-4">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
-							{{ Form::text('contingent_name2', Input::old('contingent_name2'), array('class' => 'form-control', 'placeholder' => 'Name', 'id' => 'contingent_name2', 'name' => 'contingent_name2')) }}
+							{{ Form::text('contingent_2_name', Input::old('contingent_2_name'), array('class' => 'form-control', 'placeholder' => 'Name', 'id' => 'contingent_2_name', 'name' => 'contingent_2_name')) }}
 						</div>
 					</div>
-					{{ $errors->first('contingent_name2', '<span class="help-block">:message</span>') }}
+					{{ $errors->first('contingent_2_name', '<span class="help-block">:message</span>') }}
 				</div>
 
 				<!-- Relationship -->
 
 				<div class="form-group">
-					{{ Form::label('contingent_relationship2', 'Relationship:', array('class' => 'control-label')) }}
+					{{ Form::label('contingent_2_relationship', 'Relationship:', array('class' => 'control-label')) }}
 					<div class="controls">
 						<div class="input-group col-sm-4">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
-							{{ Form::text('contingent_relationship2', Input::old('contingent_relationship2'), array('class' => 'form-control', 'placeholder' => 'Relationship', 'id' => 'contingent_relationship2', 'name' => 'contingent_relationship2')) }}
+							{{ Form::text('contingent_2_relationship', Input::old('contingent_2_relationship'), array('class' => 'form-control', 'placeholder' => 'Relationship', 'id' => 'contingent_2_relationship', 'name' => 'contingent_2_relationship')) }}
 						</div>
 					</div>
-					{{ $errors->first('contingent_relationship2', '<span class="help-block">:message</span>') }}
+					{{ $errors->first('contingent_2_relationship', '<span class="help-block">:message</span>') }}
 				</div>
 
 				<!-- % Share  -->
@@ -272,41 +293,55 @@
 				<h5>Share percentage totals must equal 100%</h5>
 
 				<div class="form-group">
-					{{ Form::label('contingent_share2', 'Percent of Share:', array('class' => 'control-label')) }}
+					{{ Form::label('contingent_2_share', 'Percent of Share:', array('class' => 'control-label')) }}
 					<div class="controls">
 						<div class="input-group col-sm-4">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
-							{{ Form::text('contingent_share2', Input::old('contingent_share2'), array('class' => 'form-control', 'placeholder' => 'Ex: 50', 'id' => 'contingent_share2', 'name' => 'contingent_share2')) }}
+							{{ Form::text('contingent_2_share', Input::old('contingent_2_share'), array('class' => 'form-control', 'placeholder' => 'Ex: 50', 'id' => 'contingent_2_share', 'name' => 'contingent_2_share')) }}
 						</div>
 					</div>
-					{{ $errors->first('contingent_share2', '<span class="help-block">:message</span>') }}
+					{{ $errors->first('contingent_2_share', '<span class="help-block">:message</span>') }}
 				</div>
 
 				<!-- SSN -->
 
 				<div class="form-group">
-					{{ Form::label('contingent_ssn2', 'Social Security:', array('class' => 'control-label')) }}
+					{{ Form::label('contingent_2_ssn', 'Social Security:', array('class' => 'control-label')) }}
 					<div class="controls">
 						<div class="input-group col-sm-4">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
-							{{ Form::text('contingent_ssn2', Input::old('contingent_ssn2'), array('class' => 'form-control', 'placeholder' => '999-99-9999', 'id' => 'ssn4', 'name' => 'contingent_ssn2')) }}
+							{{ Form::text('contingent_2_ssn', Input::old('contingent_2_ssn'), array('class' => 'form-control', 'placeholder' => '999-99-9999', 'id' => 'ssn4', 'name' => 'contingent_2_ssn')) }}
 						</div>
 					</div>
-					{{ $errors->first('contingent_ssn2', '<span class="help-block">:message</span>') }}
+					{{ $errors->first('contingent_2_ssn', '<span class="help-block">:message</span>') }}
 				</div>
 
 				<!-- Date of Birth  -->
 
 				<div class="form-group">
-					{{ Form::label('contingent_date_of_birth2', 'Date of Birth:', array('class' => 'control-label')) }}
+					{{ Form::label('contingent_2_dob', 'Date of Birth:', array('class' => 'control-label')) }}
 					<div class="controls">
 						<div class="input-group col-sm-4">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
-							{{ Form::text('contingent_date_of_birth2', Input::old('contingent_date_of_birth2'), array('class' => 'form-control', 'placeholder' => 'MM/DD/YYYY', 'id' => 'date4', 'name' => 'contingent_date_of_birth2')) }}
+							{{ Form::text('contingent_2_dob', Input::old('contingent_2_dob'), array('class' => 'form-control', 'placeholder' => 'MM/DD/YYYY', 'id' => 'date4', 'name' => 'contingent_2_dob')) }}
 						</div>
 					</div>
-					{{ $errors->first('contingent_date_of_birth2', '<span class="help-block">:message</span>') }}
+					{{ $errors->first('contingent_2_dob', '<span class="help-block">:message</span>') }}
 				</div>
+
+				<!-- Optional Remarks -->
+
+				<div class="form-group">
+					{{ Form::label('contingent_remarks', 'Additional Remarks:', array('class' => 'control-label')) }}
+					<div class="controls">
+						<div class="input-group col-sm-4">
+							<span class="input-group-addon"><i class="fa fa-male"></i></span>
+							{{ Form::textarea('contingent_remarks', Input::old('contingent_remarks'), array('class' => 'form-control', 'placeholder' => 'Remarks', 'id' => 'contingent_remarks', 'name' => 'contingent_remarks', 'rows' => '5')) }}
+						</div>
+					</div>
+					{{ $errors->first('contingent_remarks', '<span class="help-block">:message</span>') }}
+				</div>
+
 			</div>		
 		</div>
 	</div>	
@@ -314,10 +349,10 @@
 
 
 <nav>
-  <ul class="pager">
-    <li><a href="{{{ action('PolicyAppController@showLifeAppSecA') }}}">Previous</a></li>  	
-    <li><a href="{{{ action('PolicyAppController@showLifeAppSecC') }}}">Next</a></li>
-  </ul>
+	<ul class="pager">
+		<li><a href="{{{ action('PolicyAppController@showLifeAppSecA') }}}">Previous</a></li>  	
+		<li><a href="{{{ action('PolicyAppController@showLifeAppSecC') }}}">Next</a></li>
+	</ul>
 </nav>
 
 @stop
