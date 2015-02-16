@@ -2,6 +2,8 @@
 
 @section('content')
 
+<!-- SECTION A PROPOSED INSURED -->
+
 <h1>PROPOSED INSURED</h1>
 
 <h3>Primary Proposed Insured</h3>

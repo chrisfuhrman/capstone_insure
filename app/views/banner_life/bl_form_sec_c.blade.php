@@ -2,6 +2,8 @@
 
 @section('content')
 
+<!-- SECTION C OWNER -->
+
 
 
 <!--  Complete if the Proposed Insured is not the Owner. 
@@ -281,6 +283,21 @@
 					{{ $errors->first('other_owner_phone', '<span class="help-block">:message</span>') }}
 				</div>
 
+<!-- (If contingent Owner is required, use Remarks section, Question 48). -->
+
+<!-- Optional Remarks -->
+
+				<div class="form-group">
+					{{ Form::label('other_contingent_remarks', 'If Contingent Owner is Required Provide Information Here:', array('class' => 'control-label')) }}
+					<div class="controls">
+						<div class="input-group col-sm-4">
+							<span class="input-group-addon"><i class="fa fa-male"></i></span>
+							{{ Form::textarea('other_contingent_remarks', Input::old('other_contingent_remarks'), array('class' => 'form-control', 'placeholder' => 'Remarks', 'id' => 'other_contingent_remarks', 'name' => 'other_contingent_remarks', 'rows' => '5')) }}
+						</div>
+					</div>
+					{{ $errors->first('other_contingent_remarks', '<span class="help-block">:message</span>') }}
+				</div>
+
 			</div>
 
 		</div>
@@ -288,10 +305,10 @@
 </div>
 
 <nav>
-  <ul class="pager">
-    <li><a href="{{{ action('PolicyAppController@showLifeAppSecB') }}}">Previous</a></li>
-    <li><a href="{{{ action('PolicyAppController@showLifeAppSecE') }}}">Next</a></li>
-  </ul>
+	<ul class="pager">
+		<li><a href="{{{ action('PolicyAppController@showLifeAppSecB') }}}">Previous</a></li>
+		<li><a href="{{{ action('PolicyAppController@showLifeAppSecE') }}}">Next</a></li>
+	</ul>
 </nav>
 
 @stop

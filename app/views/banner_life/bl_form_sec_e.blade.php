@@ -145,6 +145,14 @@
 	</div>	
 </div>
 
+<nav>
+	<ul class="pager">
+		<li><a href="{{{ action('PolicyAppController@showLifeAppSecC') }}}">Previous</a></li>
+		<li><a href="{{{ action('PolicyAppController@showLifeAppSecF') }}}">Next</a></li>
+	</ul>
+</nav>
+
+
 @stop
 
 
