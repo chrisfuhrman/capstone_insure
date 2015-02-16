@@ -4,7 +4,7 @@
 	<div class="form-group">
 	<div class="controls">
 		<label class="control-label" for="smoking status"></label>
-		<div class="input-group col-sm-4">
+		<div class="input-group col-sm-4 input-group-2">
 		<div class="btn-group btn-toggle" data-toggle="buttons">
 			<label class="btn btn-mini btn-default" for="">
 				{{Form::radio('smoker', 'yes') }} Yes
@@ -21,7 +21,7 @@
 	<div class="form-group">
 	<div class="controls">
 		<label class="control-label" for="cholesterol question"></label>
-		<div class="input-group col-sm-4">
+		<div class="input-group col-sm-4 input-group-2">
 		<div class="btn-group btn-toggle" data-toggle="buttons">
 			<label class="btn btn-mini btn-default" for="">
 				{{Form::radio('cholesterol', 'yes') }} Yes
@@ -38,7 +38,7 @@
 	<div class="form-group">
 	<div class="controls">
 		<label class="control-label" for="blood pressure question"></label>
-		<div class="input-group col-sm-4">
+		<div class="input-group col-sm-4 input-group-2">
 		<div class="btn-group btn-toggle" data-toggle="buttons">
 			<label class="btn btn-mini btn-default" for="">
 				{{Form::radio('blood_pressure', 'yes') }} Yes
@@ -55,7 +55,7 @@
 	<div class="form-group">
 	<div class="controls">
 		<label class="control-label" for="drug and alcohol question"></label>
-		<div class="input-group col-sm-4">
+		<div class="input-group col-sm-4 input-group-2">
 		<div class="btn-group btn-toggle" data-toggle="buttons">
 			<label class="btn btn-mini btn-default" for="">
 				{{Form::radio('drugs', 'yes') }} Yes

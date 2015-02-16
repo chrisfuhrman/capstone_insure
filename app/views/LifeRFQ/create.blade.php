@@ -3,13 +3,13 @@
 @section('content')
 
 <div class="quote-section">
-	<div class="container conatiner-darker-2">
+	<div class="container">
 		<div id="content" class="col-lg-10 col-sm-11">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="box">
 						<div class="box-header">
-						<h2 id="quote-header">Check out our simple and clear life insurance price comparison tool below:</h2>
+						<h2 id="quote-header" class="quote-header">Check out our simple and clear life insurance price comparison tool below:</h2>
 						</div>
 
 						<div class="box-content">
@@ -18,20 +18,24 @@
 
 							<div id="section-1">
 								<!-- Name -->
+								<div class="wrap">
 								<div class="form-group">
-									<label class="control-label" for="first name">First Name</label>
+									<label class="control-label" for="first name">First Name <span class="lastN">Last Name</span></label>
 									<div class="controls">
-										<div class="input-group col-sm-4">
+										<div class="input-group col-sm-5">
 											<span class="input-group-addon"><i class="fa fa-user"></i></span>
 											<input type="text" name="first_name" class="form-control">
+											<span class="input-group-addon"></span>
+											<input type="text" name="last_name" class="form-control">
 										</div>
 									</div>
 								</div>		
+								</div>
 								<!-- zip -->
 								<div class="form-group">
 									<label class="control-label" for="zip code">Zip Code</label>
 									<div class="controls">
-										<div class="input-group col-sm-4">
+										<div class="input-group col-sm-5">
 											<span class="input-group-addon"><i class="fa fa-home"></i></span>
 											<input type="text" placeholder= '12345'id="zip" name="zip" class="form-control">
 										</div>
@@ -41,7 +45,7 @@
 								<div class="form-group">
 								<div class="controls">
 									<label class="control-label" for="gender">Gender</label>
-									<div class="input-group col-sm-4">
+									<div class="input-group col-sm-5">
 									<div class="wrap">	
 					    				<div class="btn-group btn-toggle" data-toggle="buttons">
 											<span class="input-group-addon gender-icon"><i class="fa fa-user"></i></span>
@@ -60,7 +64,7 @@
 								<div class="form-group">
 				            		{{ Form::label('dob', 'Date of Birth:', array('class' => 'control-label')) }}
 					                <div class="controls">
-					                    <div class="input-group col-sm-4">
+					                    <div class="input-group col-sm-5">
 					                        <span class="input-group-addon"><i class="fa fa-birthday-cake"></i></span>
 					                    {{ Form::text('dob', Input::old('dob'), array('class' => 'form-control', 'placeholder' => 'MM/DD/YYYY', 'id' => 'date', 'name' => 'dob')) }}
 					                	</div>
@@ -72,7 +76,7 @@
 								<div class="form-group">
 									<label class="control-label" for="coverage amount">Coverage Amount</label>
 									<div class="controls">
-									<div class="input-group col-sm-4">
+									<div class="input-group col-sm-5">
 										<span class="input-group-addon"><i class="fa fa-usd"></i></span>
 										<select name="coverage_amount" class="form-control selectpicker  input-tag">
 											<option disabled selected> -- Amount of Coverage -- </option>
@@ -105,7 +109,7 @@
 								<div class="form-group">
 									<label class="control-label" for="duration">Length of Coverage</label>
 									<div class="controls">
-										<div class="input-group col-sm-4">
+										<div class="input-group col-sm-5">
 											<span class="input-group-addon"><i class="fa fa-tachometer"></i></span>
 											<select name="coverage_duration" class="form-control selectpicker input-tag">
 												<option disabled selected> -- Length of Coverage -- </option>
