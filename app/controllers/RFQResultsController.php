@@ -9,7 +9,7 @@ class RFQResultsController extends BaseController
 
 	// 	$rfq = new RFQResults();
 
-	}
+	// }
 
 	// public function __construct()
 	// {

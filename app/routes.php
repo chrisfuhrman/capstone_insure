@@ -44,7 +44,7 @@ Route::post('life-quote', ['as' => 'lifeRFQ', 'uses' => 'RFQController@showLifeR
 
 
 Route::resource('LifeRFQ', 'LifeRFQController');
-Route::resource('RFQResults', 'RFQResultsController');
+Route::resource('life-quote-results', 'RFQResultsController');
 
 // Route::get('life-quote-results', ['as' => 'lifeRFQResults', 'uses' => 'RFQResultsController@showLifeResults']);
 
