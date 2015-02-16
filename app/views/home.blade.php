@@ -49,7 +49,7 @@
 				
 				<a href="#">
 				  <div class="col-md-3 ">
-					<div class="thumbnail thumbnail-darker box">
+					<div class="thumbnail thumbnail-darker thumbnail-box">
 					  <h1 class="text-center"><i class="fa fa-usd fa-4 white"></i></h1>
 					  <div class="caption">
 						<h3 class="white margin text-center">Products</h3>
@@ -60,27 +60,27 @@
 				  </div>
 				</a>
 
-				<a href="#">
+				<a href="{{{ action('ExtrasController@showLearning') }}}">
 				  <div class="col-md-3 ">
-					<div class="thumbnail thumbnail-darker box">
+					<div class="thumbnail thumbnail-darker thumbnail-box">
 					  <h1 class="text-center"><i class="fa fa-pencil white"></i></h1>
 					  <div class="caption">
 						<h3 class="white margin text-center">Learning Center</h3>
 						<p class="blue">.</p>
-						<p class="text-center"><a href="#" class="btn btn-primary" role="button">Enter to Learn More</a>
+						<p class="text-center"><a href="{{{ action('ExtrasController@showLearning') }}}" class="btn btn-primary" role="button">Enter to Learn More</a>
 					  </div>
 					</div>
 				  </div>
 				</a>
 				
-				<a href="#">
+				<a href="{{{ action('ExtrasController@showCalculator') }}}">
 				  <div class="col-md-3">
-					<div class="thumbnail thumbnail-darker box">
+					<div class="thumbnail thumbnail-darker thumbnail-box">
 					  <h1 class="text-center"><i class="fa fa-calculator white"></i></h1>
 					  <div class="caption">
 						<h3 class="white margin text-center">Calculators</h3>
 						<p class="blue">.</p>
-						<p class="text-center"><button class="btn btn-primary" role="button">Assess Your Insurance Needs</button>
+						<p class="text-center"><a href="{{{ action('ExtrasController@showCalculator') }}}" class="btn btn-primary" role="button">Assess Your Insurance Needs</a>
 					  </div>
 					</div>
 				  </div> 
@@ -88,7 +88,7 @@
 
 				<a href="#">
 				  <div class="col-md-3"> 
-					<div class="thumbnail thumbnail-darker box">
+					<div class="thumbnail thumbnail-darker thumbnail-box">
 					  <h1 class="text-center"><i class="fa fa-envelope-o white"></i></h1>
 					  <div class="caption">
 						<h3 class="white margin text-center">Contact Us</h3>

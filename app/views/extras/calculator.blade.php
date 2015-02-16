@@ -1,4 +1,3 @@
-calculator.blade.php
 
 @extends('layouts.master')
 

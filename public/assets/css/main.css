@@ -265,8 +265,10 @@ h3 {font-size: 18px;}
 	color: #233163;
 }
 
-.box:hover {
-	/*background: #004474; */
+
+.thumbnail-box:hover {
+	background: #004474; 
+
 }
 
 .quote-section {
@@ -304,7 +306,7 @@ h3 {font-size: 18px;}
 
 /* 
 	===============================
-	Thumbnails
+	Side Navbar
 	===============================
 */
 
@@ -327,4 +329,37 @@ h3 {font-size: 18px;}
 #test-this {
 		border-radius: 10px;
 
+
+/* 
+===============================
+....
+===============================
+*/
+
 }
+.form-cell {
+	background-color: 128, 128, 128, 0.5;
+}
+
+.lastN {
+	padding-left: 50%;
+}
+
+.control-label {
+	width: 325px;
+}
+
+.quote-header {
+	width: 1200px;
+	padding-bottom: 30px;
+}
+
+#tier2-btn {
+	padding-left: 40px;
+	padding-top: 15px;
+}
+
+.input-group-2 {
+	padding-bottom: 15px;
+}
+
