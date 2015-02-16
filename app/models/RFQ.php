@@ -6,9 +6,10 @@ class RFQ extends BaseModel {
 
     protected $fillable = 
 	[
+		'first_name',
 		'zip',
-		'insurance_type',
 		'insurance_id',
+		'insurance_type',
 		'user_id'
 	];
 

@@ -2,6 +2,14 @@
 
 class LifeRFQController extends BaseController 
 {
+	// public function __construct()
+	// {
+	// 	parent::__construct();
+
+ //   		$this->beforeFilter('auth', ['except' => ['index', 'show'] ]);
+
+	// }
+
 	public function showLifeRFQ() 
 	{
 		
@@ -13,11 +21,6 @@ class LifeRFQController extends BaseController
 		
 		return View::make('RFQs.life_health_questionnaire');
 
-	}
-
-	public function __construct()
-	{
-		parent::__construct();
 	}
 
 
@@ -46,11 +49,31 @@ class LifeRFQController extends BaseController
 	 */
 	public function store()
 	{
-		$LifeRFQ = new LifeRFQ();
-			// dd($LifeRFQ);
-		// $LifeRFQ->user_id = Auth::id();
+		$lifeRFQ = new LifeRFQ();
+		// dd($lifeRFQ);
+		$lifeRFQ->gender = Input::get('gender');
+		$lifeRFQ->dob = Input::get('dob');
+		$lifeRFQ->coverage_amount = Input::get('coverage_amount');
+		$lifeRFQ->coverage_duration = Input::get('coverage_duration');
+		$lifeRFQ->smoker = Input::get('smoker');
+		$lifeRFQ->cholesterol = Input::get('cholesterol');
+		$lifeRFQ->blood_pressure = Input::get('blood_pressure');
+		$lifeRFQ->drugs = Input::get('drugs');
 
-		return $this->saveLifeRFQ($LifeRFQ);
+		$lifeRFQ->save();
+
+
+		$RFQ = new RFQ();
+
+		$RFQ->first_name = Input::get('first_name');
+		$RFQ->zip = Input::get('zip');
+		$RFQ->insurance_id = $lifeRFQ->id;
+		$RFQ->insurance_type = 'life_rfq';
+		// $RFQ->user_id = Auth::id();
+
+		$RFQ->save();
+
+		return View::make('RFQResults.index');
 	}
 
 
@@ -135,18 +158,6 @@ class LifeRFQController extends BaseController
 		// 	return Redirect::back()->withInput()->withErrors($validator);
 
 		// } else {
-			// $LifeRFQ->zip = Input::get('zip');
-			// $LifeRFQ->insurance_id = Input::get('insurance_id');
-			// $LifeRFQ->insurance_type = Input::get('insurance_type');
-			$LifeRFQ->dob = Input::get('dob');
-			$LifeRFQ->gender = Input::get('gender');
-			$LifeRFQ->coverage_amount = Input::get('coverage_amount');
-			$LifeRFQ->coverage_duration = Input::get('coverage_duration');
-			$LifeRFQ->smoker = Input::get('smoker');
-			$LifeRFQ->cholesterol = Input::get('cholesterol');
-			$LifeRFQ->blood_pressure = Input::get('blood_pressure');
-			$LifeRFQ->drugs = Input::get('drugs');
-
 						
 			$LifeRFQ->save();
 			// Session::flash('successMessage', 'Sucessfully saved your post!');
