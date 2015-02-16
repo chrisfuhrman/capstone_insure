@@ -11,10 +11,10 @@ class RFQResultsController extends BaseController
 
 	}
 
-	public function __construct()
-	{
-		parent::__construct();
-	}
+	// public function __construct()
+	// {
+	// 	parent::__construct();
+	// }
 
 
 	/**
@@ -24,8 +24,6 @@ class RFQResultsController extends BaseController
 	 */
 	public function index()
 	{
-
-		$test = LifeResult::all();
 
 		// show insurance RFQ results
 		return View::make('RFQResults.index');
