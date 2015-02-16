@@ -16,7 +16,7 @@
 
 <h3>Current YTD</h3> 
 
-47.a. Assets $
+<!-- 47.a. Assets $ -->
 
 			<div class="form-group">
 				{{ Form::label('current_assests', 'Assets $:', array('class' => 'control-label')) }}
@@ -29,7 +29,7 @@
 				{{ $errors->first('current_assests', '<span class="help-block">:message</span>') }}
 			</div>
 
-b. Liabilities $
+<!-- b. Liabilities $ -->
 
 			<div class="form-group">
 				{{ Form::label('current_liabilities', 'Liabilities $:', array('class' => 'control-label')) }}
@@ -42,7 +42,7 @@ b. Liabilities $
 				{{ $errors->first('current_liabilities', '<span class="help-block">:message</span>') }}
 			</div>
 
-c. Gross Sales $
+<!-- c. Gross Sales $ -->
 
 			<div class="form-group">
 				{{ Form::label('current_gross_sales', 'Gross Sales $:', array('class' => 'control-label')) }}
@@ -55,7 +55,7 @@ c. Gross Sales $
 				{{ $errors->first('current_gross_sales', '<span class="help-block">:message</span>') }}
 			</div>
 
-d. Net Income after Taxes $
+<!-- d. Net Income after Taxes $ -->
 
 			<div class="form-group">
 				{{ Form::label('current_net_income', 'Net Income after Taxes $:', array('class' => 'control-label')) }}
@@ -68,7 +68,7 @@ d. Net Income after Taxes $
 				{{ $errors->first('current_net_income', '<span class="help-block">:message</span>') }}
 			</div>
 
-e. Fair Market Value of the business $
+<!-- e. Fair Market Value of the business $ -->
 
 			<div class="form-group">
 				{{ Form::label('current_fmv', 'Fair Market Value of the business $:', array('class' => 'control-label')) }}
@@ -85,7 +85,7 @@ e. Fair Market Value of the business $
 
 <h3>Previous Year</h3> 
 
-47.a. Assets $
+<!-- 47.a. Assets $ -->
 
 			<div class="form-group">
 				{{ Form::label('previous_assests', 'Assets $:', array('class' => 'control-label')) }}
@@ -98,7 +98,7 @@ e. Fair Market Value of the business $
 				{{ $errors->first('previous_assests', '<span class="help-block">:message</span>') }}
 			</div>
 
-b. Liabilities $
+<!-- b. Liabilities $ -->
 
 			<div class="form-group">
 				{{ Form::label('previous_liabilities', 'Liabilities $:', array('class' => 'control-label')) }}
@@ -111,7 +111,7 @@ b. Liabilities $
 				{{ $errors->first('previous_liabilities', '<span class="help-block">:message</span>') }}
 			</div>
 
-c. Gross Sales $
+<!-- c. Gross Sales $ -->
 
 			<div class="form-group">
 				{{ Form::label('previous_gross_sales', 'Gross Sales $:', array('class' => 'control-label')) }}
@@ -124,7 +124,7 @@ c. Gross Sales $
 				{{ $errors->first('previous_gross_sales', '<span class="help-block">:message</span>') }}
 			</div>
 
-d. Net Income after Taxes $
+<!-- d. Net Income after Taxes $ -->
 
 			<div class="form-group">
 				{{ Form::label('previous_net_income', 'Net Income after Taxes $:', array('class' => 'control-label')) }}
@@ -137,7 +137,7 @@ d. Net Income after Taxes $
 				{{ $errors->first('previous_net_income', '<span class="help-block">:message</span>') }}
 			</div>
 
-e. Fair Market Value of the business $
+<!-- e. Fair Market Value of the business $ -->
 
 			<div class="form-group">
 				{{ Form::label('previous_fmv', 'Fair Market Value of the business $:', array('class' => 'control-label')) }}
@@ -150,9 +150,7 @@ e. Fair Market Value of the business $
 				{{ $errors->first('previous_fmv', '<span class="help-block">:message</span>') }}
 			</div>
 
-
-
-f. How long has the business been established? 
+<!-- f. How long has the business been established?  -->
 
 			<div class="form-group">
 				{{ Form::label('time_business_established', 'How long has the business been established?:', array('class' => 'control-label')) }}
@@ -165,7 +163,7 @@ f. How long has the business been established?
 				{{ $errors->first('time_business_established', '<span class="help-block">:message</span>') }}
 			</div>
 
-g. What percentage of the business does the Proposed Insured own? 
+<!-- g. What percentage of the business does the Proposed Insured own?  -->
 
 			<div class="form-group">
 				{{ Form::label('percentage_of_ownership', 'What percentage of the business does the Proposed Insured own? :', array('class' => 'control-label')) }}
@@ -178,17 +176,17 @@ g. What percentage of the business does the Proposed Insured own?
 				{{ $errors->first('percentage_of_ownership', '<span class="help-block">:message</span>') }}
 			</div>
 
-h. Are other partners/owners/executives being insured? (If Yes, use Remarks section, Question 48.)  
+<!-- h. Are other partners/owners/executives being insured? (If Yes, use Remarks section, Question 48.)   -->
 
 			<div class="form-group">
 				<div>
-				{{ Form::label('others_insured', 'If there are other partners/owners/executives being insured, Check box:', array('class' => 'control-label')) }}
+				{{ Form::label('others_insured', 'If there are any other partners/owners/executives being insured, Check box:', array('class' => 'control-label')) }}
 				</div>
 				<div class="controls">
 					<div class="input-group col-sm-4">
 						<span class="input-group-addon"><i class="fa fa-male"></i></span>
 						<label class="switch">
-						{{ Form::checkbox('others_insured', 'yes', null, array('class' => 'form-control', 'id' => 'others_insured', 'name' => 'others_insured')) }}
+						{{ Form::checkbox('others_insured', 'yes', false, array('class' => 'form-control', 'id' => 'others_insured', 'name' => 'others_insured')) }}
 						    <span class="switch-label" data-on="Yes" data-off="No"></span>
 						    <span class="switch-handle"></span>
 					    </label>
@@ -197,53 +195,68 @@ h. Are other partners/owners/executives being insured? (If Yes, use Remarks sect
 				{{ $errors->first('others_insured', '<span class="help-block">:message</span>') }}
 			</div>
 
-i. In the last 5 years, has the business filed for bankruptcy or had any charge off of bad debts?  
+			<div class="others_insured_extra">
+
+				<div class="form-group">
+					{{ Form::label('others_insured_remarks', 'If Yes, use Remarks Section:', array('class' => 'control-label')) }}
+					<div class="controls">
+						<div class="input-group col-sm-4">
+							<span class="input-group-addon"><i class="fa fa-male"></i></span>
+							{{ Form::textarea('others_insured_remarks', Input::old('others_insured_remarks'), array('class' => 'form-control', 'placeholder' => 'Remarks', 'id' => 'others_insured_remarks', 'name' => 'others_insured_remarks', 'rows' => '5')) }}
+						</div>
+					</div>
+					{{ $errors->first('others_insured_remarks', '<span class="help-block">:message</span>') }}
+				</div>
+
+			</div>
+
+<!-- i. In the last 5 years, has the business filed for bankruptcy or had any charge off of bad debts?   -->
 
 			<div class="form-group">
 				<div>
-				{{ Form::label('credit_history', 'If in the last 5 years, the Proposed Insured has filed for bankruptcy or had any charge off of bad debts, Check box:', array('class' => 'control-label')) }}
+				{{ Form::label('business_credit_history', 'If in the last 5 years, the Proposed Insured has filed for bankruptcy or had any charge off of bad debts, Check box:', array('class' => 'control-label')) }}
 				</div>
 				<div class="controls">
 					<div class="input-group col-sm-4">
 						<span class="input-group-addon"><i class="fa fa-male"></i></span>
 						<label class="switch">
-						{{ Form::checkbox('credit_history', 'yes', null, array('class' => 'form-control', 'id' => 'credit_history', 'name' => 'credit_history')) }}
+						{{ Form::checkbox('business_credit_history', 'yes', false, array('class' => 'form-control', 'id' => 'business_credit_history', 'name' => 'business_credit_history')) }}
 						    <span class="switch-label" data-on="Yes" data-off="No"></span>
 						    <span class="switch-handle"></span>
 					    </label>
 					</div>
 				</div>
-				{{ $errors->first('credit_history', '<span class="help-block">:message</span>') }}
+				{{ $errors->first('business_credit_history', '<span class="help-block">:message</span>') }}
 			</div>
 
-If Yes, type of bankruptcy and discharge date or charge off date. 
+<!-- If Yes, type of bankruptcy and discharge date or charge off date.  -->
 
-			<div class="extra">
+			<div class="business_credit_history_extra">
 
 				<div class="form-group">
-					{{ Form::label('', 'What is the purpose of this insurance?:', array('class' => 'control-label')) }}
+					{{ Form::label('business_credit_history_remarks', 'If Yes, type of bankruptcy and discharge date or charge off date:', array('class' => 'control-label')) }}
 					<div class="controls">
 						<div class="input-group col-sm-4">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
-							{{ Form::text('', Input::old(''), array('class' => 'form-control', 'placeholder' => 'Dollar Amount', 'id' => '', 'name' => '')) }}
+							{{ Form::text('business_credit_history_remarks', Input::old('business_credit_history_remarks'), array('class' => 'form-control', 'placeholder' => 'Dollar Amount', 'id' => 'business_credit_history_remarks', 'name' => 'business_credit_history_remarks')) }}
 						</div>
 					</div>
-					{{ $errors->first('', '<span class="help-block">:message</span>') }}
+					{{ $errors->first('business_credit_history_remarks', '<span class="help-block">:message</span>') }}
 				</div>
 		
 			</div>
 
-j. Company web site address, if available 
+<!-- j. Company web site address, if available  -->
 
 			<div class="form-group">
-				{{ Form::label('', 'What is the purpose of this insurance?:', array('class' => 'control-label')) }}
+				{{ Form::label('company_website', 'What is the purpose of this insurance?:', array('class' => 'control-label')) }}
 				<div class="controls">
 					<div class="input-group col-sm-4">
 						<span class="input-group-addon"><i class="fa fa-male"></i></span>
-						{{ Form::text('', Input::old(''), array('class' => 'form-control', 'placeholder' => 'Dollar Amount', 'id' => '', 'name' => '')) }}
+						{{ Form::text('company_website', Input::old('company_website'), array('class' => 'form-control', 'placeholder' => 'Dollar Amount', 'id' => 'company_website', 'name' => 'company_website')) }}
 					</div>
 				</div>
-				{{ $errors->first('', '<span class="help-block">:message</span>') }}
+				{{ $errors->first('company_website', '<span class="help-block">:message</span>') }}
 			</div>
 
 		</div>
@@ -253,7 +266,6 @@ j. Company web site address, if available
 <nav>
 	<ul class="pager">
 		<li><a href="{{{ action('PolicyAppController@showLifeAppSecI') }}}">Previous</a></li>
-		<li><a href="{{{ action('PolicyAppController@showLifeAppSecK') }}}">Next</a></li>
 	</ul>
 </nav>
 
@@ -329,34 +341,34 @@ j. Company web site address, if available
 	<script>
 
 		$(document).ready(function() {
-			$('.credit_history_extra').hide();
-			$('.insured_self_supporting_extra').hide();
+			$('.others_insured_extra').hide();
+			$('.business_credit_history_extra').hide();
 
 
-			$( "#credit_history" ).on('click', function(){
+			$( "#others_insured" ).on('click', function(){
 				var value = $(this).prop( 'checked' );
 
 				if (value == true){
 
-					$('.insured_self_supporting_extra').slideDown(900);
+					$('.business_credit_history_extra').slideDown(900);
 
 				} else {
 
-					$('.insured_self_supporting_extra').slideUp(900);
+					$('.business_credit_history_extra').slideUp(900);
 
 				}
 			});
 
-			$( "#credit_history" ).on('click', function(){
+			$( "#business_credit_history" ).on('click', function(){
 				var value = $(this).prop( 'checked' );
 
-				if (value == false){
+				if (value == true){
 
-					$('.credit_history_extra').slideDown(900);
+					$('.business_credit_history_extra').slideDown(900);
 
 				} else {
 
-					$('.credit_history_extra').slideUp(900);
+					$('.business_credit_history_extra').slideUp(900);
 
 				}
 			});

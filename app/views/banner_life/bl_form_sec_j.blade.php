@@ -49,7 +49,7 @@
 					<div class="input-group col-sm-4">
 						<span class="input-group-addon"><i class="fa fa-male"></i></span>
 						<label class="switch">
-						{{ Form::checkbox('credit_history', 'yes', null, array('class' => 'form-control', 'id' => 'credit_history', 'name' => 'credit_history')) }}
+						{{ Form::checkbox('credit_history', 'yes', false, array('class' => 'form-control', 'id' => 'credit_history', 'name' => 'credit_history')) }}
 						    <span class="switch-label" data-on="Yes" data-off="No"></span>
 						    <span class="switch-handle"></span>
 					    </label>
@@ -111,7 +111,7 @@
 					<div class="input-group col-sm-4">
 						<span class="input-group-addon"><i class="fa fa-male"></i></span>
 						<label class="switch">
-						{{ Form::checkbox('insured_self_supporting', 'yes', null, array('class' => 'form-control', 'id' => 'insured_self_supporting', 'name' => 'insured_self_supporting')) }}
+						{{ Form::checkbox('insured_self_supporting', 'yes', false, array('class' => 'form-control', 'id' => 'insured_self_supporting', 'name' => 'insured_self_supporting')) }}
 						    <span class="switch-label" data-on="Yes" data-off="No"></span>
 						    <span class="switch-handle"></span>
 					    </label>
@@ -237,10 +237,10 @@
 			$('.insured_self_supporting_extra').hide();
 
 
-			$( "#credit_history" ).on('click', function(){
+			$( "#insured_self_supporting" ).on('click', function(){
 				var value = $(this).prop( 'checked' );
 
-				if (value == true){
+				if (value == false){
 
 					$('.insured_self_supporting_extra').slideDown(900);
 
@@ -254,7 +254,7 @@
 			$( "#credit_history" ).on('click', function(){
 				var value = $(this).prop( 'checked' );
 
-				if (value == false){
+				if (value == true){
 
 					$('.credit_history_extra').slideDown(900);
 
