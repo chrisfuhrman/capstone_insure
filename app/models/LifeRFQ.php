@@ -20,8 +20,6 @@ class LifeRFQ extends BaseModel {
 		'smoker',
 		'cholesterol',
 		'blood_pressure',
-		'insurance_type',
-		'insurance_id',
 		'drugs'
 	];
 

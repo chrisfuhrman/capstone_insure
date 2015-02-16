@@ -56,47 +56,35 @@
 				{{ $errors->first('maiden_name', '<span class="help-block">:message</span>') }}
 			</div>
 
-			<!-- 2. Sex  -->
+			<!-- 2. Gender  -->
 
 			<div class="form-group">
-				<div>
-				{{ Form::label('gender', 'Gender:', array('class' => 'control-label')) }}
+			<div class="controls">
+				<label class="control-label" for="gender">Gender</label>
+				<div class="input-group col-sm-4">
+				<div class="btn-group btn-toggle" data-toggle="buttons">
+					<label class="btn btn-mini btn-default" for="">
+						{{Form::radio('gender', 'M') }} Male
+					</label>
+					<label class="btn btn-mini btn-info" for="">
+						{{Form::radio('gender', 'F', true) }} Female
+					</label>
 				</div>
-				<div class="controls">
-					<div class="input-group col-sm-4">
-						<span class="input-group-addon"><i class="fa fa-male"></i></span>
-						<label class="switch">
-						{{ Form::checkbox('gender', 'gender', false, array('class' => 'switch-input', 'id' => 'gender')) }}
-						    <span class="switch-label" data-on="M" data-off="F"></span>
-						    <span class="switch-handle"></span>
-					    </label>
-					</div>
 				</div>
-				{{ $errors->first('gender', '<span class="help-block">:message</span>') }}
 			</div>
-
-			<div class="form-group">
-				{{ Form::label('gender', 'Gender:', array('class' => 'control-label')) }}
-				<div class="controls">
-					<div class="input-group col-sm-4">
-						<span class="input-group-addon"><i class="fa fa-male"></i></span>
-						{{ Form::select('gender', array('default'=> NULL, 'm' => 'Male', 'f' => 'Female'), array('class' => 'form-control', 'id' => 'gender')) }}
-					</div>
-				</div>
-				{{ $errors->first('gender', '<span class="help-block">:message</span>') }}
 			</div>
 
 			<!-- 3. Date of Birth  -->
 
 			<div class="form-group">
-				{{ Form::label('date_of_birth', 'Date of Birth:', array('class' => 'control-label')) }}
+				{{ Form::label('dob', 'Date of Birth:', array('class' => 'control-label')) }}
 				<div class="controls">
 					<div class="input-group col-sm-4">
 						<span class="input-group-addon"><i class="fa fa-male"></i></span>
-						{{ Form::text('date_of_birth', Input::old('date_of_birth'), array('class' => 'form-control', 'placeholder' => 'MM/DD/YYYY', 'id' => 'date', 'name' => 'date_of_birth')) }}
+						{{ Form::text('dob', Input::old('dob'), array('class' => 'form-control', 'placeholder' => 'MM/DD/YYYY', 'id' => 'date', 'name' => 'dob')) }}
 					</div>
 				</div>
-				{{ $errors->first('date_of_birth', '<span class="help-block">:message</span>') }}
+				{{ $errors->first('dob', '<span class="help-block">:message</span>') }}
 			</div>
 
 			<!-- 4. Social Security Number -->
@@ -500,38 +488,38 @@
 				<!-- Product Date last used (month/year) -->
 
 				<div class="form-group">
-					{{ Form::label('cigarettes_date_last_used', 'If yes, date of last use (Cigarettes):', array('class' => 'control-label')) }}
+					{{ Form::label('cigs_last_used', 'If yes, date of last use (Cigarettes):', array('class' => 'control-label')) }}
 					<div class="controls">
 						<div class="input-group col-sm-4">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
-							{{ Form::text('cigarettes_date_last_used', Input::old('cigarettes_date_last_used'), array('class' => 'form-control', 'placeholder' => 'MM/YYYY', 'id' => 'shortDate', 'name' => 'cigarettes_date_last_used')) }}
+							{{ Form::text('cigs_last_used', Input::old('cigs_last_used'), array('class' => 'form-control', 'placeholder' => 'MM/YYYY', 'id' => 'shortDate', 'name' => 'cigs_last_used')) }}
 						</div>
 					</div>
-					{{ $errors->first('cigarettes_date_last_used', '<span class="help-block">:message</span>') }}
+					{{ $errors->first('cigs_last_used', '<span class="help-block">:message</span>') }}
 				</div>
 
 				<!-- Amount / Frequency  -->
 
 				<div class="form-group">
-					{{ Form::label('cigarettes_amount', 'Amount (Cigarettes):', array('class' => 'control-label')) }}
+					{{ Form::label('cig_amount', 'Amount (Cigarettes):', array('class' => 'control-label')) }}
 					<div class="controls">
 						<div class="input-group col-sm-4">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
-							{{ Form::text('cigarettes_amount', Input::old('cigarettes_amount'), array('class' => 'form-control', 'placeholder' => 'Amount', 'id' => 'cigarettes_amount', 'name' => 'cigarettes_amount')) }}
+							{{ Form::text('cig_amount', Input::old('cig_amount'), array('class' => 'form-control', 'placeholder' => 'Amount', 'id' => 'cig_amount', 'name' => 'cig_amount')) }}
 						</div>
 					</div>
-					{{ $errors->first('cigarettes_amount', '<span class="help-block">:message</span>') }}
+					{{ $errors->first('cig_amount', '<span class="help-block">:message</span>') }}
 				</div>
 
 				<div class="form-group">
-					{{ Form::label('cigarettes_frequency', 'Frequency (Cigarettes):', array('class' => 'control-label')) }}
+					{{ Form::label('cigs_frequency', 'Frequency (Cigarettes):', array('class' => 'control-label')) }}
 					<div class="controls">
 						<div class="input-group col-sm-4">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
-							{{ Form::text('cigarettes_frequency', Input::old('cigarettes_frequency'), array('class' => 'form-control', 'placeholder' => 'Frequency', 'id' => 'cigarettes_frequency', 'name' => 'cigarettes_frequency')) }}
+							{{ Form::text('cigs_frequency', Input::old('cigs_frequency'), array('class' => 'form-control', 'placeholder' => 'Frequency', 'id' => 'cigs_frequency', 'name' => 'cigs_frequency')) }}
 						</div>
 					</div>
-					{{ $errors->first('cigarettes_frequency', '<span class="help-block">:message</span>') }}
+					{{ $errors->first('cigs_frequency', '<span class="help-block">:message</span>') }}
 				</div>
 
 				<h5>Cigars</h5>
@@ -539,14 +527,14 @@
 				<!-- Product Date last used (month/year) -->
 
 				<div class="form-group">
-					{{ Form::label('cigars_date_last_used', 'If yes, date of last use (Cigars):', array('class' => 'control-label')) }}
+					{{ Form::label('cigars_last_used', 'If yes, date of last use (Cigars):', array('class' => 'control-label')) }}
 					<div class="controls">
 						<div class="input-group col-sm-4">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
-							{{ Form::text('cigars_date_last_used', Input::old('cigars_date_last_used'), array('class' => 'form-control', 'placeholder' => 'MM/YYYY', 'id' => 'shortDate', 'name' => 'cigars_date_last_used')) }}
+							{{ Form::text('cigars_last_used', Input::old('cigars_last_used'), array('class' => 'form-control', 'placeholder' => 'MM/YYYY', 'id' => 'shortDate', 'name' => 'cigars_last_used')) }}
 						</div>
 					</div>
-					{{ $errors->first('cigars_date_last_used', '<span class="help-block">:message</span>') }}
+					{{ $errors->first('cigars_last_used', '<span class="help-block">:message</span>') }}
 				</div>
 
 				<!-- Amount / Frequency  -->
@@ -578,14 +566,14 @@
 				<!-- Product Date last used (month/year) -->
 
 				<div class="form-group">
-					{{ Form::label('other_date_last_used', 'If yes, date of last use (Other):', array('class' => 'control-label')) }}
+					{{ Form::label('other_last_used', 'If yes, date of last use (Other):', array('class' => 'control-label')) }}
 					<div class="controls">
 						<div class="input-group col-sm-4">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
-							{{ Form::text('other_date_last_used', Input::old('other_date_last_used'), array('class' => 'form-control', 'placeholder' => 'MM/YYYY', 'id' => 'shortDate', 'name' => 'other_date_last_used')) }}
+							{{ Form::text('other_last_used', Input::old('other_last_used'), array('class' => 'form-control', 'placeholder' => 'MM/YYYY', 'id' => 'shortDate', 'name' => 'other_last_used')) }}
 						</div>
 					</div>
-					{{ $errors->first('other_date_last_used', '<span class="help-block">:message</span>') }}
+					{{ $errors->first('other_last_used', '<span class="help-block">:message</span>') }}
 				</div>
 
 				<!-- Amount / Frequency  -->
@@ -612,8 +600,6 @@
 					{{ $errors->first('other_frequency', '<span class="help-block">:message</span>') }}
 				</div>
 			</div>
-
-			{{ form::close() }}
 
 
 		</div>
@@ -752,6 +738,26 @@
 
 				});
 
+			$('.btn-toggle').click(function() {
+
+			    $(this).find('.btn').toggleClass('active');  
+			    
+			    if ($(this).find('.btn-primary').size()>0) {
+			    	$(this).find('.btn').toggleClass('btn-primary');
+			    }
+			    if ($(this).find('.btn-danger').size()>0) {
+			    	$(this).find('.btn').toggleClass('btn-danger');
+			    }
+			    if ($(this).find('.btn-success').size()>0) {
+			    	$(this).find('.btn').toggleClass('btn-success');
+			    }
+			    if ($(this).find('.btn-info').size()>0) {
+			    	$(this).find('.btn').toggleClass('btn-info');
+			    }
+			    
+			    $(this).find('.btn').toggleClass('btn-default');
+			       
+			});
 
 		});
 

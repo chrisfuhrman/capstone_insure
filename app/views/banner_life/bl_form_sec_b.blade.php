@@ -89,14 +89,14 @@
 				<!-- Date of Birth  -->
 
 				<div class="form-group">
-					{{ Form::label('primary_date_of_birth', 'Date of Birth:', array('class' => 'control-label')) }}
+					{{ Form::label('primary_dob', 'Date of Birth:', array('class' => 'control-label')) }}
 					<div class="controls">
 						<div class="input-group col-sm-4">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
-							{{ Form::text('primary_date_of_birth', Input::old('primary_date_of_birth'), array('class' => 'form-control', 'placeholder' => 'MM/DD/YYYY', 'id' => 'date', 'name' => 'primary_date_of_birth')) }}
+							{{ Form::text('primary_dob', Input::old('primary_dob'), array('class' => 'form-control', 'placeholder' => 'MM/DD/YYYY', 'id' => 'date', 'name' => 'primary_dob')) }}
 						</div>
 					</div>
-					{{ $errors->first('primary_date_of_birth', '<span class="help-block">:message</span>') }}
+					{{ $errors->first('primary_dob', '<span class="help-block">:message</span>') }}
 				</div>
 
 				<!-- Name -->
@@ -156,14 +156,14 @@
 				<!-- Date of Birth  -->
 
 				<div class="form-group">
-					{{ Form::label('primary_date_of_birth2', 'Date of Birth:', array('class' => 'control-label')) }}
+					{{ Form::label('primary_dob2', 'Date of Birth:', array('class' => 'control-label')) }}
 					<div class="controls">
 						<div class="input-group col-sm-4">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
-							{{ Form::text('primary_date_of_birth2', Input::old('primary_date_of_birth2'), array('class' => 'form-control', 'placeholder' => 'MM/DD/YYYY', 'id' => 'date2', 'name' => 'primary_date_of_birth2')) }}
+							{{ Form::text('primary_dob2', Input::old('primary_dob2'), array('class' => 'form-control', 'placeholder' => 'MM/DD/YYYY', 'id' => 'date2', 'name' => 'primary_dob2')) }}
 						</div>
 					</div>
-					{{ $errors->first('primary_date_of_birth2', '<span class="help-block">:message</span>') }}
+					{{ $errors->first('primary_dob2', '<span class="help-block">:message</span>') }}
 				</div>
 
 
