@@ -23,7 +23,7 @@ body {
 
 .navbar {
 
-	margin-top: 50px;
+	margin-top: 20px;
 	margin-bottom: 0px;
 	padding: 15px;
 
@@ -128,9 +128,9 @@ or background color for dropdown when active*/
 	margin-right: 10px;
 }
 
-.divider {
+/*.divider {
 	margin: 0px;
-}
+}*/
 
 
 
@@ -166,7 +166,8 @@ or background color for dropdown when active*/
   ========================================
 */
 #next-container {
-	background-color: #04689b;
+	background-color: #004474;
+	padding: 50px;
 }
 
 /*
@@ -176,11 +177,14 @@ or background color for dropdown when active*/
 */
 
 #footer-main {
-	background-color: rgba(46, 127, 209, 1);
+	background-color: #EFEFEF;
 	margin-bottom: 1px;
+	color: black;
+	max-width: 100%;
+	margin-top: 10px;
 }
 .footer-header {
-	color: #fff;
+	color: black;
 }
 /*
   ========================================
@@ -211,3 +215,87 @@ h6 {
 }
 h1 
 h3 {font-size: 18px;}
+
+/* 
+	===============================
+	Thumbnails
+	===============================
+*/
+
+.container-darker {
+	background-color: #233163;
+	max-width: 100%;
+	padding-top: 35px;
+	padding-bottom: 45px;
+	margin: 0px;
+}
+
+.thumbnail-darker {
+	background-color: #233163;
+	border-color: #27366E;
+}
+
+.white {
+	color: white;
+}
+
+
+.align-button {
+	margin-left: 55px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    position: relative;
+}
+
+.left {
+    position: absolute;
+    left: 0px;
+    margin-left: 40px;
+}
+
+.margin {
+	margin-top: 10px;
+}
+
+.blue {
+	color: #233163;
+}
+
+.box:hover {
+	background: #004474; 
+}
+
+.quote-section {
+	background-color: #004474;
+	color: white;
+	max-width: 100%;
+	height: 670px;
+}
+
+.container-quote {
+	padding-bottom: 75px;
+
+}
+
+.gender-icon {
+	width: 15px;
+	float: left;
+	overflow: hidden;
+	display: block;
+	padding-right: 25px;
+	padding-bottom: 14px;
+}
+
+.btn-default, .btn-info {
+	float: left;
+	overflow: hidden;
+	display: block;
+}
+
+.form-no-padding {
+	padding-left: 0px;
+}

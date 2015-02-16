@@ -9,14 +9,13 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="/">
-					<img src="/assets/img/menetonea.png">
+					<img class ="left" src="/assets/img/menetonea.png">
 				</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-left">
-					<li><a href="">Products</a></li>
-					<li><a href="/quote">Quotes</a></li>
-					<li><a href="">Calculators</a></li>
+					<li><a href="">Why Choose Us?</a></li>
+					<li><a href="">Our Commitment</a></li>
 
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -45,7 +44,7 @@
 								</a>
 
 								<a href="auth/google">
-									<img class="hide-this" id="google-login-hover" src="assets/img/google/Red-signin_Long_press_32dp.png"/>
+									<img class="hide-this" id="google-login-hover" src="/assets/img/google/Red-signin_Long_press_32dp.png"/>
 								</a>
 
 							</div>

@@ -4,7 +4,7 @@
 <div class="page-header">
     <div class="row">
         <!-- Page header, center on small screens -->
-        <h1 class="col-xs-12 col-sm-4 text-center text-left-sm"><i class="fa fa-question-circle page-header-icon"></i>&nbsp;&nbsp;Frequently Asked Questions</h1>
+        <h1 class="col-xs-12 col-sm-4 text-center text-left-sm"><i class="fa fa-question-circle page-header-icon"></i>&nbsp;&nbsp;Learning Center</h1>
     </div>
 </div> <!-- / .page-header -->
 
@@ -48,13 +48,13 @@
             <div class="panel">
                 <div class="panel-heading">
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-example" href="#collapseOne">
-                        <strong>Q:</strong> What is Venture Lab?
+                        <strong>Q:</strong> What is InsureJoy?
                     </a>
                 </div> <!-- / .panel-heading -->
                 <div id="collapseOne" class="panel-collapse in">
                     <div class="panel-body">
                         <strong>A:</strong> 
-                        Venture Lab is a hands-on innovation and entrepreneurship program that teaches young people to be next generation innovators and entrepreneurs through inspiration, experiential learning and mentorship.
+                        InsureJoy is an independant insurance agency with the intent of helping you find the best possible insurance solution for you, your family, and your budget.
                     </div> <!-- / .panel-body -->
                 </div> <!-- / .collapse -->
             </div> <!-- / .panel -->
@@ -62,12 +62,12 @@
             <div class="panel">
                 <div class="panel-heading">
                     <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-example" href="#collapseTwo">
-                        <strong>Q:</strong> How does the Venture Lab Entrepreneur Program work?
+                        <strong>Q:</strong> How does InsureJoy work?
                     </a>
                 </div> <!-- / .panel-heading -->
                 <div id="collapseTwo" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <strong>A:</strong> We develop experiential learning programs that introduce, inspire and encourage young people to enter and succeed in technical, creative and entrepreneurial fields. We’ve taught entrepreneurship and technology for over seven years and are always innovating our YOUTH ENTREPRENEURSHIP PROGRAMS to teach the most cutting edge and relevant curriculum.
+                        <strong>A:</strong> We take some basic information which can by found by beginning the "Get Your Hassle Free Quote" form on the front page. Once you answer a few simple questions, you will be shown any and all insurance options available to you, beginning with the cheapest option first.
                     </div> <!-- / .panel-body -->
                 </div> <!-- / .collapse -->
             </div> <!-- / .panel -->

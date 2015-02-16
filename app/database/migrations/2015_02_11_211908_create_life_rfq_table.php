@@ -15,19 +15,18 @@ class CreateLifeRFQTable extends Migration {
 		Schema::create('life_rfq', function(Blueprint $table)
 		{
 			$table->increments('id');
-            $table->string('gender');
-        // should we label this DOB different than the DOB in the User Table???
             $table->string('dob');
+            $table->string('gender');
             $table->string('coverage_amount');
             $table->string('coverage_duration');
-            $table->string('smoking_status');
-            $table->string('health_class');
+            $table->string('smoker');
+            $table->string('cholesterol');
+            $table->string('blood_pressure');
+            $table->string('drugs');
 
 			$table->timestamps();
 
-            // $table->integer('life_rfq_id')->unsigned()->nullable();
-            // $table->foreign('life_rfq_id')->references('id')->on('rfq');
-		});
+      	});
 	}
 
 

@@ -17,9 +17,12 @@ class LifeRFQ extends BaseModel {
    		'dob',
         'coverage_amount',
 		'coverage_duration',
-		'smoking_status',
-		'health_class',
-		'life_rfq_id'
+		'smoker',
+		'cholesterol',
+		'blood_pressure',
+		'insurance_type',
+		'insurance_id',
+		'drugs'
 	];
 
 	public function RFQ() 

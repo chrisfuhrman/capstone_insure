@@ -1,13 +1,17 @@
 <?php
 
-class RFQResultsController extends BaseController
+class LifeRFQController extends BaseController 
 {
+	public function showLifeRFQ() 
+	{
+		
+		return View::make('RFQs.life');
+	}
 
-	// public function processLifeResults() {
-	// 	$input = Input::all();
-	// 	dd($input);
-
-	// 	$rfq = new RFQResults();
+	public function showLifeHealthQuestionnaire()
+	{
+		
+		return View::make('RFQs.life_health_questionnaire');
 
 	}
 
@@ -17,32 +21,21 @@ class RFQResultsController extends BaseController
 	}
 
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
+
 	public function index()
 	{
 
-		$test = LifeResult::all();
+		$test = LifeRFQ::all();
 
-		// show insurance RFQ results
-		return View::make('RFQResults.index');
+		// show life insurance RFQ results
 
 		// send data from RFQ to CompuLife 
 		// and retrieve data from compulife and spit out to panels
 	}
 
-
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
 	public function create()
 	{
-		// return View::make('posts.create');
+		return View::make('LifeRFQ.create');
 	}
 
 
@@ -53,10 +46,11 @@ class RFQResultsController extends BaseController
 	 */
 	public function store()
 	{
-		$quote = new LifeResult();
-		// $quote->user_id = Auth::id();
+		$LifeRFQ = new LifeRFQ();
+			// dd($LifeRFQ);
+		// $LifeRFQ->user_id = Auth::id();
 
-		return $this->savePost($post);
+		return $this->saveLifeRFQ($LifeRFQ);
 	}
 
 
@@ -105,7 +99,7 @@ class RFQResultsController extends BaseController
 	public function update($id)
 	{
 		// $post = Post::findOrFail($id);
-		// return $this->savePost($post);
+		// return $this->saveLifeRFQ($LifeRFQ);
 	}
 
 
@@ -131,28 +125,33 @@ class RFQResultsController extends BaseController
 		// return Redirect::action('PostsController@index');
 	}
 
-	protected function savePost($quote)
+	protected function saveLifeRFQ($LifeRFQ)
 	{
 		// $validator = Validator::make(Input::all(), Post::$rules);
 		
 		// if ($validator->fails()) {
-			// Session::flash('errorMessage', 'Failed to save your post!');
+		// 	Session::flash('errorMessage', 'Failed to save your post!');
 
-			// return Redirect::back()->withInput()->withErrors($validator);
+		// 	return Redirect::back()->withInput()->withErrors($validator);
 
 		// } else {
-			// $quote->zip = Input::get('zip');
-			// $quote->insurance_id = Input::get('insurance_id');
-			// $quote->insurance_type = Input::get('insurance_type');
-			// // $quote->user_id = Input::get('id');
+			// $LifeRFQ->zip = Input::get('zip');
+			// $LifeRFQ->insurance_id = Input::get('insurance_id');
+			// $LifeRFQ->insurance_type = Input::get('insurance_type');
+			$LifeRFQ->dob = Input::get('dob');
+			$LifeRFQ->gender = Input::get('gender');
+			$LifeRFQ->coverage_amount = Input::get('coverage_amount');
+			$LifeRFQ->coverage_duration = Input::get('coverage_duration');
+			$LifeRFQ->smoker = Input::get('smoker');
+			$LifeRFQ->cholesterol = Input::get('cholesterol');
+			$LifeRFQ->blood_pressure = Input::get('blood_pressure');
+			$LifeRFQ->drugs = Input::get('drugs');
 
-			
-			
-			// $quote->save();
+						
+			$LifeRFQ->save();
 			// Session::flash('successMessage', 'Sucessfully saved your post!');
 
-			// return Redirect::action('PostsController@index');
-		// }
+			return Redirect::action('RFQResultsController@index');
 
 	}
 

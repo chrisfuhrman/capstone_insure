@@ -19,6 +19,7 @@ class RFQTableSeeder extends Seeder {
 			}
 			RFQ::create([
 
+	            'first_name' => $faker->name,
 	            'zip' => $faker->postcode,
 	            'user_id' => $faker->numberBetween($min = 1, $max = 20),
 
