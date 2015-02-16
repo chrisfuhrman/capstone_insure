@@ -2,19 +2,26 @@
 
 @section('content')
 
+<!-- SECTION B BENEFICIARY -->
+
 <h1>BENEFICIARY</h1>
 
 <div class="row">
 	<div class="col-lg-12">
 		<div class="box">
- 
 
 			<div class="form-group">
-				{{ HTML::decode(Form::label('beneficiary_trust', '<h3>If Beneficiary is a trust, check box:</h3>', array('class' => 'control-label'))) }}
+				<div>
+					{{ HTML::decode(Form::label('beneficiary_trust', '<h3>If Beneficiary is a trust, check box:</h3>', array('class' => 'control-label'))) }}
+				</div>
 				<div class="controls">
 					<div class="input-group col-sm-4">
 						<span class="input-group-addon"><i class="fa fa-male"></i></span>
-						{{ Form::checkbox('beneficiary_trust', 'yes', null, array('class' => 'form-control', 'id' => 'beneficiary_trust', 'name' => 'beneficiary_trust')) }}
+						<label class="switch">
+							{{ Form::checkbox('beneficiary_trust', 'yes', null, array('class' => 'form-control', 'id' => 'beneficiary_trust', 'name' => 'beneficiary_trust')) }}
+						    <span class="switch-label" data-on="Yes" data-off="No"></span>
+						    <span class="switch-handle"></span>
+					    </label>
 					</div>
 				</div>
 				{{ $errors->first('beneficiary_trust', '<span class="help-block">:message</span>') }}
@@ -166,6 +173,19 @@
 					{{ $errors->first('primary_date_of_birth2', '<span class="help-block">:message</span>') }}
 				</div>
 
+				<!-- Optional Remarks -->
+
+				<div class="form-group">
+					{{ Form::label('primary_remarks', 'Additional Remarks:', array('class' => 'control-label')) }}
+					<div class="controls">
+						<div class="input-group col-sm-4">
+							<span class="input-group-addon"><i class="fa fa-male"></i></span>
+							{{ Form::textarea('primary_remarks', Input::old('primary_remarks'), array('class' => 'form-control', 'placeholder' => 'Remarks', 'id' => 'primary_remarks', 'name' => 'primary_remarks', 'rows' => '5')) }}
+						</div>
+					</div>
+					{{ $errors->first('primary_remarks', '<span class="help-block">:message</span>') }}
+				</div>
+
 
 
 
@@ -307,6 +327,20 @@
 					</div>
 					{{ $errors->first('contingent_date_of_birth2', '<span class="help-block">:message</span>') }}
 				</div>
+
+				<!-- Optional Remarks -->
+
+				<div class="form-group">
+					{{ Form::label('contingent_remarks', 'Additional Remarks:', array('class' => 'control-label')) }}
+					<div class="controls">
+						<div class="input-group col-sm-4">
+							<span class="input-group-addon"><i class="fa fa-male"></i></span>
+							{{ Form::textarea('contingent_remarks', Input::old('contingent_remarks'), array('class' => 'form-control', 'placeholder' => 'Remarks', 'id' => 'contingent_remarks', 'name' => 'contingent_remarks', 'rows' => '5')) }}
+						</div>
+					</div>
+					{{ $errors->first('contingent_remarks', '<span class="help-block">:message</span>') }}
+				</div>
+
 			</div>		
 		</div>
 	</div>	
@@ -314,10 +348,10 @@
 
 
 <nav>
-  <ul class="pager">
-    <li><a href="{{{ action('PolicyAppController@showLifeAppSecA') }}}">Previous</a></li>  	
-    <li><a href="{{{ action('PolicyAppController@showLifeAppSecC') }}}">Next</a></li>
-  </ul>
+	<ul class="pager">
+		<li><a href="{{{ action('PolicyAppController@showLifeAppSecA') }}}">Previous</a></li>  	
+		<li><a href="{{{ action('PolicyAppController@showLifeAppSecC') }}}">Next</a></li>
+	</ul>
 </nav>
 
 @stop

@@ -1,5 +1,4 @@
-<!-- SECTION D TRUST INFORMATION (If trust is Beneficiary and/or Owner).
- -->
+<!-- SECTION D TRUST INFORMATION (If trust is Beneficiary and/or Owner) -->
 
 <!-- Exact Name of Trust   -->
 <!-- Name   -->
