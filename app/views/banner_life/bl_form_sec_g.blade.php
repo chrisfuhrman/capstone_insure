@@ -273,15 +273,6 @@ Yes No 2 -->
 
 <!-- Replacing?
 Yes No 2 -->
-
-			<div class="form-group">
-				<div class="controls">
-					<div class="input-group col-sm-4">
-						<span class="input-group-addon"><i class="fa fa-male"></i></span>
-					</div>
-				</div>
-			</div>
-
 			<div class="form-group">
 				<div>
 					{{ Form::label('other_insurance_replacing', 'If you are Replacing this Policy, Check box:', array('class' => 'control-label')) }}
