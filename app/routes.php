@@ -72,7 +72,7 @@ Route::get('calculator', ['as' => 'calculator', 'uses' => 'ExtrasController@show
 
 Route::get('contact', ['as' => 'contact', 'uses' => 'ExtrasController@showContact']);
 
+Route::get('profile', ['as' => 'clientdash', 'uses' => 'UserController@showClientDashboard']);
 
-
-
+Route::get('create_account', ['as' => 'createaccount', 'uses' => 'UserController@showCreateAccount']);
 
