@@ -182,19 +182,19 @@ h. Are other partners/owners/executives being insured? (If Yes, use Remarks sect
 
 			<div class="form-group">
 				<div>
-				{{ Form::label('credit_history', 'If in the last 5 years, the Proposed Insured has filed for bankruptcy or had any charge off of bad debts, Check box:', array('class' => 'control-label')) }}
+				{{ Form::label('others_insured', 'If there are other partners/owners/executives being insured, Check box:', array('class' => 'control-label')) }}
 				</div>
 				<div class="controls">
 					<div class="input-group col-sm-4">
 						<span class="input-group-addon"><i class="fa fa-male"></i></span>
 						<label class="switch">
-						{{ Form::checkbox('credit_history', 'yes', null, array('class' => 'form-control', 'id' => 'credit_history', 'name' => 'credit_history')) }}
+						{{ Form::checkbox('others_insured', 'yes', null, array('class' => 'form-control', 'id' => 'others_insured', 'name' => 'others_insured')) }}
 						    <span class="switch-label" data-on="Yes" data-off="No"></span>
 						    <span class="switch-handle"></span>
 					    </label>
 					</div>
 				</div>
-				{{ $errors->first('credit_history', '<span class="help-block">:message</span>') }}
+				{{ $errors->first('others_insured', '<span class="help-block">:message</span>') }}
 			</div>
 
 i. In the last 5 years, has the business filed for bankruptcy or had any charge off of bad debts?  
