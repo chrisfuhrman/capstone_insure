@@ -39,10 +39,6 @@ Route::get('quote', ['as' => 'lifeQuote', 'uses' => 'QuoteController@showLifeQuo
 Route::get('life-quote', ['as' => 'lifeRFQ', 'uses' => 'RFQController@showLifeRFQ']);
 Route::post('life-quote', ['as' => 'lifeRFQ', 'uses' => 'RFQController@showLifeRFQ']);
 
-// Route::get('life-quote-health-questionnaire', ['as' => 'lifeRFQquestionnaire', 'uses' => 'RFQController@showLifeHealthQuestionnaire']);
-// Route::post('life-quote-health-questionnaire', ['as' => 'lifeRFQquestionnaire', 'uses' => 'RFQController@showLifeHealthQuestionnaire']);
-
-
 Route::resource('LifeRFQ', 'LifeRFQController');
 Route::resource('life-quote-results', 'RFQResultsController');
 
@@ -50,9 +46,9 @@ Route::resource('life-quote-results', 'RFQResultsController');
 
 
 // Authentication Routes
-Route::get('login', 'SessionsController@create');
-Route::get('logout', 'SessionsController@destroy');
-Route::resource('sessions', 'SessionsController');
+Route::get('login', ['as' => 'login', 'uses' => 'AuthController@showLogin']);
+Route::post('login', 'AuthController@doLogin');
+Route::get('logout', ['as' => 'logout', 'uses' => 'AuthController@doLogout']);
 // OAuth Routes
 Route::get('auth/google', 'AuthController@loginWithGoogle');
 Route::get('auth/linkedin', 'AuthController@loginWithLinkedin');
@@ -72,17 +68,14 @@ Route::get('calculator', ['as' => 'calculator', 'uses' => 'ExtrasController@show
 
 Route::get('contact', ['as' => 'contact', 'uses' => 'ExtrasController@showContact']);
 
-Route::get('profile', ['as' => 'clientdash', 'uses' => 'UserController@showClientDashboard']);
+Route::group(
+	['before' => 'auth'], function()
+{
+	Route::get('profile', ['as' => 'clientdash', 'uses' => 'UserController@showClientDashboard'])->before('auth');
+});
 
 
-// User Dashboard
-Route::get('dashboard', function() {
-
-	return "Welcome " . Auth::user()->first_name;
-
-})->before('auth');
 
 
 
 Route::get('create_account', ['as' => 'createaccount', 'uses' => 'UserController@showCreateAccount']);
-

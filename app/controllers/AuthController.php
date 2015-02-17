@@ -1,8 +1,37 @@
 <?php
 
-class ThirdPartyAuthController extends BaseController
+class AuthController extends BaseController
 {
 
+	public function showLogin() 
+	{
+		return View::make('login');
+
+	}
+	public function doLogin() 
+	{
+
+		$username    = Input::get('username');
+		$password = Input::get('password');
+
+		if (Auth::attempt(array('username' => $username, 'password' => $password))) {
+			Session::flash('successMessage', "You've logged in! Welcome!");
+
+			return Redirect::intended('/profile');
+		} else {
+			Session::flash('errorMessage', 'Your username or password was
+			 entered incorrectly.  Please try again.');
+			return Redirect::action('AuthController@showLogin')->withInput();	
+		}
+	}
+
+	public function doLogout() 
+	{
+		Auth::logout();
+		Session::flash('successMessage', 'You are logged out.');
+		return Redirect::action('HomeController@showHome');
+	}
+	
 	// Google OAUTH
 	public function loginWithGoogle() {
 
@@ -76,5 +105,6 @@ class ThirdPartyAuthController extends BaseController
 			}
 
 	}
+	
 
 }

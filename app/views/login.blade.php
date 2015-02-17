@@ -2,22 +2,32 @@
 
 @section('content')
 
-<h1>Please Log In </h1>
+<div class="container">
 
-{{ Form::open(['action' => 'AuthController@doLogin']) }}
-	<div class="form-group">
-		{{Form::label('email', 'email Address') }}
-		{{Form::email('email', Input::old('email'), ['class' => 'form-control']) }}
-	</div>	
 
-	<div class="form-group">
-		{{Form::label('password', 'password') }}
-		{{Form::password('password', ['class' => 'form-control']) }}
+	<h1>Login</h1>
+	<div class="row col-md-6">
+
+	{{ Form::open(['action' => 'AuthController@doLogin']) }}
+		<div class="form-group">
+			{{Form::text('username', Input::old('username'), ['class' => 'form-control', 'placeholder' => 'Username']) }}
+		</div>	
+
+		<div class="form-group">
+			{{Form::password('password', ['class' => 'form-control', 'placeholder' => 'Password']) }}
+		</div>
+		<div class="form-group">
+			{{Form::submit('Login', ['class' => 'btn btn-primary'])}}
+		</div>
+	{{ Form::close() }}
+
 	</div>
-	<div class="form-group">
-		{{Form::submit('Log In', ['class' => 'btn btn-primary'])}}
-	</div>
-{{ Form::close() }}
+</div>
+
+      
+          
+
+
 
 @stop
 
