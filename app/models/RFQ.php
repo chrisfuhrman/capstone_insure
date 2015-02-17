@@ -21,5 +21,9 @@ class RFQ extends BaseModel {
 		return $this->morphTo();
 	}
 
+	public function user() 
+	{
+		return $this->morphMany('User', 'RFQs');
+	}
 
 }

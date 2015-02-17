@@ -15,17 +15,13 @@ class UserTableSeeder extends Seeder
 	public function run()
 	{
 
-	// $faker = new Faker();
-	// $faker->addProvider(new Faker\Provider\en_NZ\Phone($faker));
-
-
-	$faker = Faker::create();
+		$faker = Faker::create();
 
 		foreach (range(1, 20) as $index)
 		{
 			User::create([
 	            'username' => $faker->unique->username,
-	            'password' => Hash::make($faker->word),
+	            'password' => Hash::make('secret'),
 	            'email' => $faker->email,
 	            'first_name' => $faker->firstName,
 	            'middle_name' => $faker->firstName,
