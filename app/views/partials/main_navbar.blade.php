@@ -24,7 +24,7 @@
 					@if (Auth::check())
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="account" aria-expanded="false"><i class="glyphicon glyphicon-user"></i> {{{ Auth::user()->username }}} <span class="caret"></span></a>
 						<ul class="dropdown-menu" aria-labelledby="account">
-							<li><a href="/settings">My Account</a></li>
+							<li><a href="/profile">My Account</a></li>
 							<li class="divider"></li>
 							<li><a id="login-in-a" class="dropdown-toggle" href="{{{ url('logout') }}}"><span id="sign-out"><i class="glyphicon glyphicon-log-out"></i></span>Logout</a></li>
 						</ul>
@@ -34,9 +34,6 @@
 						<a href="{{{ url('login') }}}">
 							<i class="glyphicon glyphicon-log-in"></i>Login
 						</a>
-
-				
-						
 					</li>
 					@endif
 				</ul>
