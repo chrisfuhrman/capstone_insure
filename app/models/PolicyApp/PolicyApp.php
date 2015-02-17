@@ -1,6 +1,6 @@
 <?php
 
-class PolicyApp extends \Eloquent {
+class PolicyApp extends BaseModel {
 
 	// Add your validation rules here
 	public static $rules = [

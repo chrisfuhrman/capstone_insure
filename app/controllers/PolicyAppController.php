@@ -2,6 +2,11 @@
 
 class PolicyAppController extends BaseController 
 {
+	public function showLifeAppBL()
+	{	
+		return View::make('PolicyApps.BannerLife.banner-life-app');
+	}	
+
 	public function showLifeAppSecA() {
 
 		// display correct form based on input

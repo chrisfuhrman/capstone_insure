@@ -23,7 +23,7 @@ body {
 
 .navbar {
 
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 	margin-bottom: 0px;
 	padding: 15px;
 
@@ -139,36 +139,8 @@ or background color for dropdown when active*/
   Hero Container Home Page
   ========================================
 */
-#hero-container {
-	background-image: url('/assets/img/family04.jpg');
-	padding-top: 30px;
-	padding-bottom: 20px;
-	height: 400px;
-}
-#hero-headline {
-	font-size: 50px;
-	color: #fff;
-
-	padding-top: 50px;
-	width: 750px;
-
-}
-#hero-subheadline {
-	font-size: 18px;
-	color: #fff;
-}
 
 
-
-/*
-  ========================================
-  Post Display
-  ========================================
-*/
-#next-container {
-	background-color: #004474;
-	padding: 50px;
-}
 
 /*
   ========================================
@@ -314,23 +286,27 @@ h3 {font-size: 18px;}
 .scroll-nav__wrapper {
 	position: fixed;
 	/*background-color: blue;*/
-	color: blue;
+	color: black;
 	padding: 15px 10px;
-	margin-top: 50px;
+	margin-top: 30px;
 	margin-left: 50px;
 	font-size: 25px;
 }
 .scroll-nav__link {
-	color: green;
+	color: black;
 }
 .scroll-nav__link > a {
-	color: blue;
+	/*color: black;*/
 
 }
 
 
-
-
+#right-section {
+}
+#inner-section {
+	background-color: #6190B2;
+	/*border-radius: 10px;*/
+}
 
 
 
