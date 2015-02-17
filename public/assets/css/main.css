@@ -223,7 +223,7 @@ h3 {font-size: 18px;}
 */
 
 .container-darker {
-	background-color: #233163;
+	background-color: rgba(62, 169, 245, 1);
 	max-width: 100%;
 	padding-top: 35px;
 	padding-bottom: 45px;
@@ -231,7 +231,7 @@ h3 {font-size: 18px;}
 }
 
 .thumbnail-darker {
-	background-color: #233163;
+	background-color: rgba(62, 169, 245, 1);
 	border-color: #27366E;
 }
 
@@ -265,8 +265,10 @@ h3 {font-size: 18px;}
 	color: #233163;
 }
 
-.box:hover {
-	/*background: #004474; */
+
+.thumbnail-box:hover {
+	background: #004474; 
+
 }
 
 .quote-section {
@@ -299,3 +301,56 @@ h3 {font-size: 18px;}
 .form-no-padding {
 	padding-left: 0px;
 }
+
+
+
+/* 
+	===============================
+	Side Navbar
+	===============================
+*/
+
+
+.scroll-nav__wrapper {
+	position: fixed;
+	/*background-color: blue;*/
+	color: blue;
+	padding: 15px 10px;
+	margin-top: 50px;
+	margin-left: 50px;
+	font-size: 15px;
+}
+.scroll-nav__link {
+	color: green;
+}
+.scroll-nav__link > a {
+	color: blue;
+
+}
+
+.form-cell {
+	background-color: 128, 128, 128, 0.5;
+}
+
+.lastN {
+	padding-left: 50%;
+}
+
+.control-label {
+	width: 325px;
+}
+
+.quote-header {
+	width: 1200px;
+	padding-bottom: 30px;
+}
+
+#tier2-btn {
+	padding-left: 40px;
+	padding-top: 15px;
+}
+
+.input-group-2 {
+	padding-bottom: 15px;
+}
+

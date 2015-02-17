@@ -3,6 +3,18 @@
 @include('partials.navbar')
 @include('partials.main_navbar')
 
+@if (Session::has('successMessage'))
+    <div class="alert alert-success">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        {{ Session::get('successMessage') }}    
+    </div>
+@elseif (Session::has('errorMessage'))
+    <div class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        {{ Session::get('errorMessage') }}
+    </div>
+@endif
+
 <!--content that changes -->
 @yield('content')
 

@@ -4,21 +4,21 @@ class ExtrasController extends BaseController {
 
 	public function showProducts(){
 		
-		return View::make('products');
+		return View::make('extras.products');
 	}
 
 	public function showLearning(){
 
-		return View::make('learningCenter');
+		return View::make('extras.learning');
 	}
 
 	public function showCalculator(){
 		
-		return View::make('calculator');
+		return View::make('extras.calculator');
 	}
 
 	public function showContact(){
 		
-		return View::make('contact');
+		return View::make('extras.contact');
 	}
 }

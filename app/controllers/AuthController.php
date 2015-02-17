@@ -11,16 +11,17 @@ class AuthController extends BaseController
 	public function doLogin() 
 	{
 
-		$email    = Input::get('email');
+		$username    = Input::get('username');
 		$password = Input::get('password');
 
-		if (Auth::attempt(array('email' => $email, 'password' => $password))) {
+		if (Auth::attempt(array('username' => $username, 'password' => $password))) {
 			Session::flash('successMessage', "You've logged in! Welcome!");
 
-			return Redirect::intended('/');
+			return Redirect::intended('/profile');
 		} else {
-			Session::flash('errorMessage', 'Failed to log in');
-			return Redirect::action('HomeController@showLogin')->withInput();	
+			Session::flash('errorMessage', 'Your username or password was
+			 entered incorrectly.  Please try again.');
+			return Redirect::action('AuthController@showLogin')->withInput();	
 		}
 	}
 
@@ -30,7 +31,7 @@ class AuthController extends BaseController
 		Session::flash('successMessage', 'You are logged out.');
 		return Redirect::action('HomeController@showHome');
 	}
-
+	
 	// Google OAUTH
 	public function loginWithGoogle() {
 
@@ -104,5 +105,6 @@ class AuthController extends BaseController
 			}
 
 	}
+	
 
 }
