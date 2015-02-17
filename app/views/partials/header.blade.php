@@ -16,6 +16,7 @@
 
 	<!-- custom css -->
 	<link rel="stylesheet" type="text/css" href="/assets/css/main.css"> 
+	<link rel="stylesheet" href="/assets/css/style.css">
 	<!-- FONTS -->
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>

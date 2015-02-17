@@ -33,6 +33,14 @@ Route::get('app9',  ['as' => 'app9',  'uses' => 'PolicyAppController@showLifeApp
 
 Route::get('app10', ['as' => 'app10', 'uses' => 'PolicyAppController@showLifeAppSecK']);
 
+Route::get('fileUpload', ['as' => 'fileUpload', 'uses' => 'PolicyAppController@showFileUpload']);
+
+Route::post('fileUpload', ['as' => 'fileUpload', 'uses' => 'PolicyAppController@saveFileUpload']);
+
+// Route::post('fileUpload', 'SomeController@someAction');
+
+Route::get('medHistory', ['as' => 'medHistory', 'uses' => 'PolicyAppController@showMedHistory']);
+
 Route::get('quote', ['as' => 'lifeQuote', 'uses' => 'QuoteController@showLifeQuote']);
 
 // Routes for Life RFQ
