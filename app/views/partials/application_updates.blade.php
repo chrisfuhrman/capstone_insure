@@ -1,0 +1,1 @@
+application_updates.blade.php
