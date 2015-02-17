@@ -9,7 +9,6 @@
 	<h1>PROPOSED INSURED</h1>
 
 	<h3>Primary Proposed Insured</h3>
-	id="user-info"
 	<div class="row">
 		<div class="col-lg-12">
 			<div class="box">
