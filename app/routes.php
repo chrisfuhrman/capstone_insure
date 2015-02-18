@@ -13,28 +13,6 @@
 
 Route::get('', ['as' => 'home', 'uses' => 'HomeController@showHome']);
 
-Route::get('life-policy-app-bl',   ['as' => 'life-app-bl',   'uses' => 'PolicyAppController@showLifeAppBL']);
-Route::post('life-policy-app-bl',   ['as' => 'life-app-bl',   'uses' => 'PolicyAppController@showLifeAppBL']);
-
-Route::get('app',   ['as' => 'app',   'uses' => 'PolicyAppController@showLifeAppSecA']);
-
-Route::get('app2',  ['as' => 'app2',  'uses' => 'PolicyAppController@showLifeAppSecB']);
-
-Route::get('app3',  ['as' => 'app3',  'uses' => 'PolicyAppController@showLifeAppSecC']);
-
-Route::get('app4',  ['as' => 'app4',  'uses' => 'PolicyAppController@showLifeAppSecE']);
-
-Route::get('app5',  ['as' => 'app5',  'uses' => 'PolicyAppController@showLifeAppSecF']);
-
-Route::get('app6',  ['as' => 'app6',  'uses' => 'PolicyAppController@showLifeAppSecG']);
-
-Route::get('app7',  ['as' => 'app7',  'uses' => 'PolicyAppController@showLifeAppSecH']);
-
-Route::get('app8',  ['as' => 'app8',  'uses' => 'PolicyAppController@showLifeAppSecI']);
-
-Route::get('app9',  ['as' => 'app9',  'uses' => 'PolicyAppController@showLifeAppSecJ']);
-
-Route::get('app10', ['as' => 'app10', 'uses' => 'PolicyAppController@showLifeAppSecK']);
 
 Route::get('quote', ['as' => 'lifeQuote', 'uses' => 'QuoteController@showLifeQuote']);
 
@@ -51,13 +29,11 @@ Route::resource('life-quote-results', 'RFQResultsController');
 // Authentication Routes
 Route::get('login', ['as' => 'login', 'uses' => 'AuthController@showLogin']);
 Route::post('login', 'AuthController@doLogin');
-Route::get('logout', ['as' => 'logout', 'uses' => 'AuthController@doLogout']);
 // OAuth Routes
 Route::get('auth/google', 'AuthController@loginWithGoogle');
 Route::get('auth/linkedin', 'AuthController@loginWithLinkedin');
 
 Route::get('theme', ['as' => 'theme', 'uses' => 'ThemeController@showTheme']);
-Route::get('admin', ['as' => 'admin', 'uses' => 'AdminController@showCompanyDashboard']);
 
 Route::get('test', ['as' => 'test', 'uses' => 'TestController@showTest']);
 
@@ -71,6 +47,7 @@ Route::get('calculator', ['as' => 'calculator', 'uses' => 'ExtrasController@show
 
 Route::get('contact', ['as' => 'contact', 'uses' => 'ExtrasController@showContact']);
 
+
 // Route::group(
 // 	['before' => 'auth'], function()
 // {
@@ -78,8 +55,29 @@ Route::get('contact', ['as' => 'contact', 'uses' => 'ExtrasController@showContac
 Route::get('profile', ['as' => 'clientdash', 'uses' => 'UserController@showClientDashboard']);
 // });
 
+Route::group(
+	['before' => 'auth'], function()
+{
+	Route::get('profile', ['as' => 'clientdash', 'uses' => 'UserController@showClientDashboard']);
+>>>>>>> master
 
+	Route::get('life-policy-app-bl',   ['as' => 'life-app-bl',   'uses' => 'PolicyAppController@showLifeAppBL']);
+	
+	Route::post('life-policy-app-bl',   ['as' => 'life-app-bl',   'uses' => 'PolicyAppController@showLifeAppBL']);
+
+	Route::get('fileUpload', ['as' => 'fileUpload', 'uses' => 'PolicyAppController@showFileUpload']);
+
+	Route::post('fileUpload', ['as' => 'fileUpload', 'uses' => 'PolicyAppController@saveFileUpload']);
+	
+	Route::get('logout', ['as' => 'logout', 'uses' => 'AuthController@doLogout']);
+});
+
+	Route::group(array('before' => array('auth|admin')), function()
+{
+    Route::get('admin', ['as' => 'admin', 'uses' => 'AdminController@showCompanyDashboard']);
+});
 
 
 
 Route::get('create_account', ['as' => 'createaccount', 'uses' => 'UserController@showCreateAccount']);
+

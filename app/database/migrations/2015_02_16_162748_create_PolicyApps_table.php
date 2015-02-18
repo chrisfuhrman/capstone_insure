@@ -18,23 +18,22 @@ class CreatePolicyAppsTable extends Migration
 		// IN THE life_policy_app table????
 		Schema::create('policy_apps', function(Blueprint $table)
 		{
-			// $table->engine = 'MyISAM';
 			$table->increments('id');
-			$table->string('first_name')->nullable();
+			$table->string('first_name');
 			$table->string('middle_name')->nullable();
-			$table->string('last_name')->nullable();
+			$table->string('last_name');
 			$table->string('maiden_name')->nullable();
-			$table->string('gender')->nullable();
-			$table->string('dob')->nullable();
-			$table->string('ssn')->nullable();
-			$table->string('address')->nullable();
+			$table->string('gender');
+			$table->string('dob');
+			$table->string('ssn');
+			$table->string('address');
 			$table->string('address2')->nullable();
-			$table->string('city')->nullable();
-			$table->string('state')->nullable();
-			$table->string('zip')->nullable();
-			$table->string('length_of_residence')->nullable();
-			// $table->string('work_phone')->nullable();
-			$table->string('home_phone')->nullable();
+			$table->string('city');
+			$table->string('state');
+			$table->string('zip');
+			$table->string('length_of_residence');
+			$table->string('work_phone')->nullable();
+			$table->string('home_phone');
 			// $table->string('birth_state');
 			// $table->string('birth_country');
 			// $table->string('citizen');
@@ -44,9 +43,9 @@ class CreatePolicyAppsTable extends Migration
 			// $table->string('marital_status');
 			// $table->string('id_number');
 			// $table->string('id_state');
-			$table->string('occupation')->nullable();
-			$table->string('annual_income')->nullable();
-			$table->string('total_net_worth')->nullable();
+			// $table->string('occupation');
+			// $table->string('annual_income');
+			// $table->string('total_net_worth');
 			// $table->string('emp_status')->nullable();
 			// $table->string('emp_name')->nullable();
 			// $table->string('emp_address')->nullable();
@@ -89,7 +88,7 @@ class CreatePolicyAppsTable extends Migration
 			// $table->string('contingent_2_dob')->nullable();
 			// $table->string('contingent_remarks')->nullable();
 			// $table->string('owner');
-			// Trust
+			// // Trust
 			// $table->string('trust_name')->nullable();
 			// $table->string('trust_id')->nullable();
 			// $table->string('trustee_name')->nullable();
@@ -100,7 +99,7 @@ class CreatePolicyAppsTable extends Migration
 			// $table->string('trust_state')->nullable();
 			// $table->string('trust_zip')->nullable();
 			// $table->string('trust_phone')->nullable();
-			// Owner is "Other than proposed insured or trust"
+			// // Owner is "Other than proposed insured or trust"
 			// $table->string('other_owner_name')->nullable();
 			// $table->string('other_owner_relationship')->nullable();
 			// $table->string('other_owner_dob')->nullable();
@@ -117,7 +116,7 @@ class CreatePolicyAppsTable extends Migration
 			// $table->string('business');
 			// $table->string('business_website')->nullable();
 			// $table->string('business_email')->nullable();
-			// Payor Section
+			// // Payor Section
 			// $table->string('payor');
 			// $table->string('other_payor_name')->nullable();
 			// $table->string('other_payor_relationship')->nullable();
@@ -129,19 +128,19 @@ class CreatePolicyAppsTable extends Migration
 			// $table->string('other_payor_email')->nullable();
 			
 	
-			$table->string('payment_method')->nullable();
-			$table->string('payment_frequency')->nullable();
+			// $table->string('payment_method')->nullable();
+			// $table->string('payment_frequency')->nullable();
 			// $table->string('loaned_financed_payment');
 			// $table->string('payor_remarks');
 			// $table->string('date_to_save_age');
-			// $table->string('specific_policy_date')->nullable();
-			// $table->string('policy_date')->nullable();
-			// $table->string('additional_benifits')->nullable();
-			// $table->string('description_additional')->nullable();
-			// $table->string('amount_additional')->nullable();
-			// $table->string('pending_insurance')->nullable();
-			// $table->string('intend_to_accept')->nullable();
-			$table->string('policy_in_force')->nullable();
+			// $table->string('specific_policy_date');
+			// $table->string('policy_date');
+			// $table->string('additional_benifits');
+			// $table->string('description_additional');
+			// $table->string('amount_additional');
+			// $table->string('pending_insurance');
+			// $table->string('intend_to_accept');
+			// $table->string('policy_in_force');
 			// $table->string('policy_in_force_extra_space');
 			// $table->string('policy_in_force_remarks');
 			// $table->string('other_insurance_company');
@@ -151,14 +150,14 @@ class CreatePolicyAppsTable extends Migration
 			// $table->string('other_insurance_issue_date');
 			// $table->string('other_insurance_replacing');
 			// $table->string('other_insurance_beneficiary');
-			// $table->string('other_insurance_company');
-			// $table->string('other_insurance_policy_number');
-			// $table->string('other_insurance_face_amount');
-			// $table->string('other_insurance_business');
-			// $table->string('other_insurance_issue_date');
-			// $table->string('other_insurance_replacing');
-			// $table->string('other_insurance_more_fields');
-			// $table->string('other_insurance_company3');
+			// // $table->string('other_insurance_company');
+			// // $table->string('other_insurance_policy_number');
+			// // $table->string('other_insurance_face_amount');
+			// // $table->string('other_insurance_business');
+			// // $table->string('other_insurance_issue_date');
+			// // $table->string('other_insurance_replacing');
+			// // $table->string('other_insurance_more_fields');
+			// // $table->string('other_insurance_company3');
 			// $table->string('other_insurance_policy_number3');
 			// $table->string('other_insurance_face_amount3');
 			// $table->string('other_insurance_business3');
@@ -180,7 +179,7 @@ class CreatePolicyAppsTable extends Migration
 			// $table->string('other_insurance_replacing5');
 			// $table->string('other_insurance_beneficiary5');
 			// $table->string('other_insurance_additional');
-			// $table->string('other_insurance_remarks');
+			// // $table->string('other_insurance_remarks');
 			// $table->string('application_issues');
 			// $table->string('application_remarks');
 			// $table->string('updating_existing_insurance');
@@ -231,15 +230,6 @@ class CreatePolicyAppsTable extends Migration
 			// $table->string('business_credit_history');
 			// $table->string('business_credit_history_remarks');
 			// $table->string('company_website')->nullable();
-
-
-			$table->string('coverage_amount')->nullable();
-			$table->string('coverage_duration')->nullable();
-			$table->string('policy_status')->nullable();
-			$table->string('yearly_premium')->nullable();
-			$table->string('monthly_premium')->nullable();
-			$table->string('date_approved')->nullable();
-			// $table->string('')->nullable();
 
 
 			$table->timestamps();

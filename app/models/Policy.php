@@ -3,6 +3,7 @@
 class Policy extends BaseModel {
 
 
+
     protected $table = 'policy_apps';
 
 	// Add your validation rules here

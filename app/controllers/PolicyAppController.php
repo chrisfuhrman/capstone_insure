@@ -145,4 +145,49 @@ class PolicyAppController extends BaseController
 
 	}
 
+	public function showMedHistory() {
+
+		// display correct form based on input
+		// by company
+		// by product (basically which duration of term coverage)
+		// by state
+		
+		return View::make('banner_life.bl_form_medical_history');
+
+
+	}
+
+	public function showFileUpload() {
+
+		// display correct form based on input
+		// by company
+		// by product (basically which duration of term coverage)
+		// by state
+		
+		return View::make('PolicyApps.upload');
+
+
+	}
+
+	public function saveFileUpload() {
+
+		$file = Input::file('file');
+
+		$destinationPath = public_path() . '/uploads';
+		
+		$filename = Auth::User()->username . '_' . $file->getClientOriginalName();
+
+		$upload_success = Input::file('file')->move($destinationPath, $filename);
+
+		if( $upload_success ) {
+		   return Response::json('success', 200);
+		} else {
+		   return Response::json('error', 400);
+		}
+		
+		return View::make('PolicyApps.upload');
+
+
+	}
+
 }
