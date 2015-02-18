@@ -8,10 +8,12 @@
 		<h4 class="">Please verify your information:</h4>
 		<address>
 			<strong>
-			{{{ $user->first_name . $user->middle_name . $user->last_name . "($user->maiden_name)" }}}
+			{{{ $usersPolicy->first_name . ' ' . $user->middle_name . ' '
+				 . $user->last_name . ' ' . '(' . $user->maiden_name . ')' }}}<br>
 			{{{ $user->address }}}<br>
 			{{{ $user->address2 }}}<br>
-			{{{ $user->city }}}, {{{ $user->state }}} {{{ $user->zip }}}<br></strong>
+			{{{ $user->city }}}, {{{ $user->state }}} {{{ $user->zip }}}<br>
+			</strong>
 		</address>
 		<!-- Verify applicants address -->
 		<li>Is this your home address?</li>
