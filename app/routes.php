@@ -71,11 +71,11 @@ Route::get('calculator', ['as' => 'calculator', 'uses' => 'ExtrasController@show
 
 Route::get('contact', ['as' => 'contact', 'uses' => 'ExtrasController@showContact']);
 
-Route::group(
-	['before' => 'auth'], function()
-{
-	Route::get('profile', ['as' => 'clientdash', 'uses' => 'UserController@showClientDashboard'])->before('auth');
-});
+// Route::group(
+// 	['before' => 'auth'], function()
+// {
+	Route::get('profile', ['as' => 'clientdash', 'uses' => 'UserController@showClientDashboard']);
+// });
 
 
 

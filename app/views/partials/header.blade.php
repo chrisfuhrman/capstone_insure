@@ -22,5 +22,9 @@
 		<!-- Favicon -->
 	<link rel="icon" href="/assets/favicon.ico">
 	<link rel="stylesheet" href="/assets/css/chris-css.css">
+
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link rel="stylesheet" href="/assets/css/simple-sidebar.css">
 </head>
 <body>

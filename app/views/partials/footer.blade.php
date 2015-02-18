@@ -1,5 +1,5 @@
 <!-- Main Footer -->
-<section id="footer-main" class="three-column">
+<section id="footer-main footer" class="three-column">
 	<div class="container">
 		<div class="row">
 

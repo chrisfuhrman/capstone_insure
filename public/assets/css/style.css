@@ -44,7 +44,7 @@
   padding: 0px !important;
 }
 body {
-  background: #383e4b;
+  background-color: #EFEFEF;
   color: #383e4b;
   border: none;
   font-family: 'Lato', sans-serif;
@@ -55,32 +55,7 @@ body {
 a {
   color: #383e4b;
 }
-h1 {
-  font-size: 32px;
-  line-height: 32px;
-  font-weight: 300;
-}
-h2 {
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 300;
-}
-h3 {
-  font-size: 15px;
-  line-height: 15px;
-}
-h4 {
-  font-size: 14px;
-  line-height: 14px;
-}
-h5 {
-  font-size: 13px;
-  line-height: 13px;
-}
-h6 {
-  font-size: 12px;
-  line-height: 12px;
-}
+
 #content {
   min-height: 100%;
   padding: 20px 20px;
@@ -179,7 +154,7 @@ h6 {
 /* Main Colors
 =================================================================== */
 .blue {
-  color: #36a9e1;
+  color: #004474;
 }
 .lightBlue {
   color: #67c2ef;
@@ -312,10 +287,12 @@ h6 {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 }
 a.navbar-brand {
-  background: #1e8fc6;
+  background: #36A9E1;
   text-align: center;
-  border-bottom: 1px solid #1e8fc6;
   padding: 9px 0 10px 0 !important;
+  left: 0px;
+  margin-left: 30px;
+
 }
 a.navbar-brand span {
   font-family: 'Kaushan Script', cursive;
@@ -1016,6 +993,7 @@ footer {
   padding: 14px 20px 20px 20px!important;
   margin: 0 !important;
   font-size: 12px;
+  z-index: 1500;
 }
 footer a {
   color: white;
