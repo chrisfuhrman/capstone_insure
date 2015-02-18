@@ -5,11 +5,11 @@
 	<div class="controls">
 		<label class="control-label" for="smoking status"></label>
 		<div class="input-group col-sm-4 input-group-2">
-		<div class="btn-group btn-toggle" data-toggle="buttons">
-			<label class="btn btn-mini btn-default" for="">
+		<div class="btn-group">
+			<label id="smoke-yes" class="btn-smoke btn btn-mini btn-default" data-swap="inactive" for="">
 				{{Form::radio('smoker', 'yes') }} Yes
 			</label>
-			<label class="btn btn-mini btn-info" for="">
+			<label id="smoke-no" class="btn-smoke btn btn-mini btn-info" data-swap="active" for="">
 				{{Form::radio('smoker', 'no', true) }} No
 			</label>
 		</div>
@@ -22,11 +22,11 @@
 	<div class="controls">
 		<label class="control-label" for="cholesterol question"></label>
 		<div class="input-group col-sm-4 input-group-2">
-		<div class="btn-group btn-toggle" data-toggle="buttons">
-			<label class="btn btn-mini btn-default" for="">
+		<div class="btn-group">
+			<label id="chol-yes" class="btn-chol btn btn-mini btn-default" for="">
 				{{Form::radio('cholesterol', 'yes') }} Yes
 			</label>
-				<label class="btn btn-mini btn-info" for="">
+				<label id="chol-no" class="btn-chol btn btn-mini btn-info" for="">
 				{{Form::radio('cholesterol', 'no', true) }} No
 			</label>
 		</div>
@@ -39,11 +39,11 @@
 	<div class="controls">
 		<label class="control-label" for="blood pressure question"></label>
 		<div class="input-group col-sm-4 input-group-2">
-		<div class="btn-group btn-toggle" data-toggle="buttons">
-			<label class="btn btn-mini btn-default" for="">
+		<div class="btn-group">
+			<label id="blood-pressure-yes" class="btn-blood-pressure btn btn-mini btn-default" for="">
 				{{Form::radio('blood_pressure', 'yes') }} Yes
 			</label>
-				<label class="btn btn-mini btn-info" for="">
+				<label id="blood-pressure-yes" class="btn-blood-pressure btn btn-mini btn-info" for="">
 				{{Form::radio('blood_pressure', 'no', true) }} No
 			</label>
 		</div>
@@ -56,7 +56,7 @@
 	<div class="controls">
 		<label class="control-label" for="drug and alcohol question"></label>
 		<div class="input-group col-sm-4 input-group-2">
-		<div class="btn-group btn-toggle" data-toggle="buttons">
+		<div class="btn-group">
 			<label class="btn btn-mini btn-default" for="">
 				{{Form::radio('drugs', 'yes') }} Yes
 			</label>

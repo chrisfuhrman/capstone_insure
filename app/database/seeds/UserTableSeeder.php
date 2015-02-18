@@ -21,11 +21,12 @@ class UserTableSeeder extends Seeder
 		{
 			User::create([
 	            'username' => $faker->unique->username,
-	            'password' => Hash::make('secret'),
+	            'password' => 'secret',
 	            'email' => $faker->email,
 	            'first_name' => $faker->firstName,
 	            'middle_name' => $faker->firstName,
 	            'last_name' => $faker->lastName,
+	            'maiden_name' => $faker->lastName,
 	            'dob' => $faker->dateTimeThisCentury->format('Y-m-d'), 
 	            // should we label this DOB different than the DOB in the RFQ Table???
 	            'gender' => $faker->numberBetween($min = 0, $max = 1),

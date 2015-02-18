@@ -47,13 +47,13 @@
 									<label class="control-label" for="gender">Gender</label>
 									<div class="input-group col-sm-5">
 									<div class="wrap">	
-					    				<div class="btn-group btn-toggle" data-toggle="buttons">
+					    				<div class="btn-group">
 											<span class="input-group-addon gender-icon"><i class="fa fa-user"></i></span>
-											<label class="btn btn-mini btn-default" for="">
-											<input type="radio" name="gender" value="male">Male</input>
+											<label id="gender-male" class="btn-gender btn btn-mini btn-default" for="" data-swap="inactive">
+												{{Form::radio('gender', 'male') }} Male
 											</label>
-						  					<label class="btn btn-mini btn-info" for="">
-											<input type="radio" name="gender" value="female" checked>Female</input>
+						  					<label id="gender-female" class="btn-gender btn btn-mini btn-info" for="" data-swap="active">
+												{{Form::radio('gender', 'female', true) }} Female
 											</label>
 										</div>
 									</div>
@@ -223,25 +223,81 @@
 	<script>
 	 $(document).ready(function () {
 
-		$('.btn-toggle').click(function() {
-		    $(this).find('.btn').toggleClass('active');  
-		    
-		    if ($(this).find('.btn-primary').size()>0) {
-		    	$(this).find('.btn').toggleClass('btn-primary');
-		    }
-		    if ($(this).find('.btn-danger').size()>0) {
-		    	$(this).find('.btn').toggleClass('btn-danger');
-		    }
-		    if ($(this).find('.btn-success').size()>0) {
-		    	$(this).find('.btn').toggleClass('btn-success');
-		    }
-		    if ($(this).find('.btn-info').size()>0) {
-		    	$(this).find('.btn').toggleClass('btn-info');
-		    }
-		    
-		    $(this).find('.btn').toggleClass('btn-default');
-		       
+		$('.btn-gender').click(function() {
+			var idName = $(this).attr('id');
+			var id = $('#'+idName);
+			var classNames = id.attr('class');
+
+			var isHilighted = (classNames.search('btn-info') != -1) ? true : false;
+			var otherBtn = (idName == 'gender-female') ? $('#gender-male') : $('#gender-female');
+
+			if(!isHilighted) {
+				id.removeClass('btn-default').addClass('btn-info');
+				otherBtn.addClass('btn-default').removeClass('btn-info');
+			}
+		});		
+
+		$('.btn-smoke').click(function() {
+			var idName = $(this).attr('id');
+			var id = $('#'+idName);
+			var classNames = id.attr('class');
+
+			var isHilighted = (classNames.search('btn-info') != -1) ? true : false;
+			var otherBtn = (idName == 'smoke-no') ? $('#smoke-yes') : $('#smoke-no');
+
+			if(!isHilighted) {
+				id.removeClass('btn-default').addClass('btn-info');
+				otherBtn.addClass('btn-default').removeClass('btn-info');
+			}
+		});		
+
+		$('.btn-chol').click(function() {
+			var idName = $(this).attr('id');
+			var id = $('#'+idName);
+			var classNames = id.attr('class');
+
+			var isHilighted = (classNames.search('btn-info') != -1) ? true : false;
+			var otherBtn = (idName == 'chol-no') ? $('#chol-yes') : $('#chol-no');
+
+			if(!isHilighted) {
+				id.removeClass('btn-default').addClass('btn-info');
+				otherBtn.addClass('btn-default').removeClass('btn-info');
+			}
+		});		
+		$('.btn-blood-pressure').click(function() {
+			var idName = $(this).attr('id');
+			var id = $('#'+idName);
+			var classNames = id.attr('class');
+
+			var isHilighted = (classNames.search('btn-info') != -1) ? true : false;
+			var otherBtn = (idName == 'blood-pressure-no') ? $('#blood-pressure-no') : $('#blood-pressure-no');
+
+			if(!isHilighted) {
+				id.removeClass('btn-default').addClass('btn-info');
+				otherBtn.addClass('btn-default').removeClass('btn-info');
+			}
 		});
+
+		    // $(this).find('.btn').toggleClass('active');
+		    // var classNames = $(this).find('.btn').attr('class');
+		    // console.log(classNames);
+		    
+		    // if ($(this).find('.btn-primary').size()>0) {
+		    // 	$(this).find('.btn').toggleClass('btn-primary');
+		    // }
+		    // if ($(this).find('.btn-danger').size()>0) {
+		    // 	$(this).find('.btn').toggleClass('btn-danger');
+		    // }
+		    // if ($(this).find('.btn-success').size()>0) {
+		    // 	$(this).find('.btn').toggleClass('btn-success');
+		    // }
+		    // if ($(this).find('.btn-info').size()>0) {
+		    // 	$(this).find('.btn').toggleClass('btn-info');
+		    // }
+		    
+		    // $(this).find('.btn').toggleClass('btn-default');
+		       
+		// });
 
 		$('#next-btn').on('click', function() {
 			$(this).hide();
