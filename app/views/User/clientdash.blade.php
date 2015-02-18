@@ -1,16 +1,5 @@
 @extends('layouts.master')
 
-@section('top-script')
-<?php
-
-$userId = Auth::user()->id;
-$policy = Policy::where('user_id', '=', $userId)->firstOrFail();
-// You can access all policy info of a logged in user via the
-// $policy array. Example: $policy->coverage_amount will give you the coverage amount
-// dd($policy);
-
-?>
-@stop
 
 @section('content')
 
