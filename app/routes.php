@@ -13,6 +13,9 @@
 
 Route::get('', ['as' => 'home', 'uses' => 'HomeController@showHome']);
 
+Route::get('life-policy-app-bl',   ['as' => 'life-app-bl',   'uses' => 'PolicyAppController@showLifeAppBL']);
+Route::post('life-policy-app-bl',   ['as' => 'life-app-bl',   'uses' => 'PolicyAppController@showLifeAppBL']);
+
 Route::get('app',   ['as' => 'app',   'uses' => 'PolicyAppController@showLifeAppSecA']);
 
 Route::get('app2',  ['as' => 'app2',  'uses' => 'PolicyAppController@showLifeAppSecB']);
@@ -76,11 +79,11 @@ Route::get('calculator', ['as' => 'calculator', 'uses' => 'ExtrasController@show
 
 Route::get('contact', ['as' => 'contact', 'uses' => 'ExtrasController@showContact']);
 
-Route::group(
-	['before' => 'auth'], function()
-{
-	Route::get('profile', ['as' => 'clientdash', 'uses' => 'UserController@showClientDashboard'])->before('auth');
-});
+// Route::group(
+// 	['before' => 'auth'], function()
+// {
+	Route::get('profile', ['as' => 'clientdash', 'uses' => 'UserController@showClientDashboard']);
+// });
 
 
 

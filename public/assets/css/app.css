@@ -23,7 +23,7 @@ body {
 
 .navbar {
 
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 	margin-bottom: 0px;
 	padding: 15px;
 
@@ -139,36 +139,8 @@ or background color for dropdown when active*/
   Hero Container Home Page
   ========================================
 */
-#hero-container {
-	background-image: url('/assets/img/family04.jpg');
-	padding-top: 30px;
-	padding-bottom: 20px;
-	height: 400px;
-}
-#hero-headline {
-	font-size: 50px;
-	color: #fff;
-
-	padding-top: 50px;
-	width: 750px;
-
-}
-#hero-subheadline {
-	font-size: 18px;
-	color: #fff;
-}
 
 
-
-/*
-  ========================================
-  Post Display
-  ========================================
-*/
-#next-container {
-	background-color: #004474;
-	padding: 50px;
-}
 
 /*
   ========================================
@@ -186,11 +158,6 @@ or background color for dropdown when active*/
 .footer-header {
 	color: black;
 }
-
-.push {
-	height: 125px; /* '.push' must be the same height as 'footer' */
-}
-
 /*
   ========================================
   Misc
@@ -228,18 +195,16 @@ h3 {font-size: 18px;}
 */
 
 .container-darker {
-	background-color: #36A9E1;
+	background-color: rgba(62, 169, 245, 1);
 	max-width: 100%;
 	padding-top: 35px;
 	padding-bottom: 45px;
 	margin: 0px;
-	padding-right: 0px;
-	margin-right: 0px;
 }
 
 .thumbnail-darker {
-	background-color: #36A9E1;
-	border-color: #47A6E1;
+	background-color: rgba(62, 169, 245, 1);
+	border-color: #27366E;
 }
 
 .white {
@@ -269,7 +234,7 @@ h3 {font-size: 18px;}
 }
 
 .blue {
-	color: #47A6E1;
+	color: #233163;
 }
 
 
@@ -321,25 +286,31 @@ h3 {font-size: 18px;}
 .scroll-nav__wrapper {
 	position: fixed;
 	/*background-color: blue;*/
-	color: blue;
+	color: black;
 	padding: 15px 10px;
-	margin-top: 50px;
+	margin-top: 30px;
 	margin-left: 50px;
 	font-size: 25px;
 }
 .scroll-nav__link {
-	color: green;
+	color: black;
 }
 .scroll-nav__link > a {
-	color: blue;
+	/*color: black;*/
 
 }
 
 
+#right-section {
+}
+.inner-section {
+	background-color: #6190B2;
+	/*border-radius: 10px;*/
+}
 
-
-
-
+.section-heading {
+	background-color: rgb(67, 172, 106);
+}
 
 
 /* 
@@ -373,50 +344,3 @@ h3 {font-size: 18px;}
 	padding-bottom: 15px;
 }
 
-
-.sidebar-wrapper {
-	background-color: #EFEFEF;
-}
-
-.btn-margin {
-	margin-top: 25px;
-}
-
-.float-right {
-	float: right;
-	display: inline-block;
-	margin-top: 40px;
-	margin-right: 80px;
-}
-
-.container-client {
-	background-color: #004474;
-	height: 500px;
-	overflow: hidden;
-}
-
-.no-padding {
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-}
-
-.new-quote-btn {
-	margin-top: 40px;
-	padding-top: 30px;
-	padding-bottom: 30px;
-	padding-left: 50px;
-	padding-right: 50px;
-}
-
-.progress-blue {
-	background-color: #36A9E1;
-}
-
-.table-bg {
-	background-color: #FEFEFE;
-}
-
-.btn-group input[type="radio"] {
-	display: none;
-}

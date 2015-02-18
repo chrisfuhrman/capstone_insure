@@ -15,17 +15,12 @@
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 	<!-- custom css -->
-	<link rel="stylesheet" type="text/css" href="/assets/css/main.css"> 
-	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/app.css"> 
 	<!-- FONTS -->
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 		<!-- Favicon -->
 	<link rel="icon" href="/assets/favicon.ico">
 	<link rel="stylesheet" href="/assets/css/chris-css.css">
-
-	<link rel="stylesheet" href="/assets/css/style.css">
-
-	<link rel="stylesheet" href="/assets/css/simple-sidebar.css">
 </head>
 <body>

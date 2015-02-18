@@ -33,11 +33,12 @@
 
 <div id="next-container">
 	<div class="container">
-		<div class="row col-sm-12">
+		<div class="row col-sm-8">
 			<h1 class="white">No more pushy insurance sales agent!</h1>
 			<h3 class="white">Get insurance comparison quotes in minutes.</h3>
-			<a href="{{{ action('LifeRFQController@create') }}}" class="btn btn-success btn-lg" type="button">Get Your No Hassle Quote</a>
+			
 		</div>
+			<span class="float-right"><a href="{{{ action('LifeRFQController@create') }}}" class="btn btn-success btn-lg" type="button">Get Your No Hassle Quote</a></span>
 	</div>
 </div>
 
@@ -53,8 +54,7 @@
 					  <h1 class="text-center"><i class="fa fa-usd fa-4 white"></i></h1>
 					  <div class="caption">
 						<h3 class="white margin text-center">Products</h3>
-						<p class="blue">.</p>
-						<p class="text-center"><a href="#" class="btn btn-primary" role="button">Our Insurance Carriers</a>
+						<p class="text-center"><a href="#" class="btn btn-primary btn-margin" role="button">Our Insurance Carriers</a>
 					  </div>
 					</div>
 				  </div>
@@ -66,8 +66,7 @@
 					  <h1 class="text-center"><i class="fa fa-pencil white"></i></h1>
 					  <div class="caption">
 						<h3 class="white margin text-center">Learning Center</h3>
-						<p class="blue">.</p>
-						<p class="text-center"><a href="{{{ action('ExtrasController@showLearning') }}}" class="btn btn-primary" role="button">Enter to Learn More</a>
+						<p class="text-center"><a href="{{{ action('ExtrasController@showLearning') }}}" class="btn btn-primary btn-margin" role="button">Enter to Learn More</a>
 					  </div>
 					</div>
 				  </div>
@@ -79,21 +78,19 @@
 					  <h1 class="text-center"><i class="fa fa-calculator white"></i></h1>
 					  <div class="caption">
 						<h3 class="white margin text-center">Calculators</h3>
-						<p class="blue">.</p>
-						<p class="text-center"><a href="{{{ action('ExtrasController@showCalculator') }}}" class="btn btn-primary" role="button">Assess Your Insurance Needs</a>
+						<p class="text-center"><a href="{{{ action('ExtrasController@showCalculator') }}}" class="btn btn-primary btn-margin" role="button">Assess Your Insurance Needs</a>
 					  </div>
 					</div>
 				  </div> 
 				</a>
 
-				<a href="#">
+				<a href="{{{ action('ExtrasController@showContact') }}}">
 				  <div class="col-md-3"> 
 					<div class="thumbnail thumbnail-darker thumbnail-box">
 					  <h1 class="text-center"><i class="fa fa-envelope-o white"></i></h1>
 					  <div class="caption">
 						<h3 class="white margin text-center">Contact Us</h3>
-						<p class="blue">.</p>
-						<p class="text-center"><a href="#" class="btn btn-primary" role="button">Send Us A Message</a>
+						<p class="text-center"><a href="{{{ action('ExtrasController@showContact') }}}" class="btn btn-primary btn-margin" role="button">Send Us A Message</a>
 					  </div>
 					</div>
 				  </div>
