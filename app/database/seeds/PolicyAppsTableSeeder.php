@@ -38,7 +38,7 @@ class PolicyAppsTableSeeder extends Seeder
             	$duration = '30';
 			} 
 
-			PolicyApp::create([
+			Policy::create([
 
 	            'first_name' => $faker->firstName,
 	            'last_name' => $faker->lastName,
