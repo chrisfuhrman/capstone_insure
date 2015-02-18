@@ -32,4 +32,11 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	{
 		return $this->morphTo();
 	}
+
+    public function isAdmin()
+    {
+        return $this->id == 1;
+    }
+
+
 }
