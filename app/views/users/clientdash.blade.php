@@ -1,10 +1,9 @@
 @extends('layouts.master')
 
-
 @section('content')
 
 
-?>
+
 <!-- sidebar -->		
 
 
@@ -71,12 +70,14 @@
 												</div>
 												<div class="panel-body">
 
-												    <p class="text-center">${{{ $policyApp->coverage_amount }}} 30yr.</p>
+													@foreach($user->policies as $policy)
 
-												    <p class="text-center">{{{ $policy->coverage_amount }}} 30yr.</p>
+												    	<p class="text-center">${{{ $policy->coverage_amount }}} 30yr.</p>
+												    	<p class="text-center">Term Policy</p>
+												    	<p class="text-center">Expires on: 02/22/25</p>
 
-												    <p class="text-center">Term Policy</p>
-												    <p class="text-center">Expires on: 02/22/25</p>
+													@endforeach
+												    
 												</div>
 											</div>
 										</div>
