@@ -32,4 +32,9 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	{
 		return $this->morphTo();
 	}
+
+	public function policies()
+	{
+		return $this->hasMany('Policy');
+	}
 }

@@ -34,7 +34,7 @@
 <div id="next-container">
 	<div class="container">
 		<div class="row col-sm-8">
-			<h1 class="white">No more pushy insurance sales agent!</h1>
+			<h1 class="white">No more pushy insurance sales agents!</h1>
 			<h3 class="white">Get insurance comparison quotes in minutes.</h3>
 			
 		</div>

@@ -4,15 +4,15 @@
 
 <div class="quote-section">
 	<div class="container">
-		<div id="content" class="col-lg-10 col-sm-11">
+		<div class="col-lg-10 col-sm-11">
 			<div class="row">
 				<div class="col-lg-12">
-					<div class="box">
-						<div class="box-header">
+					<!-- <div class="box"> -->
+						<!-- <div class="box-header"> -->
 						<h2 id="quote-header" class="quote-header">Check out our simple and clear life insurance price comparison tool below:</h2>
-						</div>
+						<!-- </div> -->
 
-						<div class="box-content">
+						<div>
 							<!-- <form class="form-horizontal"> -->
 							{{ Form::open(['action' => 'LifeRFQController@store']) }}
 
@@ -144,7 +144,7 @@
 							{{ Form::close() }}   
 						</div>
 					
-					</div>
+					<!-- </div> -->
 				</div><!--/col-->
 
 			</div><!--/row-->		
@@ -221,9 +221,32 @@
 
 
 	<script>
+	(function( $ ){
+		$.fn.swapRadio = function($) 
+		{
+
+			var idName = $(this).attr('id');
+			var id = $('#'+idName);
+			var classNames = id.attr('class');
+
+			var isHilighted = (classNames.search('btn-info') != -1) ? true : false;
+			var otherBtn = (idName == 'gender-female') ? $('#gender-male') : $('#gender-female');
+
+			if(!isHilighted) {
+				id.removeClass('btn-default').addClass('btn-info');
+				otherBtn.addClass('btn-default').removeClass('btn-info');
+			}
+			return this;
+		}; 
+	})( jQuery );
+
+
+		// $('#my_div').swapRadio();
+
 	 $(document).ready(function () {
 
-		$('.btn-gender').click(function() {
+		$('.btn-gender').click(function() 
+		{
 			var idName = $(this).attr('id');
 			var id = $('#'+idName);
 			var classNames = id.attr('class');

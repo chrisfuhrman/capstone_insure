@@ -1,6 +1,6 @@
 <?php
 
-class PolicyApp extends BaseModel {
+class Policy extends BaseModel {
 
 
     protected $table = 'policy_apps';
@@ -34,5 +34,10 @@ class PolicyApp extends BaseModel {
 		'date_approved',
 		'user_id'
 	];
+
+	public function user()
+	{
+		return $this->belongsTo('User');
+	}
 
 }

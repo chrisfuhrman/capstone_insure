@@ -1,4 +1,12 @@
-@yield('top-script')
+<?php
+
+$userId = Auth::user()->id;
+$user = Policy::where('user_id', '=', $userId)->firstOrFail();
+
+// $user = Policy::find(1)->user()->where('userId', '=', $userId);
+
+
+?>
 
 
 @include('partials.app-header')
@@ -7,7 +15,7 @@
 
 <!-- <div class="" id="sidebar-nav"> -->
 <nav class="scroll-nav col-md-2 pull-left" id="test-this" role="navigation">
-	<div class="scroll-nav__wrapper"><span class="scroll-nav__heading">Application ID: XXXX </span>
+	<div class="scroll-nav__wrapper"><span class="scroll-nav__heading">Application ID:{{{ }}}</span>
 	<ol class="scroll-nav__list">
 	<li class="scroll-nav__item description active in-view">
 		<a href="#scrollNav-1" class="scroll-nav__link">Proposed Insured</a>
