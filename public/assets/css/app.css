@@ -23,7 +23,7 @@ body {
 
 .navbar {
 
-	/*margin-top: 20px;*/
+	margin-top: 0px;
 	margin-bottom: 0px;
 	padding: 15px;
 
@@ -288,7 +288,7 @@ h3 {font-size: 18px;}
 	/*background-color: blue;*/
 	color: black;
 	padding: 15px 10px;
-	margin-top: 30px;
+	/*margin-top: 30px;*/
 	margin-left: 50px;
 	font-size: 25px;
 }
@@ -306,13 +306,21 @@ h3 {font-size: 18px;}
 .inner-section {
 	background-color: #fff;
 	/*border-radius: 10px;*/
+	margin-top: 10px;
 }
 
 .section-heading {
 	background-color: rgb(67, 172, 106);
+	color: #fff;
 	padding: 10px 15px;
 }
+.progress {
+	position: absolute;
+    z-index: 10;
+}
+#test-this {
 
+}
 
 /* 
 	===============================

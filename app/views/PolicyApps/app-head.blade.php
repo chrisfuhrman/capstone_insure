@@ -16,15 +16,15 @@
 			</strong>
 		</address>
 		<!-- Verify applicants address -->
-		<li>Is this your home address?</li>
 		<div class="form-group">
-			<label class="control-label" for=""></label>
+		<label class="control-label" for="gender">Is this your home address?</label>
+
 			<div class="input-group col-sm-4 input-group-2">
-			<div class="btn-group btn-toggle" data-toggle="buttons">
-				<label class="btn btn-mini btn-default" for="">
+			<div class="btn-group">
+				<label id="address-confirm-yes" class="btn-chol btn btn-mini btn-default" for="">
 					{{Form::radio('correct_address', 'yes') }} Yes
 				</label>
-				<label class="btn btn-mini btn-info" for="">
+					<label id="address-confirm-no" class="btn-chol btn btn-mini btn-info" for="">
 					{{Form::radio('correct_address', 'no', true) }} No
 				</label>
 			</div>
