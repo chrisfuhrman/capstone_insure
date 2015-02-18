@@ -21,7 +21,7 @@ class UserTableSeeder extends Seeder
 		{
 			User::create([
 	            'username' => $faker->unique->username,
-	            'password' => Hash::make('secret'),
+	            'password' => 'secret',
 	            'email' => $faker->email,
 	            'first_name' => $faker->firstName,
 	            'middle_name' => $faker->firstName,

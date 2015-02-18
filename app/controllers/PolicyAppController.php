@@ -151,8 +151,8 @@ class PolicyAppController extends BaseController
 		$file = Input::file('file');
 
 		$destinationPath = public_path() . '/uploads';
-		 
-		$filename = $this->username . '-' . $file->getClientOriginalName();
+		
+		$filename = Auth::User()->username . '_' . $file->getClientOriginalName();
 
 		$upload_success = Input::file('file')->move($destinationPath, $filename);
 
