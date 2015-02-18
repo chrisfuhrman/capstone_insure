@@ -39,6 +39,13 @@
 	@yield('content')
 </div>
 
+<nav>
+  <ul class="pager">
+    <li><a>Next</a></li>
+  </ul>
+</nav>
+
+
 <div class="clear-fix">
 	@include('partials.footer')
 </div>

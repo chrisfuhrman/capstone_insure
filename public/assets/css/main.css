@@ -366,3 +366,6 @@ h3 {font-size: 18px;}
 	padding-bottom: 15px;
 }
 
+.btn-group input[type="radio"] {
+	display: none;
+}
