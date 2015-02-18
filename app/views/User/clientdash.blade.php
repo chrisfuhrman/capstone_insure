@@ -2,8 +2,17 @@
 
 @section('content')
 
+<?php 
+
+$user= Auth::user();
+$policyApp= new PolicyApp();
+// dd($policyApp);
 
 
+@section('content')
+
+
+?>
 <!-- sidebar -->		
 
 
@@ -60,7 +69,7 @@
 						<div class="container">
 							<! -- section 01 -->
 							<div id="section-01">
-								<h1 class="white"> Welcome USER! </h1>
+								<h1 class="white"> Welcome {{{ $user->first_name }}}! </h1>
 			                        <p class="white">This is your personal dashboard. Select items from the sidebar to view any and all applications submitted or in-process.</p>
 			                        <div class="row">
 			                        	<div class="col-md-4 col-md-offset-1">
@@ -69,7 +78,11 @@
 												    <h3 class="panel-title">Current Coverage</h3>
 												</div>
 												<div class="panel-body">
-												    <p class="text-center">$1,000,000 30yr.</p>
+
+												    <p class="text-center">${{{ $policyApp->coverage_amount }}} 30yr.</p>
+
+												    <p class="text-center">{{{ $policy->coverage_amount }}} 30yr.</p>
+
 												    <p class="text-center">Term Policy</p>
 												    <p class="text-center">Expires on: 02/22/25</p>
 												</div>

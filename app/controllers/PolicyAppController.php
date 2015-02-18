@@ -4,7 +4,25 @@ class PolicyAppController extends BaseController
 {
 	public function showLifeAppBL()
 	{	
-		return View::make('PolicyApps.BannerLife.banner-life-app');
+
+		$user = Auth::user();
+		$userId = $user->id;
+
+		// $usersPolicy = User::with('policies')->where('user_id', '=', $userId)->firstOrFail();
+		$usersPolicy = Policy::with('user')->where('user_id', '=', $userId)->firstOrFail();
+		// dd($usersPolicy);
+
+		// $usersPolicy = Policy::where('user_id', '=', $userId)->firstOrFail();
+
+		// $user = Policy::findOrFail(1)->user()->where('userId', '=', $userId);
+
+		$data = 
+		[
+			'usersPolicy' => $usersPolicy,
+			'user' => $user
+		];
+			
+		return View::make('PolicyApps.BannerLife.banner-life-app')->with($data);
 	}	
 
 	public function showLifeAppSecA() {

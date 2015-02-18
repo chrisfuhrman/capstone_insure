@@ -1,3 +1,5 @@
+@yield('top-script')
+
 @include('partials.header')
 
 @include('partials.navbar')

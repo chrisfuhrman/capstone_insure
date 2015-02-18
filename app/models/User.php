@@ -38,5 +38,9 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
         return $this->id == 1;
     }
 
+	public function policies()
+	{
+		return $this->hasMany('Policy');
+	}
 
 }
