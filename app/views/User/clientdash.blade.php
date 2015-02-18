@@ -1,13 +1,5 @@
 @extends('layouts.master')
 
-@section('content')
-
-<?php 
-
-$user= Auth::user();
-$policyApp= new PolicyApp();
-// dd($policyApp);
-
 
 @section('content')
 
