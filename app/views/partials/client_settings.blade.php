@@ -1,1 +1,1 @@
-client_settings.blade.php
+@extends('layouts.master')

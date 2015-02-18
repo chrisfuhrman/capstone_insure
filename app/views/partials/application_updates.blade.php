@@ -1,1 +1,1 @@
-application_updates.blade.php
+@extends('layouts.master')

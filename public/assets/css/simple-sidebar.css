@@ -19,14 +19,12 @@
 }
 
 #sidebar-wrapper {
-    z-index: 1000;
     position: fixed;
     left: 250px;
     width: 0;
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #000;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -40,7 +38,10 @@
 #page-content-wrapper {
     width: 100%;
     position: absolute;
-    padding: 15px;
+    padding-left: 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -57,6 +58,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    height: 400px;
 }
 
 .sidebar-nav li {
@@ -114,7 +116,6 @@
     }
 
     #page-content-wrapper {
-        padding: 20px;
         position: relative;
     }
 

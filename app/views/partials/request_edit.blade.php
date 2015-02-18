@@ -1,1 +1,1 @@
-request_edit.blade.php
+@extends('layouts.master')
