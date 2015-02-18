@@ -376,6 +376,8 @@
 			<!-- start: Content -->
 			<div id="content" class="col-lg-10 col-sm-11">
 			
+				@include('admin_panel.charts')
+
 				@include('admin_panel.draft-apps')
 
 				@include('admin_panel.in-process-apps')
@@ -491,9 +493,6 @@
 	<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	
-		
-	
-	
 	<!-- page scripts -->
 	<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
 	<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
@@ -515,10 +514,11 @@
 	<!-- theme scripts -->
 	<script src="assets/js/custom.min.js"></script>
 	<script src="assets/js/core.min.js"></script>
-	
-	<!-- inline scripts related to this page -->
 	<script src="assets/js/pages/index.js"></script>
 	<script src="assets/js/pages/table.js"></script>
+	<script src="assets/js/pages/charts-xcharts.js"></script>
+	<script src="assets/js/xcharts.min.js"></script>
+	<script src="assets/js/d3.min.js"></script>
 	<!-- end: JavaScript-->
 	
 </body>
