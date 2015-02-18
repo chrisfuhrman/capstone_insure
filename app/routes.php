@@ -74,7 +74,8 @@ Route::get('contact', ['as' => 'contact', 'uses' => 'ExtrasController@showContac
 // Route::group(
 // 	['before' => 'auth'], function()
 // {
-	Route::get('profile', ['as' => 'clientdash', 'uses' => 'UserController@showClientDashboard']);
+
+Route::get('profile', ['as' => 'clientdash', 'uses' => 'UserController@showClientDashboard']);
 // });
 
 
