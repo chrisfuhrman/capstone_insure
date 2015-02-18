@@ -1,8 +1,18 @@
 @extends('layouts.master')
 
+@section('top-script')
+<?php
+
+$userId = Auth::user()->id;
+$policy = Policy::where('user_id', '=', $userId)->firstOrFail();
+// You can access all policy info of a logged in user via the
+// $policy array. Example: $policy->coverage_amount will give you the coverage amount
+// dd($policy);
+
+?>
+@stop
+
 @section('content')
-
-
 
 <!-- sidebar -->		
 
@@ -69,7 +79,7 @@
 												    <h3 class="panel-title">Current Coverage</h3>
 												</div>
 												<div class="panel-body">
-												    <p class="text-center">$1,000,000 30yr.</p>
+												    <p class="text-center">{{{ $policy->coverage_amount }}} 30yr.</p>
 												    <p class="text-center">Term Policy</p>
 												    <p class="text-center">Expires on: 02/22/25</p>
 												</div>

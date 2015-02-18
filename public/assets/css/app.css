@@ -304,12 +304,13 @@ h3 {font-size: 18px;}
 #right-section {
 }
 .inner-section {
-	background-color: #6190B2;
+	background-color: #fff;
 	/*border-radius: 10px;*/
 }
 
 .section-heading {
 	background-color: rgb(67, 172, 106);
+	padding: 10px 15px;
 }
 
 

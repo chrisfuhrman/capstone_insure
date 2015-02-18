@@ -1,18 +1,6 @@
 @extends('layouts.master-app')
 
 
-@section('top-script')
-
-<?php
-
-$user = new User();
-
-
-
-
-?>
-@stop
-
 @section('content')
 <div class="col-md-11 pull-left">
 
