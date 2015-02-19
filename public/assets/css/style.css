@@ -552,6 +552,12 @@ ul.notifications li.warning a {
 ul.messages li .message {
   font-size: 11px;
 }
+
+
+.nav-bar-main {
+  padding-right: 70px
+
+}
 /* Navigation Section
 =================================================================== */
 a#main-menu-toggle {
@@ -1485,7 +1491,7 @@ footer a {
 }
 .smallstat .title {
   top: 12px;
-  color: #c7cbd5;
+  color: #36a9e1;
   display: block;
   font-size: 14px;
   margin-top: 4px;

@@ -6,7 +6,7 @@ class UserController extends BaseController
 	public function showClientDashboard() {
 
 		$user = Auth::user();
-		// $userId = $user->id;
+		$userId = $user->id;
 
 		// $usersPolicy = Policy::with('user')->where('user_id', '=', $userId);
 		$usersPolicy = User::with('policies')->where('id', '=', $userId)->firstOrFail();
