@@ -42,7 +42,7 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 
 
   //   	$this->User::with('')->where('user_id', '=', $userId)->firstOrFail();
-        return $this->role_id == 2;
+        return $this->role_id == 1;
     }
 
 	public function policies()

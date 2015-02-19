@@ -14,11 +14,11 @@ class UserController extends BaseController
 		// $usersPolicy = Policy::with('user')->where('user_id', '=', $userId)->firstOrFail();
 		// dd($usersPolicy);
 		
-		// $data = 
-		// [
-		// 	'usersPolicy' => $usersPolicy,
-		// 	'user' => $user
-		// ];
+		$data = 
+		[
+			'usersPolicy' => $usersPolicy,
+			'user' => $user
+		];
 			
 
 		return View::make('PolicyApps.BannerLife.banner-life-app')->with($data);

@@ -95,6 +95,6 @@ Route::filter('admin', function($route, $request)
     if ( ! Auth::user()->isAdmin())
     {
     	Session::flash('errorMessage', 'You are not authorized to access that page');
-        return Redirect::to('profile');
+        return Redirect::to('/profile');
     }
 });
