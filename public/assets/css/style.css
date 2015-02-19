@@ -4863,7 +4863,7 @@ ul.messagesList li span.date {
     margin: 20px -20px 0px -20px;
     padding: 10px 20px;
     position: relative;
-    z-index: 2;
+   
   }
 }
 /* All Mobile Sizes (devices and browser)
@@ -5101,4 +5101,67 @@ ul.messagesList li span.date {
   footer {
     padding: 10px 20px;
   }
+}
+
+/*
+============================
+Life App Available Quotes Page
+============================
+
+*/
+
+.life-app-panel-footer {
+  padding-bottom: 70px !important;
+}
+
+.plans-banner {
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+/*
+===============================
+Footer style 2.0
+===============================
+*/
+
+.copyright {
+  padding-right: 15px;
+  margin-right: 0px;
+}
+
+/*
+================================
+Gender Icon 
+================================
+*/
+
+.gender-icon {
+  height: 37px;
+}
+
+/*
+=================================
+Padding Issues Fix on Create Blade
+=================================
+*/
+
+.no-padding-left-header {
+  padding-left: 0px;
+  padding-right: 10px;
+}
+
+.no-padding-bottom-header {
+  padding-bottom: 0px;
+  margin-bottom: 8px;
+}
+
+/*
+=================================
+Create Account Mini-Containers
+=================================
+*/
+
+.mini-container {
+  padding-bottom: 40px;
 }

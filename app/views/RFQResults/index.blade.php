@@ -1,13 +1,14 @@
+
 @extends('layouts.master')
+
 
 @section('content')
 
-<h1>Your most competitive Life Insurance Quotes</h1>
+<h1 class="text-center">Your most competitive Life Insurance Quotes</h1>
 
 <div class="container">
 	<div class="row">
-		<h2 class="text-center">Simple and Affordable Plans</h2>
-		<div style="padding-bottom: 20px"></div>
+		<h2 class="text-center"><div class="plans-banner">Simple and Affordable Plans</div></h2>
 		<div class="col-md-3">
 			<div class="panel panel-info">
 				<div class="panel-heading">
@@ -22,11 +23,11 @@
 					<li class="list-group-item"><i class="icon-ok text-default"></i>30 Year Term Policy</li>
 					<li class="list-group-item"><i class="icon-ok text-default"></i>A++ Financial Rating</li>
 				</ul>
-				<div class="panel-footer">
-					<a class="btn btn-lg btn-block btn-info" href="app">Apply Now</a>
+				<div class="panel-footer life-app-panel-footer">
+					<a class="btn btn-lg btn-block btn-info" href="createaccount">Apply Now</a>
 				</div>
 			</div>
-		</div>		<div style="padding-bottom: 20px"></div>
+		</div>	
 		<div class="col-md-3">
 			<div class="panel panel-info">
 				<div class="panel-heading">
@@ -41,11 +42,11 @@
 					<li class="list-group-item"><i class="icon-ok text-default"></i>30 Year Term Policy</li>
 					<li class="list-group-item"><i class="icon-ok text-default"></i>A++ Financial Rating</li>
 				</ul>
-				<div class="panel-footer">
-					<a class="btn btn-lg btn-block btn-info" href="app">Apply Now</a>
+				<div class="panel-footer life-app-panel-footer">
+					<a class="btn btn-lg btn-block btn-info" href="createaccount">Apply Now</a>
 				</div>
 			</div>
-		</div>		<div style="padding-bottom: 20px"></div>
+		</div>		
 		<div class="col-md-3">
 			<div class="panel panel-info">
 				<div class="panel-heading">
@@ -60,11 +61,11 @@
 					<li class="list-group-item"><i class="icon-ok text-default"></i>30 Year Term Policy</li>
 					<li class="list-group-item"><i class="icon-ok text-default"></i>A++ Financial Rating</li>
 				</ul>
-				<div class="panel-footer">
-					<a class="btn btn-lg btn-block btn-info" href="app">Apply Now</a>
+				<div class="panel-footer life-app-panel-footer">
+					<a class="btn btn-lg btn-block btn-info" href="createaccount">Apply Now</a>
 				</div>
 			</div>
-		</div>		<div style="padding-bottom: 20px"></div>
+		</div>		
 		<div class="col-md-3">
 			<div class="panel panel-info">
 				<div class="panel-heading">
@@ -79,8 +80,8 @@
 					<li class="list-group-item"><i class="icon-ok text-default"></i>30 Year Term Policy</li>
 					<li class="list-group-item"><i class="icon-ok text-default"></i>A++ Financial Rating</li>
 				</ul>
-				<div class="panel-footer">
-					<a class="btn btn-lg btn-block btn-info" href="app">Apply Now</a>
+				<div class="panel-footer life-app-panel-footer">
+					<a class="btn btn-lg btn-block btn-info" href="createaccount">Apply Now</a>
 				</div>
 			</div>
 		</div>
