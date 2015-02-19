@@ -11,6 +11,18 @@
 |
 */
 
+Route::get('testAdmin', function() {
+
+	$user = User::findOrFail(Auth::id());
+
+	if ($user->isAdmin()) {
+		echo "You're an admin buddy.";
+	} else {
+		echo "No.";
+	}
+
+});
+
 Route::get('', ['as' => 'home', 'uses' => 'HomeController@showHome']);
 
 
