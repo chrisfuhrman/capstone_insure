@@ -39,7 +39,7 @@
                             Can't find the answer?
                         </p>
                         <div style="margin-top: 20px;">
-                            <a href="#" class="btn btn-lg btn-primary btn-flat" data-toggle="modal" data-target="#modal-faq">Contact Us</a>
+                            <a href="{{{ action('ExtrasController@showContact') }}}" class="btn btn-lg btn-primary btn-flat">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -76,11 +76,11 @@
 
                 <div class="panel">
                     <div class="panel-heading">
-                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-example" href="#collapseTwo">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-example" href="#collapseThree">
                             <strong>Q:</strong> How soon will I hear from InsureJoy?
                         </a>
                     </div> <!-- / .panel-heading -->
-                    <div id="collapseTwo" class="panel-collapse collapse">
+                    <div id="collapseThree" class="panel-collapse collapse">
                         <div class="panel-body">
                             <strong>A:</strong> Typically the time it takes to process one of the completed insurance applications takes 1 - 2 weeks.
                         </div> <!-- / .panel-body -->
@@ -89,13 +89,13 @@
 
                 <div class="panel">
                     <div class="panel-heading">
-                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-example" href="#collapseTwo">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-example" href="#collapseFour">
                             <strong>Q:</strong> Where can I learn more about life insurance?
                         </a>
                     </div> <!-- / .panel-heading -->
-                    <div id="collapseTwo" class="panel-collapse collapse">
+                    <div id="collapseFour" class="panel-collapse collapse">
                         <div class="panel-body">
-                            <strong>A:</strong> We are willing to answer any and all questions about life insurance!.
+                            <strong>A:</strong> We are willing to answer any and all questions about life insurance!
                         </div> <!-- / .panel-body -->
                     </div> <!-- / .collapse -->
                 </div> <!-- / .panel -->
