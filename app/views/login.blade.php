@@ -2,6 +2,14 @@
 
 @section('content')
 
+<style>
+	.create
+	{
+		text-decoration: underline;
+	}
+
+</style>
+
 <div class="container">
 
 	<h1>Login</h1>
@@ -21,6 +29,9 @@
 			</div>
 		{{ Form::close() }}
 
+		<p>Don't have a Profile? <a class="create" href="{{{ route('createaccount') }}}"> Create one now.</a>
+		<p><a class="remind" href="{{{ route('remind') }}}">Forgot your Password?</a>
+			
 
 		<a href="auth/google">
 			<img id="google-login" src="/assets/img/google/Red-signin_Long_base_32dp.png">
@@ -55,4 +66,6 @@
 				
 	})();
 	</script>
+
+
 @stop
