@@ -59,7 +59,7 @@ Route::group(
 	['before' => 'auth'], function()
 {
 	Route::get('profile', ['as' => 'clientdash', 'uses' => 'UserController@showClientDashboard']);
->>>>>>> master
+
 
 	Route::get('life-policy-app-bl',   ['as' => 'life-app-bl',   'uses' => 'PolicyAppController@showLifeAppBL']);
 	

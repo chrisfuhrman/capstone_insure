@@ -42,7 +42,7 @@
                 <a class="white" id="settings-btn" href="#">Settings</a>
             </li>
             <li>
-                <a class="white" href="#">Contact</a>
+                <a class="white" href="{{{ action('ExtrasController@showContact') }}}">Contact</a>
             </li>
         </ul>
     </div>
@@ -84,7 +84,7 @@
 												    <h3 class="panel-title"><i class="fa fa-exclamation-triangle"></i> Needs Attention</h3>
 												</div>
 												<div class="panel-body">
-												    <a class="text-center" href="#">Saved Application</a>
+												    <a class="text-center" href="{{{ action('PolicyAppController@showLifeAppBL') }}}">Saved Application</a>
 												</div>
 											</div>
 										</div>
@@ -123,7 +123,7 @@
 							<! -- section 04 -->
 		                    <div class="hide-this" id="section-04">
 								<h1 class="white"><i class="fa fa-check"></i> Completed Application Overview</h1>
-								<a class="btn btn-success" href="#">View Your Completed Application</a>
+								<a class="btn btn-success" href="{{{ action('PolicyAppController@showLifeAppBL') }}}">View Your Completed Application</a>
 							</div>
 							<! -- end section 04 -->
 
