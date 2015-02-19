@@ -9,10 +9,16 @@ class UserController extends BaseController
 		$userId = $user->id;
 
 		$usersPolicy = User::with('policies')->where('id', '=', $userId)->firstOrFail();
-		
-		$usersPolicy = User::with('policies')->where('id', '=', $userId)->firstOrFail();			
+							
+		$policy = User::with('policies')->where('id', '=', $userId)->firstOrFail();	
 
-		return View::make('users.clientdash')->with('user', $user);
+		$data = 
+		[
+			'policy' => $policy,
+			'user' => $user
+		];		
+
+		return View::make('users.clientdash')->with($data);
 	}	
 
 
