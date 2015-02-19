@@ -2,7 +2,7 @@
 				<div class="col-lg-12">
 					<div class="box">
 						<div class="box-header" data-original-title>
-							<h2><i class="fa fa-folder-open"></i><span class="break"></span>Draft Policy Apps</h2>
+							<h2><i class="fa fa-folder-open"></i><span class="break"></span>Draft Apps</h2>
 							<div class="box-icon">
 								<a href="table.html#" class="btn-setting"><i class="fa fa-wrench"></i></a>
 								<a href="table.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
@@ -12,58 +12,34 @@
 						<div class="box-content">
 							<table class="table table-striped table-bordered bootstrap-datatable datatable">
 							  <thead>
-								  <tr>
-									  <th>Username</th>
-									  <th>name</th>
-									  <th>Date registered</th>
-									  <th>Role</th>
-									  <th>Status</th>
-									  <th>Status</th>
-								  </tr>
+									<tr>
+										<th>Username</th>
+										<th>Name</th>
+										<th>Date Saved</th>
+										<th>Yearly Prem.</th>
+										<th>Coverage Amount</th>
+										<th>Coverage Duration</th>
+										<th>Phone #</th>
+										<th>Status</th>
+									</tr>
 							  </thead>   
-							  <tbody>
-								<tr>
-									<td>Anton Phunihel</td>
-									<td class="center">2012/01/01</td>
-									<td class="center">Member</td>
-									<td class="center">
-										<span class="label label-success">Active</span>
-									</td>
-									<td class="center">
-										<a class="btn btn-success" href="table.html#">
-											<i class="fa fa-search-plus "></i>  
-										</a>
-										<a class="btn btn-info" href="table.html#">
-											<i class="fa fa-edit "></i>  
-										</a>
-										<a class="btn btn-danger" href="table.html#">
-											<i class="fa fa-trash-o "></i> 
-										</a>
-									</td>
-									<td>adsfdsf</td>
-								</tr>
+								<tbody>
 
-								<tr>
-									<td>Buford Phunihel</td>
-									<td class="center">2012/01/01</td>
-									<td class="center">Member</td>
-									<td class="center">
-										<span class="label label-success">Active</span>
-									</td>
-									<td class="center">
-										<a class="btn btn-success" href="table.html#">
-											<i class="fa fa-search-plus "></i>  
-										</a>
-										<a class="btn btn-info" href="table.html#">
-											<i class="fa fa-edit "></i>  
-										</a>
-										<a class="btn btn-danger" href="table.html#">
-											<i class="fa fa-trash-o "></i> 
-										</a>
-									</td>
-									<td>adsfdsf</td>
-								</tr>
-								
+								@foreach ($draftPolicies as $policy)
+	               					<tr>
+										<td>{{ $policy->user->username }}</td>
+										<td>{{ $policy->first_name }}</td>
+										<td>{{ $policy->created_at }}</td>
+										<td>{{ $policy->yearly_premium }}</td>
+										<td>{{ $policy->coverage_amount }}</td>
+										<td>{{ $policy->coverage_duration }}</td>
+										<td>{{ $policy->home_phone }}</td>
+										<td class="center">
+											<span class="label label-danger">{{ $policy->policy_status }}</span>
+										</td>
+									</tr>
+          						@endforeach
+
 							  </tbody>
 						  </table>            
 						</div>
