@@ -10,18 +10,18 @@ class LifeRFQController extends BaseController
 
 	// }
 
-	public function showLifeRFQ() 
-	{
+	// public function showLifeRFQ() 
+	// {
 		
-		return View::make('RFQs.life');
-	}
+	// 	return View::make('RFQs.life');
+	// }
 
-	public function showLifeHealthQuestionnaire()
-	{
+	// public function showLifeHealthQuestionnaire()
+	// {
 		
-		return View::make('RFQs.life_health_questionnaire');
+	// 	return View::make('RFQs.life_health_questionnaire');
 
-	}
+	// }
 
 
 

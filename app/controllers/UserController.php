@@ -8,20 +8,9 @@ class UserController extends BaseController
 		$user = Auth::user();
 		$userId = $user->id;
 
-		// $usersPolicy = Policy::with('user')->where('user_id', '=', $userId);
-		$usersPolicy = User::with('policies')->where('id', '=', $userId)->firstOrFail();
+		$usersPolicy = User::with('policies')->where('id', '=', $userId)->firstOrFail();			
 
-		// $usersPolicy = Policy::with('user')->where('user_id', '=', $userId)->firstOrFail();
-		// dd($usersPolicy);
-		
-		$data = 
-		[
-			'usersPolicy' => $usersPolicy,
-			'user' => $user
-		];
-			
-
-		return View::make('PolicyApps.BannerLife.banner-life-app')->with($data);
+		return View::make('users.clientdash')->with('user', $user);
 	}	
 
 
