@@ -23,7 +23,7 @@
 					<li class="list-group-item"><i class="icon-ok text-default"></i>A++ Financial Rating</li>
 				</ul>
 				<div class="panel-footer">
-					<a class="btn btn-lg btn-block btn-info" href="app">Apply Now</a>
+					<a class="btn btn-lg btn-block btn-info" href="{{{ action('PolicyAppController@showLifeAppBL') }}}">Apply Now</a>
 				</div>
 			</div>
 		</div>		<div style="padding-bottom: 20px"></div>
@@ -42,7 +42,7 @@
 					<li class="list-group-item"><i class="icon-ok text-default"></i>A++ Financial Rating</li>
 				</ul>
 				<div class="panel-footer">
-					<a class="btn btn-lg btn-block btn-info" href="app">Apply Now</a>
+					<a class="btn btn-lg btn-block btn-info" href="{{{ action('PolicyAppController@showLifeAppBL') }}}">Apply Now</a>
 				</div>
 			</div>
 		</div>		<div style="padding-bottom: 20px"></div>
@@ -61,7 +61,7 @@
 					<li class="list-group-item"><i class="icon-ok text-default"></i>A++ Financial Rating</li>
 				</ul>
 				<div class="panel-footer">
-					<a class="btn btn-lg btn-block btn-info" href="app">Apply Now</a>
+					<a class="btn btn-lg btn-block btn-info" href="{{{ action('PolicyAppController@showLifeAppBL') }}}">Apply Now</a>
 				</div>
 			</div>
 		</div>		<div style="padding-bottom: 20px"></div>
@@ -80,7 +80,7 @@
 					<li class="list-group-item"><i class="icon-ok text-default"></i>A++ Financial Rating</li>
 				</ul>
 				<div class="panel-footer">
-					<a class="btn btn-lg btn-block btn-info" href="app">Apply Now</a>
+					<a class="btn btn-lg btn-block btn-info" href="{{{ action('PolicyAppController@showLifeAppBL') }}}">Apply Now</a>
 				</div>
 			</div>
 		</div>

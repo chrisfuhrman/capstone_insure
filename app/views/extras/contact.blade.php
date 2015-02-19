@@ -5,20 +5,20 @@
 <div class="container contact-container">
   <div class="row">
     <div class="col-md-6">
-      <form class="form-horizontal">
+      <form action="{{{ action('HomeController@sendContactUs') }}}" class="form-horizontal">
       	<div class="form-group">
           	<div class="col-sm-10 col-sm-offset-2">
-            	<input type="email" class="form-control" id="inputName" placeholder="Name">
+            	<input name="name" type="text" class="form-control" id="inputName" placeholder="Name">
           	</div>
         	</div>
         		<div class="form-group">
           	<div class="col-sm-10 col-sm-offset-2">
-            	<input type="email" class="form-control" id="inputEmail" placeholder="Email">
+            	<input name="email_address" type="email" class="form-control" id="inputEmail" placeholder="Email">
           	</div>
         	</div>
         	<div class="form-group">
           	<div class="col-sm-10 col-sm-offset-2">
-          		<textarea class="form-control" rows="3" placeholder="Write your question here."></textarea>
+          		<textarea name="content" class="form-control" rows="3" placeholder="Write your question here."></textarea>
           	</div>
         	</div>
         	<div class="form-group">
