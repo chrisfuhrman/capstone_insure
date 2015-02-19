@@ -42,6 +42,7 @@ class UserController extends BaseController
 			// dd(Input::all());
 		$user = new User;
 
+
 		$dob = strtotime(Input::get('dob'));
 
 			$user->first_name	= Input::get('first_name');
@@ -62,8 +63,14 @@ class UserController extends BaseController
 			$user->zip  		= Input::get('zip');
 			$user->save();
 
+			$data = 
+			[
+			'username' => Input::get('username'),
+			'password' => Input::get('password')
+			];
+
 			Session::flash('sucessMessage', 'Sucessfully saved your post!');
-			return Redirect::action('HomeController@showHome');
+			return Redirect::to('doLogin')->with($data);
 	    // }		
 
 	}

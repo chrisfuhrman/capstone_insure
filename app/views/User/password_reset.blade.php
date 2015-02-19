@@ -23,21 +23,21 @@
 		<div class="controls">
 			<div class="input-group col-sm-4">
 				<span class="input-group-addon"><i class="fa fa-male"></i></span>
-				{{ Form::text('password', Input::old('password'), array('class' => 'form-control', 'placeholder' => 'Madien Name (if you have one)', 'id' => 'password', 'name' => 'password')) }}
+				{{ Form::password('password', array('class' => 'form-control', 'id' => 'password', 'name' => 'password')) }}
 			</div>
 		</div>
 		{{ $errors->first('password', '<span class="help-block">:message</span>') }}
 	</div>
 
 	<div class="form-group">
-		{{ Form::label('password_comfirmation', 'Verify Password_comfirmation:', array('class' => 'control-label')) }}
+		{{ Form::label('password_confirmation', 'Verify Password:', array('class' => 'control-label')) }}
 		<div class="controls">
 			<div class="input-group col-sm-4">
 				<span class="input-group-addon"><i class="fa fa-male"></i></span>
-				{{ Form::text('password_comfirmation', Input::old('password_comfirmation'), array('class' => 'form-control', 'placeholder' => 'Madien Name (if you have one)', 'id' => 'password_comfirmation', 'name' => 'password_comfirmation')) }}
+				{{ Form::password('password_confirmation', array('class' => 'form-control', 'id' => 'password_confirmation', 'name' => 'password_confirmation')) }}
 			</div>
 		</div>
-		{{ $errors->first('password_comfirmation', '<span class="help-block">:message</span>') }}
+		{{ $errors->first('password_confirmation', '<span class="help-block">:message</span>') }}
 	</div>
 
 	{{ Form::submit('Reset Password', array('class' => 'name')) }}
