@@ -7,10 +7,11 @@
 		<div class="col-lg-10 col-sm-11">
 			<div class="row">
 				<div class="col-lg-12">
-					<!-- <div class="box"> -->
-						<!-- <div class="box-header"> -->
-						<h2 id="quote-header" class="quote-header">Check out our simple and clear life insurance price comparison tool below:</h2>
-						<!-- </div> -->
+					<h2 id="quote-header" class="quote-header">Price Comparison Tool</h2>
+					<div class="col-sm-5">
+						<h4 id="sub-headline">We only ask the bare minimum information in order to provide you with the most accurate estimates possible!</h4>
+					</div>
+					<div class="clear-fix"></div>
 
 						<div>
 							<!-- <form class="form-horizontal"> -->
@@ -325,6 +326,7 @@
 		$('#next-btn').on('click', function() {
 			$(this).hide();
 			$('#tier2-btn').show();
+			$('#sub-headline').hide();
 
 			$('#section-2').fadeIn();
 			$('#section-1').hide();
@@ -332,6 +334,7 @@
 		$('#back-btn').on('click', function() {
 			$('#tier2-btn').hide();
 			$('#next-btn').show();
+			$('#sub-headline').show();
 
 			$('#section-1').fadeIn();
 			$('#section-2').hide();

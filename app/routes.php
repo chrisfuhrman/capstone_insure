@@ -14,13 +14,12 @@
 Route::get('', ['as' => 'home', 'uses' => 'HomeController@showHome']);
 
 
-Route::get('quote', ['as' => 'lifeQuote', 'uses' => 'QuoteController@showLifeQuote']);
-
 // Routes for Life RFQ
-Route::get('life-quote', ['as' => 'lifeRFQ', 'uses' => 'RFQController@showLifeRFQ']);
-Route::post('life-quote', ['as' => 'lifeRFQ', 'uses' => 'RFQController@showLifeRFQ']);
+// Route::get('life-quote', ['as' => 'lifeRFQ', 'uses' => 'RFQController@showLifeRFQ']);
+// Route::post('life-quote', ['as' => 'lifeRFQ', 'uses' => 'RFQController@showLifeRFQ']);
 
-Route::resource('LifeRFQ', 'LifeRFQController');
+Route::resource('life-quote', 'LifeRFQController');
+
 Route::resource('life-quote-results', 'RFQResultsController');
 
 // Route::get('life-quote-results', ['as' => 'lifeRFQResults', 'uses' => 'RFQResultsController@showLifeResults']);

@@ -5,7 +5,7 @@
 			<div class="boxchart-overlay blue">
 				<div class="boxchart">5,6,7,2,0,4,2,4,8,2,3,3,2</div>
 			</div>	
-			<span class="">Submitted today</span>
+			<span class="">Submitted today</span><br>
 			<span class="value">{{{ $appsToday }}}</span>
 		</div>
 	</div><!--/col-->
@@ -15,7 +15,7 @@
 			<div class="boxchart-overlay green">
 				<div class="boxchart">1,2,6,4,0,8,2,4,5,3,1,7,5</div>
 			</div>	
-			<span class="">Avg Premium</span>
+			<span class="">Avg Premium</span><br>
 			<span class="value">{{{ '$' . $avgPrem }}}</span>
 		</div>
 	</div><!--/col-->
