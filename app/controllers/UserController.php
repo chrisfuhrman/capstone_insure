@@ -16,7 +16,7 @@ class UserController extends BaseController
 
 	public function showCreateAccount() {
 
-		return View::make('User.createaccount');
+		return View::make('users.createaccount');
 	}
 
 	public function saveCreateAccount() {

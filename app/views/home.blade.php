@@ -48,13 +48,13 @@
 		<div class="container">
 			<div class="row">
 				
-				<a href="#">
+				<a href="{{{ action('ExtrasController@showProducts') }}}">
 				  <div class="col-md-3 ">
 					<div class="thumbnail thumbnail-darker thumbnail-box">
 					  <h1 class="text-center"><i class="fa fa-usd fa-4 white"></i></h1>
 					  <div class="caption">
 						<h3 class="white margin text-center">Products</h3>
-						<p class="text-center"><a href="#" class="btn btn-primary btn-margin" role="button">Our Insurance Carriers</a>
+						<p class="text-center"><a href="{{{ action('ExtrasController@showProducts') }}}" class="btn btn-primary btn-margin" role="button">Our Insurance Carriers</a>
 					  </div>
 					</div>
 				  </div>
