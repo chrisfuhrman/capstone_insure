@@ -3,10 +3,8 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-10">
-			<img src="/assets/img/banner-logo.gif">
-			<img src="/assets/img/ING-logo.png">
-			<img src="/assets/img/metlife-logo.jpg">
+		<div class="col-md-6 col-md-offset-3">
+			<img src="/assets/img/insurance_logos.gif">
 		</div>
 	</div>
 </div>

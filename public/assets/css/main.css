@@ -425,3 +425,21 @@ h3 {font-size: 18px;}
 	margin-top: 20px;
 }
 
+.clipboard-container {
+  overflow: scroll;
+  height: 950px;
+  width: 800px; 
+  background-image: url("/assets/img/clipboard_blue.png");
+  background-repeat: no-repeat;
+  text-align: left;
+  background-size: 90%;
+}
+
+.inner-clipboard {
+  overflow: scroll;
+  margin-top: 160px;
+  margin-left: 65px;
+  height: 700px;
+  width: 485px;
+
+}
