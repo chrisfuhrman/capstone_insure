@@ -53,12 +53,12 @@
 			      <span class="icon-bar"></span>
 			</button>
 			<a id="main-menu-toggle" class="hidden-xs open"><i class="fa fa-bars"></i></a>		
-				<a class="navbar-brand col-lg-2 col-sm-1 col-xs-12" href="index.html"><span>InsureJoy</span></a>
+				<a class="navbar-brand col-lg-2 col-sm-1 col-xs-12" href="/admin"><span>InsureJoy</span></a>
 			<!-- start: Header Menu -->
 			<div class="nav-no-collapse header-nav">
 				<ul class="nav navbar-nav pull-right">
 					<li class="dropdown hidden-xs">
-						<a class="btn dropdown-toggle" data-toggle="dropdown" href="index.html#">
+						<a class="btn dropdown-toggle" data-toggle="dropdown" href="/admin#">
 							<i class="fa fa-warning"></i>
 						</a>
 						<ul class="dropdown-menu notifications">
@@ -66,70 +66,70 @@
 								<span>You have 11 notifications</span>
 							</li>	
                         	<li>
-                                <a href="index.html#">
+                                <a href="/admin#">
 									<span class="icon blue"><i class="fa fa-user"></i></span>
 									<span class="message">New user registration</span>
 									<span class="time">1 min</span> 
                                 </a>
                             </li>
 							<li>
-                                <a href="index.html#">
+                                <a href="/admin#">
 									<span class="icon green"><i class="fa fa-comment"></i></span>
 									<span class="message">New comment</span>
 									<span class="time">7 min</span> 
                                 </a>
                             </li>
 							<li>
-                                <a href="index.html#">
+                                <a href="/admin#">
 									<span class="icon green"><i class="fa fa-comment"></i></span>
 									<span class="message">New comment</span>
 									<span class="time">8 min</span> 
                                 </a>
                             </li>
 							<li>
-                                <a href="index.html#">
+                                <a href="/admin#">
 									<span class="icon green"><i class="fa fa-comment"></i></span>
 									<span class="message">New comment</span>
 									<span class="time">16 min</span> 
                                 </a>
                             </li>
 							<li>
-                                <a href="index.html#">
+                                <a href="/admin#">
 									<span class="icon blue"><i class="fa fa-user"></i></span>
 									<span class="message">New user registration</span>
 									<span class="time">36 min</span> 
                                 </a>
                             </li>
 							<li>
-                                <a href="index.html#">
+                                <a href="/admin#">
 									<span class="icon yellow"><i class="fa fa-shopping-cart"></i></span>
 									<span class="message">2 items sold</span>
 									<span class="time">1 hour</span> 
                                 </a>
                             </li>
 							<li class="warning">
-                                <a href="index.html#">
+                                <a href="/admin#">
 									<span class="icon red"><i class="fa fa-user"></i></span>
 									<span class="message">User deleted account</span>
 									<span class="time">2 hour</span> 
                                 </a>
                             </li>
 							<li class="warning">
-                                <a href="index.html#">
+                                <a href="/admin#">
 									<span class="icon red"><i class="fa fa-shopping-cart"></i></span>
 									<span class="message">Transaction was canceled</span>
 									<span class="time">6 hour</span> 
                                 </a>
                             </li>
 							<li>
-                                <a href="index.html#">
+                                <a href="/admin#">
 									<span class="icon green"><i class="fa fa-comment"></i></span>
 									<span class="message">New comment</span>
 									<span class="time">yesterday</span> 
                                 </a>
                             </li>
 							<li>
-                                <a href="index.html#">
+                                <a href="/admin#">
 									<span class="icon blue"><i class="fa fa-user"></i></span>
 									<span class="message">New user registration</span>
 									<span class="time">yesterday</span> 
@@ -142,7 +142,7 @@
 					</li>
 					<!-- start: Notifications Dropdown -->
 					<li class="dropdown hidden-xs">
-						<a class="btn dropdown-toggle" data-toggle="dropdown" href="index.html#">
+						<a class="btn dropdown-toggle" data-toggle="dropdown" href="/admin#">
 							<i class="fa fa-tasks"></i>
 						</a>
 						<ul class="dropdown-menu tasks">
@@ -150,7 +150,7 @@
 								<span class="dropdown-menu-title">You have 17 tasks in progress</span>
                         	</li>
 							<li>
-                                <a href="index.html#">
+                                <a href="/admin#">
 									<span class="header">
 										<span class="title">iOS Development</span>
 										<span class="percent"></span>
@@ -159,7 +159,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html#">
+                                <a href="/admin#">
 									<span class="header">
 										<span class="title">Android Development</span>
 										<span class="percent"></span>
@@ -168,7 +168,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html#">
+                                <a href="/admin#">
 									<span class="header">
 										<span class="title">Django Project For Google</span>
 										<span class="percent"></span>
@@ -177,7 +177,7 @@
                                 </a>
                             </li>
 							<li>
-                                <a href="index.html#">
+                                <a href="/admin#">
 									<span class="header">
 										<span class="title">SEO for new sites</span>
 										<span class="percent"></span>
@@ -186,7 +186,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html#">
+                                <a href="/admin#">
 									<span class="header">
 										<span class="title">New blog posts</span>
 										<span class="percent"></span>
@@ -202,7 +202,7 @@
 					<!-- end: Notifications Dropdown -->
 					<!-- start: Message Dropdown -->
 					<li class="dropdown hidden-xs">
-						<a class="btn dropdown-toggle" data-toggle="dropdown" href="index.html#">
+						<a class="btn dropdown-toggle" data-toggle="dropdown" href="/admin#">
 							<i class="fa fa-envelope"></i>
 						</a>
 						<ul class="dropdown-menu messages">
@@ -210,7 +210,7 @@
 								<span class="dropdown-menu-title">You have 9 messages</span>
 							</li>	
                         	<li>
-                                <a href="index.html#">
+                                <a href="/admin#">
 									<span class="avatar"><img src="assets/img/avatar.jpg" alt="Avatar"></span>
 									<span class="header">
 										<span class="from">
@@ -226,7 +226,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html#">
+                                <a href="/admin#">
 									<span class="avatar"><img src="assets/img/avatar2.jpg" alt="Avatar"></span>
 									<span class="header">
 										<span class="from">
@@ -242,7 +242,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html#">
+                                <a href="/admin#">
 									<span class="avatar"><img src="assets/img/avatar3.jpg" alt="Avatar"></span>
 									<span class="header">
 										<span class="from">
@@ -258,7 +258,7 @@
                                 </a>
                             </li>
 							<li>
-                                <a href="index.html#">
+                                <a href="/admin#">
 									<span class="avatar"><img src="assets/img/avatar4.jpg" alt="Avatar"></span>
 									<span class="header">
 										<span class="from">
@@ -274,7 +274,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html#">
+                                <a href="/admin#">
 									<span class="avatar"><img src="assets/img/avatar5.jpg" alt="Avatar"></span>
 									<span class="header">
 										<span class="from">
@@ -296,13 +296,13 @@
 					</li>
 					<!-- end: Message Dropdown -->
 					<li>
-						<a class="btn" href="index.html#">
+						<a class="btn" href="/admin#">
 							<i class="fa fa-wrench"></i>
 						</a>
 					</li>
 					<!-- start: User Dropdown -->
 					<li id="admin-dropdown" class="dropdown">
-						<a class="btn account dropdown-toggle" data-toggle="dropdown" href="index.html#">
+						<a class="btn account dropdown-toggle" data-toggle="dropdown" href="/admin#">
 							<!-- <div class="avatar"><img src="assets/img/avatar.jpg" alt="Avatar"></div> -->
 							<div class="user">
 								<span class="hello">Welcome!</span>
@@ -313,9 +313,9 @@
 							<li class="dropdown-menu-title">
 								
 							</li>
-							<li><a href="index.html#"><i class="fa fa-user"></i> Profile</a></li>
-							<li><a href="index.html#"><i class="fa fa-cog"></i> Settings</a></li>
-							<li><a href="index.html#"><i class="fa fa-envelope"></i> Messages</a></li>
+							<li><a href="/admin#"><i class="fa fa-user"></i> Profile</a></li>
+							<li><a href="/admin#"><i class="fa fa-cog"></i> Settings</a></li>
+							<li><a href="/admin#"><i class="fa fa-envelope"></i> Messages</a></li>
 							<li><a href="login.html"><i class="fa fa-off"></i> Logout</a></li>
 						</ul>
 					</li>
@@ -341,7 +341,7 @@
 						<li><a href="/admin"><i class="fa fa-bar-chart-o"></i><span class="hidden-sm"> Dashboard</span></a></li>
 						<!-- Marketing Section -->	
 						<li>
-							<a class="dropmenu" href="index.html#"><i class="fa fa-eye"></i><span class="hidden-sm">Marketing</span> <span class="label">3</span></a>
+							<a class="dropmenu" href="/admin#"><i class="fa fa-eye"></i><span class="hidden-sm">Marketing</span> <span class="label">3</span></a>
 							<ul>
 								<li><a class="submenu" href="ui-sliders-progress.html"><i class="fa fa-circle"></i><span class="hidden-sm">Section 1</span></a></li>
 								<li><a class="submenu" href="ui-nestable-list.html"><i class="fa fa-circle"></i><span class="hidden-sm">Section 2</span></a></li>
@@ -350,7 +350,7 @@
 						</li>
 						<!-- Support Section -->
 						<li>
-							<a class="dropmenu" href="index.html#"><i class="fa fa-ticket"></i><span class="hidden-sm">Support</span> <span class="label">3</span></a>
+							<a class="dropmenu" href="/admin#"><i class="fa fa-ticket"></i><span class="hidden-sm">Support</span> <span class="label">3</span></a>
 							<ul>
 								<li><a class="submenu" href="ui-sliders-progress.html"><i class="fa fa-circle"></i><span class="hidden-sm">Review</span></a></li>
 								<li><a class="submenu" href="ui-nestable-list.html"><i class="fa fa-circle"></i><span class="hidden-sm">Pending</span></a></li>
@@ -359,7 +359,7 @@
 						</li>
 						<!--  -->
 						<li>
-							<a class="dropmenu" href="index.html#"><i class="fa fa-folder-o"></i><span class="hidden-sm">Another Section</span> <span class="label">3</span></a>
+							<a class="dropmenu" href="/admin#"><i class="fa fa-folder-o"></i><span class="hidden-sm">Another Section</span> <span class="label">3</span></a>
 							<ul>
 								<li><a class="submenu" href="page-infrastructure.html"><i class="fa fa-hdd-o"></i><span class="hidden-sm"> Infrastructure</span></a></li>
 								<li><a class="submenu" href="page-inbox.html"><i class="fa fa-circle"></i><span class="hidden-sm"> Inbox</span></a></li>

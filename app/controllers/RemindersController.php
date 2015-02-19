@@ -9,7 +9,7 @@ class RemindersController extends Controller {
 	 */
 	public function getRemind()
 	{
-		return View::make('password.remind');
+		return View::make('User.password_remind');
 	}
 
 	/**
@@ -18,6 +18,17 @@ class RemindersController extends Controller {
 	 * @return Response
 	 */
 	public function postRemind()
+
+		$name = Input::get('name');
+		$email_address = Input::get('email_address');
+		$content = Input::get('content');
+
+			Mail::send('emails.help_request', 
+				['name' => $name, 'email_address' => $email_address, 'content' => $content], 
+				function($message) {
+		    		$message->to('support@venturelab.org', 'Venture Lab Support')->subject('Help Request!');
+				});
+
 	{
 		switch ($response = Password::remind(Input::only('email')))
 		{
@@ -39,7 +50,7 @@ class RemindersController extends Controller {
 	{
 		if (is_null($token)) App::abort(404);
 
-		return View::make('password.reset')->with('token', $token);
+		return View::make('User.password_reset')->with('token', $token);
 	}
 
 	/**

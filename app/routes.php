@@ -14,13 +14,12 @@
 Route::get('', ['as' => 'home', 'uses' => 'HomeController@showHome']);
 
 
-Route::get('quote', ['as' => 'lifeQuote', 'uses' => 'QuoteController@showLifeQuote']);
-
 // Routes for Life RFQ
-Route::get('life-quote', ['as' => 'lifeRFQ', 'uses' => 'RFQController@showLifeRFQ']);
-Route::post('life-quote', ['as' => 'lifeRFQ', 'uses' => 'RFQController@showLifeRFQ']);
+// Route::get('life-quote', ['as' => 'lifeRFQ', 'uses' => 'RFQController@showLifeRFQ']);
+// Route::post('life-quote', ['as' => 'lifeRFQ', 'uses' => 'RFQController@showLifeRFQ']);
 
-Route::resource('LifeRFQ', 'LifeRFQController');
+Route::resource('life-quote', 'LifeRFQController');
+
 Route::resource('life-quote-results', 'RFQResultsController');
 
 // Route::get('life-quote-results', ['as' => 'lifeRFQResults', 'uses' => 'RFQResultsController@showLifeResults']);
@@ -48,12 +47,7 @@ Route::get('calculator', ['as' => 'calculator', 'uses' => 'ExtrasController@show
 Route::get('contact', ['as' => 'contact', 'uses' => 'ExtrasController@showContact']);
 
 
-// Route::group(
-// 	['before' => 'auth'], function()
-// {
-
-Route::get('profile', ['as' => 'clientdash', 'uses' => 'UserController@showClientDashboard']);
-// });
+Route::post('createaccount', ['as' => 'createaccount', 'uses' => 'UserController@saveCreateAccount']);
 
 Route::group(
 	['before' => 'auth'], function()
@@ -69,14 +63,20 @@ Route::group(
 	Route::post('fileUpload', ['as' => 'fileUpload', 'uses' => 'PolicyAppController@saveFileUpload']);
 	
 	Route::get('logout', ['as' => 'logout', 'uses' => 'AuthController@doLogout']);
+
+
 });
 
-	Route::group(array('before' => array('auth|admin')), function()
+Route::post('remind', ['as' => 'remind', 'uses' => 'RemindersController@postRemind']);
+	
+Route::get('remind', ['as' => 'remind', 'uses' => 'RemindersController@getRemind']);
+
+Route::group(array('before' => array('auth|admin')), function()
 {
     Route::get('admin', ['as' => 'admin', 'uses' => 'AdminController@showCompanyDashboard']);
 });
 
 
 
-Route::get('create_account', ['as' => 'createaccount', 'uses' => 'UserController@showCreateAccount']);
+Route::get('createaccount', ['as' => 'createaccount', 'uses' => 'UserController@showCreateAccount']);
 

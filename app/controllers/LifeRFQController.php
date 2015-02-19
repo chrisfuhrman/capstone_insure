@@ -10,18 +10,18 @@ class LifeRFQController extends BaseController
 
 	// }
 
-	public function showLifeRFQ() 
-	{
+	// public function showLifeRFQ() 
+	// {
 		
-		return View::make('RFQs.life');
-	}
+	// 	return View::make('RFQs.life');
+	// }
 
-	public function showLifeHealthQuestionnaire()
-	{
+	// public function showLifeHealthQuestionnaire()
+	// {
 		
-		return View::make('RFQs.life_health_questionnaire');
+	// 	return View::make('RFQs.life_health_questionnaire');
 
-	}
+	// }
 
 
 
@@ -50,9 +50,12 @@ class LifeRFQController extends BaseController
 	public function store()
 	{
 		$lifeRFQ = new LifeRFQ();
+
+		$dob = strtotime(Input::get('dob'));
+
 		// dd($lifeRFQ);
 		$lifeRFQ->gender = Input::get('gender');
-		$lifeRFQ->dob = Input::get('dob');
+		$lifeRFQ->dob = date('Y-m-d',$dob);
 		$lifeRFQ->coverage_amount = Input::get('coverage_amount');
 		$lifeRFQ->coverage_duration = Input::get('coverage_duration');
 		$lifeRFQ->smoker = Input::get('smoker');

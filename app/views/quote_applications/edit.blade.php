@@ -1,1 +1,0 @@
-/vagrant/sites/insure.dev/app/views/quote_applications/edit.blade.php
