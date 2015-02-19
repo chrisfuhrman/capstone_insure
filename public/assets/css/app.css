@@ -304,7 +304,7 @@ h3 {font-size: 18px;}
 #right-section {
 }
 .inner-section {
-	background-color: #fff;
+	/*background-color: #fff;*/
 	/*border-radius: 10px;*/
 	margin-top: 10px;
 }
@@ -353,3 +353,99 @@ h3 {font-size: 18px;}
 	padding-bottom: 15px;
 }
 
+.clipboard-container {
+	overflow: scroll;
+	height: 950px;
+	width: 800px; 
+	background-image: url("/assets/img/clipboard_blue.png");
+	background-repeat: no-repeat;
+	text-align: left;
+	background-size: 90%;
+}
+
+.inner-clipboard {
+	overflow: scroll;
+	margin-top: 160px;
+	margin-left: 65px;
+	height: 700px;
+	width: 485px;
+
+}
+
+.breadcrumb { 
+	list-style: none; 
+	overflow: hidden; 
+	font: 10px Helvetica, Arial, Sans-Serif;
+}
+.breadcrumb li { 
+	float: left; 
+}
+.breadcrumb li a {
+	color: white;
+	text-decoration: none; 
+	padding: 10px 0 10px 45px;
+	background: #285F7C;                   /* fallback color */
+	background: #285F7C; 
+	position: relative; 
+	display: block;
+	float: left;
+}
+
+.breadcrumb li a:after { 
+	content: " "; 
+	display: block; 
+	width: 0; 
+	height: 0;
+	border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+	border-bottom: 50px solid transparent;
+	border-left: 30px solid #285F7C;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px; 
+	left: 100%;
+	z-index: 2; 
+}
+
+.breadcrumb li a:before { 
+	content: " "; 
+	display: block; 
+	width: 0; 
+	height: 0;
+	border-top: 50px solid transparent;       
+	border-bottom: 50px solid transparent;
+	border-left: 30px solid white;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px; 
+	margin-left: 1px;
+	left: 100%;
+	z-index: 1; 
+}
+
+.breadcrumb li:first-child a {
+	padding-left: 10px;
+}
+.breadcrumb li:nth-child(2) a       { background:        #285F7C; }
+.breadcrumb li:nth-child(2) a:after { border-left-color: #285F7C; }
+.breadcrumb li:nth-child(3) a       { background:        #285F7C; }
+.breadcrumb li:nth-child(3) a:after { border-left-color: #285F7C; }
+.breadcrumb li:nth-child(4) a       { background:        #285F7C; }
+.breadcrumb li:nth-child(4) a:after { border-left-color: #285F7C; }
+.breadcrumb li:nth-child(5) a       { background:        #285F7C; }
+.breadcrumb li:nth-child(5) a:after { border-left-color: #285F7C; }
+.breadcrumb li:last-child a {
+	background: #285F7C;
+}
+
+.breadcrumb li a:hover { background: #3C90C4; }
+.breadcrumb li a:hover:after { border-left-color: #3C90C4 !important; }
+
+.breadcrumb-no-pad {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding: 0px;
+}
+
+.active-breadcrumb {
+	background-color: #3EA9F5;
+}

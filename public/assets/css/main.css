@@ -420,3 +420,7 @@ h3 {font-size: 18px;}
 .btn-group input[type="radio"] {
 	display: none;
 }
+
+.contact-container {
+	margin-top: 20px;
+}

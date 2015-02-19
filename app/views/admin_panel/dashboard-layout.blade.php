@@ -42,9 +42,11 @@
 </head>
 
 <body>
-		<!-- start: Header -->
+
+	<!-- start: Header -->
 	<header class="navbar">
 		<div class="container">
+		<div class="nav-bar-main">
 			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".sidebar-nav.nav-collapse">
 			      <span class="icon-bar"></span>
 			      <span class="icon-bar"></span>
@@ -299,12 +301,12 @@
 						</a>
 					</li>
 					<!-- start: User Dropdown -->
-					<li class="dropdown">
+					<li id="admin-dropdown" class="dropdown">
 						<a class="btn account dropdown-toggle" data-toggle="dropdown" href="index.html#">
-							<div class="avatar"><img src="assets/img/avatar.jpg" alt="Avatar"></div>
+							<!-- <div class="avatar"><img src="assets/img/avatar.jpg" alt="Avatar"></div> -->
 							<div class="user">
 								<span class="hello">Welcome!</span>
-								<span class="name">Łukasz Holeczek</span>
+								<span class="name">{{{ $admin->first_name }}}</span>
 							</div>
 						</a>
 						<ul class="dropdown-menu">
@@ -321,7 +323,7 @@
 				</ul>
 			</div>
 			<!-- end: Header Menu -->
-			
+		</div>
 		</div>	
 	</header>
 	<!-- end: Header -->
@@ -336,23 +338,23 @@
 				
 				<div class="nav-collapse sidebar-nav collapse navbar-collapse bs-navbar-collapse">
 					<ul class="nav nav-tabs nav-stacked main-menu">
-						<li><a href="index.html"><i class="fa fa-bar-chart-o"></i><span class="hidden-sm"> Dashboard</span></a></li>
+						<li><a href="/admin"><i class="fa fa-bar-chart-o"></i><span class="hidden-sm"> Dashboard</span></a></li>
 						<!-- Marketing Section -->	
 						<li>
 							<a class="dropmenu" href="index.html#"><i class="fa fa-eye"></i><span class="hidden-sm">Marketing</span> <span class="label">3</span></a>
 							<ul>
-								<li><a class="submenu" href="ui-sliders-progress.html"><i class="fa fa-eye"></i><span class="hidden-sm">Section 1</span></a></li>
-								<li><a class="submenu" href="ui-nestable-list.html"><i class="fa fa-eye"></i><span class="hidden-sm">Section 2</span></a></li>
-								<li><a class="submenu" href="ui-elements.html"><i class="fa fa-eye"></i><span class="hidden-sm">Section 3</span></a></li>
+								<li><a class="submenu" href="ui-sliders-progress.html"><i class="fa fa-circle"></i><span class="hidden-sm">Section 1</span></a></li>
+								<li><a class="submenu" href="ui-nestable-list.html"><i class="fa fa-circle"></i><span class="hidden-sm">Section 2</span></a></li>
+								<li><a class="submenu" href="ui-elements.html"><i class="fa fa-circle"></i><span class="hidden-sm">Section 3</span></a></li>
 							</ul>
 						</li>
 						<!-- Support Section -->
 						<li>
-							<a class="dropmenu" href="index.html#"><i class="fa fa-eye"></i><span class="hidden-sm">Support</span> <span class="label">3</span></a>
+							<a class="dropmenu" href="index.html#"><i class="fa fa-ticket"></i><span class="hidden-sm">Support</span> <span class="label">3</span></a>
 							<ul>
-								<li><a class="submenu" href="ui-sliders-progress.html"><i class="fa fa-eye"></i><span class="hidden-sm">Apps</span></a></li>
-								<li><a class="submenu" href="ui-nestable-list.html"><i class="fa fa-eye"></i><span class="hidden-sm"></span></a></li>
-								<li><a class="submenu" href="ui-elements.html"><i class="fa fa-eye"></i><span class="hidden-sm">Section 3</span></a></li>
+								<li><a class="submenu" href="ui-sliders-progress.html"><i class="fa fa-circle"></i><span class="hidden-sm">Review</span></a></li>
+								<li><a class="submenu" href="ui-nestable-list.html"><i class="fa fa-circle"></i><span class="hidden-sm">Pending</span></a></li>
+								<li><a class="submenu" href="ui-elements.html"><i class="fa fa-circle"></i><span class="hidden-sm">Section 3</span></a></li>
 							</ul>
 						</li>
 						<!--  -->
@@ -360,8 +362,8 @@
 							<a class="dropmenu" href="index.html#"><i class="fa fa-folder-o"></i><span class="hidden-sm">Another Section</span> <span class="label">3</span></a>
 							<ul>
 								<li><a class="submenu" href="page-infrastructure.html"><i class="fa fa-hdd-o"></i><span class="hidden-sm"> Infrastructure</span></a></li>
-								<li><a class="submenu" href="page-inbox.html"><i class="fa fa-envelope"></i><span class="hidden-sm"> Inbox</span></a></li>
-								<li><a class="submenu" href="page-todo.html"><i class="fa fa-tasks"></i><span class="hidden-sm"> ToDo & Timeline</span></a></li>
+								<li><a class="submenu" href="page-inbox.html"><i class="fa fa-circle"></i><span class="hidden-sm"> Inbox</span></a></li>
+								<li><a class="submenu" href="page-todo.html"><i class="fa fa-circle"></i><span class="hidden-sm"> ToDo & Timeline</span></a></li>
 								<!-- Profile Page - Cooming Soone
 								<li><a class="submenu" href="page-profile.html"><i class="fa fa-male"></i><span class="hidden-sm"> User Profile</span></a></li>
 								-->
@@ -376,49 +378,15 @@
 			<!-- start: Content -->
 			<div id="content" class="col-lg-10 col-sm-11">
 			
+				@include('admin_panel.small-boxes')
+
+				@include('admin_panel.charts')
+
 				@include('admin_panel.draft-apps')
 
 				@include('admin_panel.in-process-apps')
 
-				<div class="row">
-					
-					<div class="col-lg-3 col-sm-6 col-xs-6 col-xxs-12">
-						<div class="smallstat box">
-							<div class="boxchart-overlay blue">
-								<div class="boxchart">5,6,7,2,0,4,2,4,8,2,3,3,2</div>
-							</div>	
-							<span class="title">Approved Apps</span>
-							<span class="value">4 589</span>
-						</div>
-					</div><!--/col-->
-					
-					<div class="col-lg-3 col-sm-6 col-xs-6 col-xxs-12">
-						<div class="smallstat box">
-							<div class="boxchart-overlay red">
-								<div class="boxchart">1,2,6,4,0,8,2,4,5,3,1,7,5</div>
-							</div>	
-							<span class="title">Premium</span>
-							<span class="value">789</span>
-						</div>
-					</div><!--/col-->
-					
-					<div class="col-lg-3 col-sm-6 col-xs-6 col-xxs-12">
-						<div class="smallstat box">
-							<i class="fa fa-download green"></i>
-							<span class="title">Income</span>
-							<span class="value">$1 999,99</span>
-						</div>
-					</div><!--/col-->
-					
-					<div class="col-lg-3 col-sm-6 col-xs-6 col-xxs-12">
-						<div class="smallstat box">
-							<i class="fa fa-money yellow"></i>
-							<span class="title">Account</span>
-							<span class="value">$19 999,99</span>
-						</div>
-					</div><!--/col-->
-				
-				</div><!--/row-->	
+
 
 				
 			</div><!--/row-->	
@@ -491,9 +459,6 @@
 	<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	
-		
-	
-	
 	<!-- page scripts -->
 	<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
 	<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
@@ -515,11 +480,108 @@
 	<!-- theme scripts -->
 	<script src="assets/js/custom.min.js"></script>
 	<script src="assets/js/core.min.js"></script>
-	
-	<!-- inline scripts related to this page -->
 	<script src="assets/js/pages/index.js"></script>
 	<script src="assets/js/pages/table.js"></script>
+
+	<script src="assets/js/pages/charts-xcharts.js"></script> 
+	<script src="assets/js/xcharts.min.js"></script>
+
+	<script src="assets/js/d3.min.js"></script>
 	<!-- end: JavaScript-->
+	<script>
+
+		var tt = document.createElement('div'),
+		  leftOffset = -(~~$('html').css('padding-left').replace('px', '') + ~~$('body').css('margin-left').replace('px', '')),
+		  topOffset = -32;
+		tt.className = 'ex-tooltip';
+		document.body.appendChild(tt);
+
+		var data = {
+		  "xScale": "time",
+		  "yScale": "linear",
+		  "main": [
+		    {
+		      "className": ".pizza",
+		      "data": [
+		        {
+		          "x": "2014-01-01",
+		          "y": {{{ $revenueJan }}}
+		        },
+		        {
+		          "x": "2014-02-01",
+		          "y": {{{ $revenueFeb }}}
+		        },
+		        {
+		          "x": "2014-03-01",
+		          "y": {{{ $revenueMar }}}
+		        },
+		        {
+		          "x": "2014-04-01",
+		          "y": {{{ $revenueApr }}}
+		        },
+		        {
+		          "x": "2014-05-01",
+		          "y": {{{ $revenueMay }}}
+		        },
+		        {
+		          "x": "2014-06-01",
+		          "y": {{{ $revenueJun }}}
+		        },
+		        {
+		          "x": "2014-07-01",
+		          "y": {{{ $revenueJul }}}
+		        },
+		        {
+		          "x": "2014-08-01",
+		          "y": {{{ $revenueAug }}}
+		        },
+		        {
+		          "x": "2014-09-01",
+		          "y": {{{ $revenueSep }}}
+		        },
+		        {
+		          "x": "2014-10-01",
+		          "y": {{{ $revenueOct }}}
+		        },
+		        {
+		          "x": "2014-11-01",
+		          "y": {{{ $revenueNov }}}
+		        },
+		        {
+		          "x": "2014-12-01",
+		          "y": {{{ $revenueDec }}}
+		        },
+		        {
+		          "x": "2015-01-01",
+		          "y": {{{$revenueJan }}}
+		        },
+		        {
+		          "x": "2015-02-01",
+		          "y": {{{ $revenueFeb }}}
+		        }
+		      ]
+		    }
+		  ]
+		};
+
+		var opts = {
+			"dataFormatX": function (x) { return d3.time.format('%Y-%m-%d').parse(x); },
+			"tickFormatX": function (x) { return d3.time.format('%b-%y')(x); },
+			"mouseover": function (d, i) {
+			var pos = $(this).offset();
+			$(tt).text(d3.time.format('%b-%y')(d.x) + ': ' + d.y)
+			  .css({top: topOffset + pos.top, left: pos.left + leftOffset})
+			  .show();
+			},
+			"mouseout": function (x) {
+			$(tt).hide();
+			}
+		};
+
+		var myChart = new xChart('line-dotted', data, '#myChart', opts);
+
+
+	</script>
 	
 </body>
 </html>

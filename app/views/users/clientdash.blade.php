@@ -2,17 +2,8 @@
 
 @section('content')
 
-<?php 
-
-$user= Auth::user();
-$policyApp= new PolicyApp();
-// dd($policyApp);
 
 
-@section('content')
-
-
-?>
 <!-- sidebar -->		
 
 
@@ -54,7 +45,7 @@ $policyApp= new PolicyApp();
                 <a class="white" id="settings-btn" href="#">Settings</a>
             </li>
             <li>
-                <a class="white" href="#">Contact</a>
+                <a class="white" href="{{{ action('ExtrasController@showContact') }}}">Contact</a>
             </li>
         </ul>
     </div>
@@ -79,12 +70,14 @@ $policyApp= new PolicyApp();
 												</div>
 												<div class="panel-body">
 
-												    <p class="text-center">${{{ $policyApp->coverage_amount }}} 30yr.</p>
+													@foreach($user->policies as $policy)
 
-												    <p class="text-center">{{{ $policy->coverage_amount }}} 30yr.</p>
+												    	<p class="text-center">${{{ $policy->coverage_amount }}} 30yr.</p>
+												    	<p class="text-center">Term Policy</p>
+												    	<p class="text-center">Expires on: 02/22/25</p>
 
-												    <p class="text-center">Term Policy</p>
-												    <p class="text-center">Expires on: 02/22/25</p>
+													@endforeach
+												    
 												</div>
 											</div>
 										</div>
@@ -94,7 +87,7 @@ $policyApp= new PolicyApp();
 												    <h3 class="panel-title"><i class="fa fa-exclamation-triangle"></i> Needs Attention</h3>
 												</div>
 												<div class="panel-body">
-												    <a class="text-center" href="#">Saved Application</a>
+												    <a class="text-center" href="{{{ action('PolicyAppController@showLifeAppBL') }}}">Saved Application</a>
 												</div>
 											</div>
 										</div>
@@ -133,7 +126,7 @@ $policyApp= new PolicyApp();
 							<! -- section 04 -->
 		                    <div class="hide-this" id="section-04">
 								<h1 class="white"><i class="fa fa-check"></i> Completed Application Overview</h1>
-								<a class="btn btn-success" href="#">View Your Completed Application</a>
+								<a class="btn btn-success" href="{{{ action('PolicyAppController@showLifeAppBL') }}}">View Your Completed Application</a>
 							</div>
 							<! -- end section 04 -->
 

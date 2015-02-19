@@ -47,6 +47,7 @@ Route::get('calculator', ['as' => 'calculator', 'uses' => 'ExtrasController@show
 
 Route::get('contact', ['as' => 'contact', 'uses' => 'ExtrasController@showContact']);
 
+
 Route::post('createaccount', ['as' => 'createaccount', 'uses' => 'UserController@saveCreateAccount']);
 
 Route::group(

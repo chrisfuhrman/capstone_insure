@@ -2,12 +2,27 @@
 
 @include('partials.main_navbar')
 
-<div class="progress col-sm-12">
+<ol class="breadcrumb breadcrumb-no-pad">
+  <li><a href="#" class="active-breadcrumb">Proposed Insured</a></li>
+  <li><a href="#">Employment</a></li>
+  <li><a href="#">Usage</a></li>
+  <li><a href="#">Options</a></li>
+  <li><a href="#">Errors</a></li>
+  <li><a href="#">Issues</a></li>
+  <li><a href="#">License</a></li>
+  <li><a href="#">Authors</a></li>
+  <li><a href="#">Colophon</a></li>
+</ol>
+
+<!-- progress bar -->
+<!-- <div class="progress col-sm-12">
 	<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
 	<span class="sr-only">40% Complete (success)</span>
 	</div>
-</div>
-<!--  -->
+</div> -->
+<!-- end progress bar -->
+
+
 <div id="test-this">
 	<nav class="scroll-nav col-md-2 pull-left" id="test-this" role="navigation">
 		<div class="scroll-nav__wrapper"><span class="scroll-nav__heading">Application ID:</span>
@@ -42,11 +57,7 @@
 		@yield('content')
 	</div>
 
-	<nav>
-	  <ul class="pager">
-	    <li><a>Next</a></li>
-	  </ul>
-	</nav>
+	
 
 
 	<div class="clear-fix">
@@ -134,6 +145,10 @@
 			display: none;
 		}
 	</style>
+
+	<script src="assets/js/custom-xcharts.js"></script>
+
+	
 
 	<script>
 

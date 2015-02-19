@@ -14,55 +14,32 @@
 				  <thead>
 					  <tr>
 						  <th>Username</th>
-						  <th>name</th>
-						  <th>Date registered</th>
-						  <th>Role</th>
-						  <th>Status</th>
+						  <th>Name</th>
+						  <th>Date Saved</th>
+						  <th>Yearly Prem.</th>
+						  <th>Coverage Amount</th>
+						  <th>Coverage Duration</th>
+						  <th>Phone #</th>
 						  <th>Status</th>
 					  </tr>
 				  </thead>   
 				  <tbody>
-					<tr>
-						<td>Anton Phunihel</td>
-						<td class="center">2012/01/01</td>
-						<td class="center">Member</td>
+				@foreach ($pendingPolicies as $policy)
+						<tr>
+						<td>{{ $policy->user->username }}</td>
+						<td>{{ $policy->first_name }}</td>
+						<td>{{ $policy->created_at }}</td>
+						<td>{{ $policy->yearly_premium }}</td>
+						<td>{{ $policy->coverage_amount }}</td>
+						<td>{{ $policy->coverage_duration }}</td>
+						<td>{{ $policy->home_phone }}</td>
 						<td class="center">
-							<span class="label label-success">Active</span>
+							<span class="label label-danger">{{ $policy->policy_status }}</span>
 						</td>
-						<td class="center">
-							<a class="btn btn-success" href="table.html#">
-								<i class="fa fa-search-plus "></i>  
-							</a>
-							<a class="btn btn-info" href="table.html#">
-								<i class="fa fa-edit "></i>  
-							</a>
-							<a class="btn btn-danger" href="table.html#">
-								<i class="fa fa-trash-o "></i> 
-							</a>
-						</td>
-						<td>adsfdsf</td>
 					</tr>
+					@endforeach
 
-					<tr>
-						<td>Buford Phunihel</td>
-						<td class="center">2012/01/01</td>
-						<td class="center">Member</td>
-						<td class="center">
-							<span class="label label-success">Active</span>
-						</td>
-						<td class="center">
-							<a class="btn btn-success" href="table.html#">
-								<i class="fa fa-search-plus "></i>  
-							</a>
-							<a class="btn btn-info" href="table.html#">
-								<i class="fa fa-edit "></i>  
-							</a>
-							<a class="btn btn-danger" href="table.html#">
-								<i class="fa fa-trash-o "></i> 
-							</a>
-						</td>
-						<td>adsfdsf</td>
-					</tr>
+
 					
 				  </tbody>
 			  </table>            

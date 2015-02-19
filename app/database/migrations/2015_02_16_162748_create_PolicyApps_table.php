@@ -34,6 +34,17 @@ class CreatePolicyAppsTable extends Migration
 			$table->string('length_of_residence');
 			$table->string('work_phone')->nullable();
 			$table->string('home_phone');
+			$table->string('coverage_amount');
+			$table->string('coverage_duration');
+			$table->string('yearly_premium');
+			$table->string('monthly_premium');
+			$table->string('policy_rev');
+			$table->string('policy_in_force');
+			$table->string('policy_status');
+			$table->string('date_approved');
+
+		
+		
 			// $table->string('birth_state');
 			// $table->string('birth_country');
 			// $table->string('citizen');
