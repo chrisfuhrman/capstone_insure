@@ -8,8 +8,7 @@ class UserController extends BaseController
 		$user = Auth::user();
 		$userId = $user->id;
 
-		$usersPolicy = User::with('policies')->where('id', '=', $userId)->firstOrFail();
-			
+		$usersPolicy = User::with('policies')->where('id', '=', $userId)->firstOrFail();			
 
 		return View::make('users.clientdash')->with('user', $user);
 	}	
