@@ -146,6 +146,10 @@
 		}
 	</style>
 
+	<script src="assets/js/custom-xcharts.js"></script>
+
+	
+
 	<script>
 
 		$(document).ready(function() {

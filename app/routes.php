@@ -60,7 +60,6 @@ Route::group(
 {
 	Route::get('profile', ['as' => 'clientdash', 'uses' => 'UserController@showClientDashboard']);
 
-
 	Route::get('life-policy-app-bl',   ['as' => 'life-app-bl',   'uses' => 'PolicyAppController@showLifeAppBL']);
 	
 	Route::post('life-policy-app-bl',   ['as' => 'life-app-bl',   'uses' => 'PolicyAppController@showLifeAppBL']);

@@ -1,6 +1,37 @@
 (function () {
-var data = [{"xScale":"ordinal","comp":[],"main":[{"className":".main.l1","data":[{"y":15,"x":"2012-11-19T00:00:00"},{"y":11,"x":"2012-11-20T00:00:00"},{"y":8,"x":"2012-11-21T00:00:00"},{"y":10,"x":"2012-11-22T00:00:00"},{"y":1,"x":"2012-11-23T00:00:00"},{"y":6,"x":"2012-11-24T00:00:00"},{"y":8,"x":"2012-11-25T00:00:00"}]},{"className":".main.l2","data":[{"y":29,"x":"2012-11-19T00:00:00"},{"y":33,"x":"2012-11-20T00:00:00"},{"y":13,"x":"2012-11-21T00:00:00"},{"y":16,"x":"2012-11-22T00:00:00"},{"y":7,"x":"2012-11-23T00:00:00"},{"y":18,"x":"2012-11-24T00:00:00"},{"y":8,"x":"2012-11-25T00:00:00"}]}],"type":"line-dotted","yScale":"linear"},{"xScale":"ordinal","comp":[],"main":[{"className":".main.l1","data":[{"y":12,"x":"2012-11-19T00:00:00"},{"y":18,"x":"2012-11-20T00:00:00"},{"y":8,"x":"2012-11-21T00:00:00"},{"y":7,"x":"2012-11-22T00:00:00"},{"y":6,"x":"2012-11-23T00:00:00"},{"y":12,"x":"2012-11-24T00:00:00"},{"y":8,"x":"2012-11-25T00:00:00"}]},{"className":".main.l2","data":[{"y":29,"x":"2012-11-19T00:00:00"},{"y":33,"x":"2012-11-20T00:00:00"},{"y":13,"x":"2012-11-21T00:00:00"},{"y":16,"x":"2012-11-22T00:00:00"},{"y":7,"x":"2012-11-23T00:00:00"},{"y":18,"x":"2012-11-24T00:00:00"},{"y":8,"x":"2012-11-25T00:00:00"}]}],"type":"cumulative","yScale":"linear"},{"xScale":"ordinal","comp":[],"main":[{"className":".main.l1","data":[{"y":12,"x":"2012-11-19T00:00:00"},{"y":18,"x":"2012-11-20T00:00:00"},{"y":8,"x":"2012-11-21T00:00:00"},{"y":7,"x":"2012-11-22T00:00:00"},{"y":6,"x":"2012-11-23T00:00:00"},{"y":12,"x":"2012-11-24T00:00:00"},{"y":8,"x":"2012-11-25T00:00:00"}]},{"className":".main.l2","data":[{"y":29,"x":"2012-11-19T00:00:00"},{"y":33,"x":"2012-11-20T00:00:00"},{"y":13,"x":"2012-11-21T00:00:00"},{"y":16,"x":"2012-11-22T00:00:00"},{"y":7,"x":"2012-11-23T00:00:00"},{"y":18,"x":"2012-11-24T00:00:00"},{"y":8,"x":"2012-11-25T00:00:00"}]}],"type":"bar","yScale":"linear"}];
-var order = [0, 1, 0, 2],
+var data = [{
+    "xScale": "ordinal",
+    "comp": [],
+    "main": [{
+            "className": ".main.l1",
+            "data": [{
+                "y": $revenueJan,
+                "x": "January"
+                }, {
+                    "y": 10,
+                    "x": "February"
+                }, {
+                    "y": 15,
+                    "x": "March"
+                }, {
+                    "y": 20,
+                    "x": "April"
+                }, {
+                    "y": 50,
+                    "x": "May"
+                }, {
+                    "y": 100,
+                    "x": "June"
+                }, {
+                    "y": 150,
+                    "x": "July"
+                }]
+        }],
+    "type": "line-dotted",
+    "yScale": "linear"
+}];
+
+var order = [0],
   i = 0,
   xFormat = d3.time.format('%A'),
   chart = new xChart('line-dotted', data[order[i]], '#chart', {
@@ -31,37 +62,8 @@ toggles.on('click', function (d, i) {
   updateChart(i);
 });
 
-function rotateChart() {
-  i += 1;
-  i = (i >= order.length) ? 0 : i;
-  var d = updateChart(order[i]);
-  rotateTimer = setTimeout(rotateChart, t);
-}
-rotateTimer = setTimeout(rotateChart, t);
-}());
 
-(function () {
-      
-      var data = {
-  "xScale": "ordinal",
-  "yScale": "linear",
-  "main": [
-    {
-      "className": ".pizza",
-      "data": [
-        {
-          "x": "Pepperoni",
-          "y": 4
-        },
-        {
-          "x": "Cheese",
-          "y": 8
-        }
-      ]
-    }
-  ]
-};
-      var myChart = new xChart('bar', data, '#example1');
+
       
     }());
 
