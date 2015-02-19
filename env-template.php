@@ -6,6 +6,7 @@ return array(
 	'DB_USER' => '',
 	'DB_PASS' => '',
 	'GOOGLE_CLIENT_ID' => '',
-	'GOOGLE_CLIENT_SECRET' => ''
-
+	'GOOGLE_CLIENT_SECRET' => '',
+	'MAILGUN_DOMAIN' => '',
+	'MAILGUN_SECRET' => ''
 );
