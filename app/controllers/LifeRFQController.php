@@ -50,9 +50,12 @@ class LifeRFQController extends BaseController
 	public function store()
 	{
 		$lifeRFQ = new LifeRFQ();
+
+		$dob = strtotime(Input::get('dob'));
+
 		// dd($lifeRFQ);
 		$lifeRFQ->gender = Input::get('gender');
-		$lifeRFQ->dob = Input::get('dob');
+		$lifeRFQ->dob = date('Y-m-d',$dob);
 		$lifeRFQ->coverage_amount = Input::get('coverage_amount');
 		$lifeRFQ->coverage_duration = Input::get('coverage_duration');
 		$lifeRFQ->smoker = Input::get('smoker');
