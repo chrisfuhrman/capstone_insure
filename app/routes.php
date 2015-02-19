@@ -72,10 +72,18 @@ Route::post('remind', ['as' => 'remind', 'uses' => 'RemindersController@postRemi
 	
 Route::get('remind', ['as' => 'remind', 'uses' => 'RemindersController@getRemind']);
 
+
 // Route::group(array('before' => array('auth|admin')), function()
 // {
+
+Route::get('password/reset/{token}', ['as' => 'password/reset/{token}', 'uses' => 'RemindersController$getReset']);
+
+Route::post('password/reset/{token}', ['as' => 'password/reset/{token}', 'uses' => 'RemindersController$postReset']);
+
+Route::group(array('before' => array('auth|admin')), function()
+{
     Route::get('admin', ['as' => 'admin', 'uses' => 'AdminController@showCompanyDashboard']);
-// });
+});
 
 
 

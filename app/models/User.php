@@ -35,11 +35,18 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 
     public function isAdmin()
     {
-  //   	$role_id = Role::with('id')where('name', '=', 'admin')->firstOrFail();
 
-		// $userId = $user->id;
+    	$roles = User::find($this->id)->roles;
 
+    	foreach ($roles as $role) {
+    		$roleArray[] = $role->name;
+    	}
 
+    	if (in_array('admin', $roleArray)) {
+    		return true;
+    	} else {
+    		return false;
+    	}
 
   //   	$this->User::with('')->where('user_id', '=', $userId)->firstOrFail();
         return $this->role_id == 1;
@@ -48,6 +55,10 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	public function policies()
 	{
 		return $this->hasMany('Policy');
+	}
+
+	public function roles(){
+		return $this->belongsToMany('Role');
 	}
 
 }

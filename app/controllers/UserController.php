@@ -10,13 +10,15 @@ class UserController extends BaseController
 
 		$usersPolicy = User::with('policies')->where('id', '=', $userId)->firstOrFail();
 		
+		$usersPolicy = User::with('policies')->where('id', '=', $userId)->firstOrFail();			
+
 		return View::make('users.clientdash')->with('user', $user);
 	}	
 
 
 	public function showCreateAccount() {
 
-		return View::make('User.createaccount');
+		return View::make('users.createaccount');
 	}
 
 	public function saveCreateAccount() {

@@ -3,11 +3,6 @@
 @section('content')
 
 <!-- sidebar -->		
-<?
-
-$number = 12345.09;
-
-?>
 
 <div id="wrapper">
 
@@ -41,10 +36,7 @@ $number = 12345.09;
 				</a>
             </li>
             <li>
-                <a class="white" id="account-btn" href="#">Account</a>
-            </li>
-            <li>
-                <a class="white" id="settings-btn" href="#">Settings</a>
+                <a class="white" id="account-btn" href="#">Account Settings</a>
             </li>
             <li>
                 <a class="white" href="{{{ action('ExtrasController@showContact') }}}">Contact</a>
@@ -195,15 +187,9 @@ $number = 12345.09;
 
 							<! -- section 07 -->
 		                    <div class="hide-this" id="section-07">
-								<h1 class="white"><i class="fa fa-user"></i> Account</h1>
+								<h1 class="white"><i class="fa fa-cogs"></i> Account Settings</h1>
 							</div>
 							<! -- end section 07 -->
-
-							<! -- section 08 -->
-		                    <div class="hide-this" id="section-08">
-								<h2 class="white"><i class="fa fa-wrench"></i> Settings</h2>
-							</div>
-							<! -- end section 08 -->
 
 
 		                </div>
@@ -379,20 +365,6 @@ $number = 12345.09;
 
 		});
 
-		$('#settings-btn').on('click', function() {
-			$('#tier2-btn').hide();
-			$('#next-btn').show();
-
-			$('#section-08').fadeIn();
-			$('#section-01').hide();
-			$('#section-02').hide();
-			$('#section-03').hide();
-			$('#section-04').hide();
-			$('#section-05').hide();
-			$('#section-06').hide();
-			$('#section-07').hide();
-
-		});
 
 	});
 

@@ -7,9 +7,9 @@
 		<div class="col-lg-10 col-sm-11">
 			<div class="row">
 				<div class="col-lg-12">
-					<h2 id="quote-header" class="quote-header">Price Comparison Tool</h2>
-					<div class="col-sm-5">
-						<h4 id="sub-headline">We only ask the bare minimum information in order to provide you with the most accurate estimates possible!</h4>
+					<h2 id="quote-header" class="quote-header no-padding-bottom-header"><i class="fa fa-check-circle-o white"></i> Price Comparison Tool</h2>
+					<div class="col-sm-5 no-padding-left-header">
+						<h4 id="sub-headline no-padding-left-header">We only ask the bare minimum information in order to provide you with the most accurate estimates possible!</h4>
 					</div>
 					<div class="clear-fix"></div>
 
@@ -161,7 +161,6 @@
 	<!-- start: JavaScript-->
 	<!--[if !IE]>-->
 
-			<script src="/assets/js/jquery-2.1.0.min.js"></script>
 
 	<!--<![endif]-->
 
@@ -187,7 +186,7 @@
 		
 	<![endif]-->
 	<script src="/assets/js/jquery-migrate-1.2.1.min.js"></script>
-	<script src="/assets/js/bootstrap.min.js"></script>
+	
 	
 		
 	
