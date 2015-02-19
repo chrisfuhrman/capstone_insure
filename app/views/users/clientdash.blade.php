@@ -2,10 +2,12 @@
 
 @section('content')
 
-
-
 <!-- sidebar -->		
+<?
 
+$number = 12345.09;
+
+?>
 
 <div id="wrapper">
 
@@ -71,8 +73,8 @@
 												<div class="panel-body">
 
 													@foreach($user->policies as $policy)
-
-												    	<p class="text-center">${{{ $policy->coverage_amount }}} 30yr.</p>
+														<? setlocale(LC_MONETARY, 'en_US'); ?>
+												    	<p class="text-center">{{{ money_format('$%i', $policy->coverage_amount) }}} {{{ $policy->coverage_duration }}}yr.</p>
 												    	<p class="text-center">Term Policy</p>
 												    	<p class="text-center">Expires on: 02/22/25</p>
 
@@ -213,21 +215,13 @@
     <!-- /#page-content-wrapper -->
 
 </div>
-<!-- /#wrapper -->
 
-
-<!-- Menu Toggle Script -->
-<script>
-$("#menu-toggle").click(function(e) {
-    e.preventDefault();
-    $("#wrapper").toggleClass("toggled");
-});
-</script>
 
 
 @stop
 
 @section('bottom-script')
+
 	<!-- start: JavaScript-->
 	<!--[if !IE]>-->
 
@@ -256,39 +250,6 @@ $("#menu-toggle").click(function(e) {
 		</script>
 		
 	<![endif]-->
-	<script src="/assets/js/jquery-migrate-1.2.1.min.js"></script>
-	<script src="/assets/js/bootstrap.min.js"></script>
-	
-		
-	
-	
-	<!-- page scripts -->
-	<script src="/assets/js/jquery-ui-1.10.3.custom.min.js"></script>
-	<script src="/assets/js/jquery.sparkline.min.js"></script>
-	<script src="/assets/js/jquery.chosen.min.js"></script>
-	<script src="/assets/js/jquery.cleditor.min.js"></script>
-	<script src="/assets/js/jquery.autosize.min.js"></script>
-	<script src="/assets/js/jquery.placeholder.min.js"></script>
-	<script src="/assets/js/jquery.maskedinput.min.js"></script>
-	<script src="/assets/js/jquery.inputlimiter.1.3.1.min.js"></script>
-	<script src="/assets/js/bootstrap-datepicker.min.js"></script>
-	<script src="/assets/js/bootstrap-timepicker.min.js"></script>
-	<script src="/assets/js/moment.min.js"></script>
-	<script src="/assets/js/daterangepicker.min.js"></script>
-	<script src="/assets/js/jquery.hotkeys.min.js"></script>
-	<script src="/assets/js/bootstrap-wysiwyg.min.js"></script>
-	<script src="/assets/js/bootstrap-colorpicker.min.js"></script>
-	
-	<!-- theme scripts -->
-	<script src="/assets/js/custom.min.js"></script>
-	<script src="/assets/js/core.min.js"></script>
-
-
-	
-	<!-- inline scripts related to this page -->
-	<script src="/assets/js/pages/form-elements.js"></script>
-	
-	<!-- end: JavaScript-->
 
 
 	<script>
