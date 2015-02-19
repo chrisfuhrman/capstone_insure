@@ -1,10 +1,3 @@
-<form action="{{ action('RemindersController@postReset') }}" method="POST">
-    <input type="email" name="email">
-    <input type="password" name="password">
-    <input type="password" name="password_confirmation">
-    <input type="submit" value="Reset Password">
-</form>
-
 @extends('layouts.master')
 
 @section('content')
@@ -12,7 +5,7 @@
 	
 	{{ Form::open(array('action' =>  'RemindersController@postReset', 'method' => 'POST')) }}
     
-    <input type="hidden" name="token" value="{{ $token }}">
+   {{ Form::hidden('token', $token) }}
     
     <div class="form-group">
 		{{ Form::label('email', 'Email:', array('class' => 'control-label')) }}

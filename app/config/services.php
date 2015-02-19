@@ -15,8 +15,8 @@ return array(
 	*/
 
 	'mailgun' => array(
-		'domain' => $_ENV['MAILGUN_SECRET'],
-		'secret' => $_ENV['MAILGUN_DOMAIN']
+		'domain' => $_ENV['MAILGUN_DOMAIN'],
+		'secret' => $_ENV['MAILGUN_SECRET']
 	),
 
 	'mandrill' => array(
