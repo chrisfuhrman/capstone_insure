@@ -6,7 +6,7 @@
 	</div>
 
 	<div class="container clipboard-container">
-		<div class="container inner-clipboard">
+		<div class="inner-clipboard">
 			<h4 class="">Please verify your information:</h4>
 			<address>
 				<strong>
