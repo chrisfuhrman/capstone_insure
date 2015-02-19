@@ -15,7 +15,7 @@ class CreateLifeRFQTable extends Migration {
 		Schema::create('life_rfq', function(Blueprint $table)
 		{
 			$table->increments('id');
-            $table->string('dob');
+            $table->date('dob');
             $table->string('gender');
             $table->string('coverage_amount');
             $table->string('coverage_duration');

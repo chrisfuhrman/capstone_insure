@@ -6,6 +6,8 @@
 
 <p>If you already have an account:</p><a class="btn btn-info" href="{{{ route('login') }}}">Log in</a>
 
+	{{ Form::open(array('action' => 'UserController@saveCreateAccount')) }}
+	
 	<div class="form-group">
 		{{ Form::label('first_name', 'First Name:', array('class' => 'control-label')) }}
 		<div class="controls">
@@ -55,7 +57,7 @@
 		<div class="controls">
 			<div class="input-group col-sm-4">
 				<span class="input-group-addon"><i class="fa fa-male"></i></span>
-				{{ Form::text('dob', Input::old('dob'), array('class' => 'form-control', 'placeholder' => 'Dollar amount', 'id' => 'date', 'name' => 'dob')) }}
+				{{ Form::text('dob', Input::old('dob'), array('class' => 'form-control', 'placeholder' => 'MM/DD/YYYY', 'id' => 'date', 'name' => 'dob')) }}
 			</div>
 		</div>
 		{{ $errors->first('dob', '<span class="help-block">:message</span>') }}
@@ -66,7 +68,7 @@
 		<div class="controls">
 			<div class="input-group col-sm-4">
 				<span class="input-group-addon"><i class="fa fa-male"></i></span>
-				{{ Form::text('username', Input::old('username'), array('class' => 'form-control', 'placeholder' => 'Madien Name (if you have one)', 'id' => 'username', 'name' => 'username')) }}
+				{{ Form::text('username', Input::old('username'), array('class' => 'form-control', 'placeholder' => 'Username', 'id' => 'username', 'name' => 'username')) }}
 			</div>
 		</div>
 		{{ $errors->first('password', '<span class="help-block">:message</span>') }}
@@ -77,21 +79,21 @@
 		<div class="controls">
 			<div class="input-group col-sm-4">
 				<span class="input-group-addon"><i class="fa fa-male"></i></span>
-				{{ Form::text('password', Input::old('password'), array('class' => 'form-control', 'placeholder' => 'Madien Name (if you have one)', 'id' => 'password', 'name' => 'password')) }}
+				{{ Form::password('password', array('class' => 'form-control', 'id' => 'password', 'name' => 'password')) }}
 			</div>
 		</div>
 		{{ $errors->first('password', '<span class="help-block">:message</span>') }}
 	</div>
 
 	<div class="form-group">
-		{{ Form::label('password_comfirmation', 'Verify Password_comfirmation:', array('class' => 'control-label')) }}
+		{{ Form::label('email', 'Email:', array('class' => 'control-label')) }}
 		<div class="controls">
 			<div class="input-group col-sm-4">
 				<span class="input-group-addon"><i class="fa fa-male"></i></span>
-				{{ Form::text('password_comfirmation', Input::old('password_comfirmation'), array('class' => 'form-control', 'placeholder' => 'Madien Name (if you have one)', 'id' => 'password_comfirmation', 'name' => 'password_comfirmation')) }}
+				{{ Form::email('email', 'eMail', array('class' => 'form-control', 'id' => 'email', 'name' => 'email')) }}
 			</div>
 		</div>
-		{{ $errors->first('password_comfirmation', '<span class="help-block">:message</span>') }}
+		{{ $errors->first('email', '<span class="help-block">:message</span>') }}
 	</div>
 
 	<div class="form-group">
@@ -193,6 +195,11 @@
 		</div>
 		{{ $errors->first('zip', '<span class="help-block">:message</span>') }}
 	</div>
+	
+	{{ Form::submit('Create Account', array('class' => 'form-control')) }}
+
+	{{ Form::close() }}
+
 
 
 @stop
