@@ -35,7 +35,14 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 
     public function isAdmin()
     {
-        return $this->id == 1;
+  //   	$role_id = Role::with('id')where('name', '=', 'admin')->firstOrFail();
+
+		// $userId = $user->id;
+
+
+
+  //   	$this->User::with('')->where('user_id', '=', $userId)->firstOrFail();
+        return $this->role_id == 2;
     }
 
 	public function policies()

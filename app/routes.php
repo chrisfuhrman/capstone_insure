@@ -47,6 +47,8 @@ Route::get('calculator', ['as' => 'calculator', 'uses' => 'ExtrasController@show
 
 Route::get('contact', ['as' => 'contact', 'uses' => 'ExtrasController@showContact']);
 
+Route::post('createaccount', ['as' => 'createaccount', 'uses' => 'UserController@saveCreateAccount']);
+
 Route::group(
 	['before' => 'auth'], function()
 {
@@ -61,14 +63,20 @@ Route::group(
 	Route::post('fileUpload', ['as' => 'fileUpload', 'uses' => 'PolicyAppController@saveFileUpload']);
 	
 	Route::get('logout', ['as' => 'logout', 'uses' => 'AuthController@doLogout']);
+
+
 });
 
-	Route::group(array('before' => array('auth|admin')), function()
+Route::post('remind', ['as' => 'remind', 'uses' => 'RemindersController@postRemind']);
+	
+Route::get('remind', ['as' => 'remind', 'uses' => 'RemindersController@getRemind']);
+
+Route::group(array('before' => array('auth|admin')), function()
 {
     Route::get('admin', ['as' => 'admin', 'uses' => 'AdminController@showCompanyDashboard']);
 });
 
 
 
-Route::get('create_account', ['as' => 'createaccount', 'uses' => 'UserController@showCreateAccount']);
+Route::get('createaccount', ['as' => 'createaccount', 'uses' => 'UserController@showCreateAccount']);
 
