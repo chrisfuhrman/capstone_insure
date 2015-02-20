@@ -63,14 +63,11 @@ class UserController extends BaseController
 			$user->zip  		= Input::get('zip');
 			$user->save();
 
-			$data = 
-			[
-			'username' => Input::get('username'),
-			'password' => Input::get('password')
-			];
+			$user = User::findOrFail($user->id);
+			Auth::login($user);
 
-			Session::flash('sucessMessage', 'Sucessfully saved your post!');
-			return Redirect::to('doLogin')->with($data);
+			Session::flash('sucessMessage', 'Sucessfully created your Profile!');
+			return Redirect::to('profile');
 	    // }		
 
 	}

@@ -27,7 +27,7 @@ Route::resource('life-quote-results', 'RFQResultsController');
 
 // Authentication Routes
 Route::get('login', ['as' => 'login', 'uses' => 'AuthController@showLogin']);
-Route::post('login', 'AuthController@doLogin');
+Route::post('login', ['as' => 'login', 'uses' => 'AuthController@doLogin']);
 // OAuth Routes
 Route::get('auth/google', 'AuthController@loginWithGoogle');
 Route::get('auth/linkedin', 'AuthController@loginWithLinkedin');
@@ -67,13 +67,7 @@ Route::group(
 
 });
 
-Route::post('remind', ['as' => 'remind', 'uses' => 'RemindersController@postRemind']);
-	
-Route::get('remind', ['as' => 'remind', 'uses' => 'RemindersController@getRemind']);
-
-Route::get('password/reset/{token}', ['as' => 'password/reset/{token}', 'uses' => 'RemindersController@getReset']);
-
-Route::post('password/reset/{token}', ['as' => 'password/reset/{token}', 'uses' => 'RemindersController@postReset']);
+Route::controller('password', 'RemindersController');
 
 Route::group(array('before' => array('auth|admin')), function()
 {
