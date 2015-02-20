@@ -140,12 +140,12 @@ or background color for dropdown when active*/
   Hero Container Home Page
   ========================================
 */
-#hero-container {
+/*#hero-container {
 	background-image: url('/assets/img/family04.jpg');
 	padding-top: 30px;
 	padding-bottom: 20px;
 	height: 400px;
-}
+}*/
 #hero-headline {
 	font-size: 50px;
 	color: #fff;
