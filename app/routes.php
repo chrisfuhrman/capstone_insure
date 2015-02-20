@@ -45,6 +45,7 @@ Route::get('learning', ['as' => 'learning', 'uses' => 'ExtrasController@showLear
 Route::get('calculator', ['as' => 'calculator', 'uses' => 'ExtrasController@showCalculator']);
 
 Route::get('contact', ['as' => 'contact', 'uses' => 'ExtrasController@showContact']);
+Route::post('contact', 'HomeController@sendContactUs');
 
 
 Route::post('createaccount', ['as' => 'createaccount', 'uses' => 'UserController@saveCreateAccount']);
@@ -70,6 +71,7 @@ Route::group(
 Route::post('remind', ['as' => 'remind', 'uses' => 'RemindersController@postRemind']);
 	
 Route::get('remind', ['as' => 'remind', 'uses' => 'RemindersController@getRemind']);
+
 
 Route::get('password/reset/{token}', ['as' => 'password/reset/{token}', 'uses' => 'RemindersController@getReset']);
 

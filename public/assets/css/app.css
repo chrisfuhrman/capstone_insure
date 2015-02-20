@@ -314,9 +314,9 @@ h3 {font-size: 18px;}
 	color: #fff;
 	padding: 10px 15px;
 }
-.progress {
+.breadcrumb {
 	position: absolute;
-    z-index: 10;
+    z-index: 1;
 }
 #test-this {
 

@@ -10,19 +10,21 @@
 			<h3 id="hero-subheadline">Simple, Clear, and Transparent price comparison</h3>
 		</div>
 		<div class="row col-sm-7 col-md-5 col-lg-5">
-			<form class="form-group" id="form_select_ins_type" method="POST" action="">
-				<div class="form-select">
-					<select name="insurance_selection" class="form-control">
-						<option disabled="disabled" selected>What type of insurance do you need?</option>
-						<option value="life_ins">Life Insurance</option>
-						<option value="disability_ins">Disability Insurance</option>
-					</select>
-				</div>
-			</form>
+			<div class="form-select">
+				<select id="insurance_selection" class="form-control">
+					<option disabled="disabled" selected>What type of insurance do you need?</option>
+					<option value="life_ins">Life Insurance</option>
+					<option value="disability_ins">Disability Insurance</option>
+				</select>
+			</div>
 		</div>
-
-
+		<div class="clear-fix"></div>
+		<div class="row" id="btn-ins-group">
+			<a href="{{{ action('LifeRFQController@create') }}}" id="life-btn" class="hide-this btn btn-success btn-lg" type="button">Instant Life Quote</a>
+			<a href="{{{ action('LifeRFQController@create') }}}" id="dis-btn" class="hide-this btn btn-success btn-lg" type="button">Instant Disability Quote</a>
+		</div>
 	</div>
+</div>
 
 		<!-- delete this eventually -->
 		<div class="row col-sm-12 col-md-12 col-lg-12">
@@ -100,7 +102,23 @@
 		</div>
 	</div>
 </div>
+@stop
 
+@section('bottom-script')
+	<script>
+	
+$('#insurance_selection').on('change', function() {
+	var val = $(this).val();
 
+	if (val == 'disability_ins') {
+		$('#dis-btn').show()
+			.siblings().hide();
+	} else if (val == 'life_ins') {
+		$('#life-btn').show()
+			.siblings().hide();
+	}
 
+});
+
+	</script>
 @stop
