@@ -1,9 +1,10 @@
 @extends('layouts.master')
 
+	
 
 @section('content')
 
-<div id="hero-container">
+<div id="hero-container" >
 	<div class="container homepage-padding-left">
 		<div class="row col-sm-12 col-md-12 col-lg-12">
 			<h1 id="hero-headline">The easiest and most affordable way to buy insurance</h1>

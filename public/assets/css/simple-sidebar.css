@@ -124,3 +124,13 @@
         margin-right: 0;
     }
 }
+
+#hero-container {
+  background-image: url(/assets/img/family04-r.jpg);
+  -webkit-background-size:cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  padding-top: 30px;
+  padding-bottom: 20px;
+
+}
