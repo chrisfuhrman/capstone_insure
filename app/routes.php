@@ -64,6 +64,8 @@ Route::group(
 	
 	Route::get('logout', ['as' => 'logout', 'uses' => 'AuthController@doLogout']);
 
+	Route::get('medHistory', ['as' => 'medHistory', 'uses' => 'PolicyAppController@showMedHistory']);
+
 
 });
 
