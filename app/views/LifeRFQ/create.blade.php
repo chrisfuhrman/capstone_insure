@@ -21,13 +21,11 @@
 								<!-- Name -->
 								<div class="wrap">
 								<div class="form-group">
-									<label class="control-label" for="first name">First Name <span class="lastN">Last Name</span></label>
+									<label class="control-label" for="first name">First Name</label>
 									<div class="controls">
 										<div class="input-group col-sm-5">
 											<span class="input-group-addon"><i class="fa fa-user"></i></span>
 											<input type="text" name="first_name" class="form-control">
-											<span class="input-group-addon"></span>
-											<input type="text" name="last_name" class="form-control">
 										</div>
 									</div>
 								</div>		
@@ -38,7 +36,7 @@
 									<div class="controls">
 										<div class="input-group col-sm-5">
 											<span class="input-group-addon"><i class="fa fa-home"></i></span>
-											<input type="text" placeholder= '12345'id="zip" name="zip" class="form-control">
+											<input type="text" placeholder= '78205'id="zip" name="zip" class="form-control">
 										</div>
 									</div>
 								</div>
@@ -221,27 +219,31 @@
 
 
 	<script>
-	(function( $ ){
-		$.fn.swapRadio = function($) 
-		{
 
-			var idName = $(this).attr('id');
-			var id = $('#'+idName);
-			var classNames = id.attr('class');
+	// var female = $('#gender-female');
+	// var male = $('#gender-male');
+	// var btngroup = $('.btn-gender');
+	
+	// function swapRadio(btngroup, female, male)
+	// {
+	// 	var idName = btngroup.attr('id');
+	// 	var id = $('#'+idName);
+	// 	var classNames = id.attr('class');
 
-			var isHilighted = (classNames.search('btn-info') != -1) ? true : false;
-			var otherBtn = (idName == 'gender-female') ? $('#gender-male') : $('#gender-female');
+	// 	var isHilighted = (classNames.search('btn-info') != -1) ? true : false;
+	// 	var otherBtn = (idName == 'gender-female') ? $('#gender-male') : $('#gender-female');
 
-			if(!isHilighted) {
-				id.removeClass('btn-default').addClass('btn-info');
-				otherBtn.addClass('btn-default').removeClass('btn-info');
-			}
-			return this;
-		}; 
-	})( jQuery );
+	// 	if(!isHilighted) {
+	// 		id.removeClass('btn-default').addClass('btn-info');
+	// 		otherBtn.addClass('btn-default').removeClass('btn-info');
+	// 	}
+	// 	return this;
+	// };
+
+	// swapRadio(btngroup, female, male);
 
 
-		// $('#my_div').swapRadio();
+		// $('#my_div').swapRadio($gender-female, $gender-male);
 
 	 $(document).ready(function () {
 

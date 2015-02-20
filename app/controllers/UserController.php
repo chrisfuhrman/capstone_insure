@@ -15,7 +15,8 @@ class UserController extends BaseController
 		$data = 
 		[
 			'policy' => $policy,
-			'user' => $user
+			'user' => $user,
+			'userId' => $user
 		];		
 
 		return View::make('users.clientdash')->with($data);
@@ -42,6 +43,7 @@ class UserController extends BaseController
 
 	  //   } else {
 			// dd(Input::all());
+		
 		$user = new User;
 
 
@@ -67,8 +69,8 @@ class UserController extends BaseController
 
 			$data = 
 			[
-			'username' => Input::get('username'),
-			'password' => Input::get('password')
+				'username' => Input::get('username'),
+				'password' => Input::get('password')
 			];
 
 			Session::flash('sucessMessage', 'Sucessfully saved your post!');

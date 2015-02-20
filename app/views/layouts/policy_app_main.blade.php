@@ -63,8 +63,20 @@
 	<!-- </div> -->
 
 	<!--content that changes -->
-	<div class="col-md-8 pull-right" id="right-section">
-		@yield('content')
+	<div class="col-md-8 pull-right " id="right-section">
+
+		<div class="section-heading">
+			<h2>Proposed Insured Information</h2>
+		</div>
+
+		<div class="clipboard-container">
+			<div class="inner-clipboard">
+				@yield('content')
+			</div>
+			
+		</div>
+
+
 	</div>
 
 	
@@ -166,8 +178,12 @@
 
 
               jQuery(function($) {              
-                  $('.progress').stickUp();
-              });
+                  $('.breadcrumb').stickUp();
+              }); 
+
+              // jQuery(function($) {              
+              //     $('.clipboard-container').stickUp();
+              //  });
 
 			$('.tobacco_extra').hide();
 			$('.citizen_extra').hide();
@@ -219,7 +235,21 @@
 
 				}
 
-				});
+				});		
+				
+			$( "#verify-address" ).on('click', function(){
+				var value = $('input:radio[name=correct_address]:checked').val();
+				console.log('test');
+				if (value == 'Yes'){
+
+					$('#verify-address-block').slideDown(900);
+
+				} else {
+
+					$('#verify-address-block').slideUp(900);
+
+				}
+			});
 
 			$('.btn-toggle').click(function() {
 
@@ -241,6 +271,22 @@
 			    $(this).find('.btn').toggleClass('btn-default');
 			       
 			});
+
+			// 
+			$('.btn-verify-address').click(function() {
+
+				var idName = $(this).attr('id');
+				var id = $('#'+idName);
+				var classNames = id.attr('class');
+
+				var isHilighted = (classNames.search('btn-info') != -1) ? true : false;
+				var otherBtn = (idName == 'address-confirm-no') ? $('#address-confirm-yes') : $('#address-confirm-no');
+
+				if(!isHilighted) {
+					id.removeClass('btn-default').addClass('btn-info');
+					otherBtn.addClass('btn-default').removeClass('btn-info');
+				}
+			});		
 
 		});
 
