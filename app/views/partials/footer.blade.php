@@ -15,7 +15,7 @@
 			<div class="col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1">
 				<h4>For Employees</h4>
 				<ul class="footer-links">
-					<li><a href="http://cnn.com">Employee Login</a></li>
+					<li><a href="{{{ url('admin') }}}">Employee Login</a></li>
 					<li><a href="http://cnn.com">Careers</a></li>
 					<li><a href="http://cnn.com">Helpful Links</a></li>
 				</ul>

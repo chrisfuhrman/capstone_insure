@@ -23,9 +23,8 @@
 					<li class="list-group-item"><i class="icon-ok text-default"></i>30 Year Term Policy</li>
 					<li class="list-group-item"><i class="icon-ok text-default"></i>A++ Financial Rating</li>
 				</ul>
-				<div class="panel-footer life-app-panel-footer">
-					<a class="btn btn-lg btn-block btn-info" href="createaccount">Apply Now</a>
-				</div>
+				<div class="panel-footer">
+					<a class="btn btn-lg btn-block btn-info" href="{{{ action('PolicyAppController@showLifeAppBL') }}}">Apply Now</a>
 			</div>
 		</div>	
 		<div class="col-md-3">
@@ -42,8 +41,9 @@
 					<li class="list-group-item"><i class="icon-ok text-default"></i>30 Year Term Policy</li>
 					<li class="list-group-item"><i class="icon-ok text-default"></i>A++ Financial Rating</li>
 				</ul>
-				<div class="panel-footer life-app-panel-footer">
-					<a class="btn btn-lg btn-block btn-info" href="createaccount">Apply Now</a>
+				<div class="panel-footer">
+					<a class="btn btn-lg btn-block btn-info" href="{{{ action('PolicyAppController@showLifeAppBL') }}}">Apply Now</a>
+
 				</div>
 			</div>
 		</div>		
@@ -61,9 +61,9 @@
 					<li class="list-group-item"><i class="icon-ok text-default"></i>30 Year Term Policy</li>
 					<li class="list-group-item"><i class="icon-ok text-default"></i>A++ Financial Rating</li>
 				</ul>
-				<div class="panel-footer life-app-panel-footer">
-					<a class="btn btn-lg btn-block btn-info" href="createaccount">Apply Now</a>
-				</div>
+
+				<div class="panel-footer">
+					<a class="btn btn-lg btn-block btn-info" href="{{{ action('PolicyAppController@showLifeAppBL') }}}">Apply Now</a>
 			</div>
 		</div>		
 		<div class="col-md-3">
@@ -80,9 +80,8 @@
 					<li class="list-group-item"><i class="icon-ok text-default"></i>30 Year Term Policy</li>
 					<li class="list-group-item"><i class="icon-ok text-default"></i>A++ Financial Rating</li>
 				</ul>
-				<div class="panel-footer life-app-panel-footer">
-					<a class="btn btn-lg btn-block btn-info" href="createaccount">Apply Now</a>
-				</div>
+				<div class="panel-footer">
+					<a class="btn btn-lg btn-block btn-info" href="{{{ action('PolicyAppController@showLifeAppBL') }}}">Apply Now</a>
 			</div>
 		</div>
 	</div>
