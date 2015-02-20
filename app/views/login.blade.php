@@ -30,7 +30,7 @@
 		{{ Form::close() }}
 
 		<p>Don't have a Profile? <a class="create" href="{{{ route('createaccount') }}}"> Create one now.</a>
-		<p><a class="remind" href="{{{ route('remind') }}}">Forgot your Password?</a>
+		<p><a class="remind" href="{{{ action('RemindersController@getRemind') }}}">Forgot your Password?</a>
 			
 
 		<a href="auth/google">
