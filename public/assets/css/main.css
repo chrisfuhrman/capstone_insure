@@ -2,6 +2,7 @@
 * {
 	border-radius: 0 !important;
 	-moz-border-radius: 0 !important;
+	-webkit-appearance: none;
 }
 
 body {
@@ -139,12 +140,12 @@ or background color for dropdown when active*/
   Hero Container Home Page
   ========================================
 */
-#hero-container {
+/*#hero-container {
 	background-image: url('/assets/img/family04.jpg');
 	padding-top: 30px;
 	padding-bottom: 20px;
 	height: 400px;
-}
+}*/
 #hero-headline {
 	font-size: 50px;
 	color: #fff;
@@ -158,7 +159,11 @@ or background color for dropdown when active*/
 	color: #fff;
 }
 
-
+#btn-ins-group {
+	/*padding-top: 15px;*/
+	margin-top: 35px;
+	margin-left: 120px;
+}
 
 /*
   ========================================

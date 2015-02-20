@@ -8,12 +8,15 @@ class UserController extends BaseController
 		$user = Auth::user();
 		$userId = $user->id;
 
+		$usersPolicy = User::with('policies')->where('id', '=', $userId)->firstOrFail();
+							
 		$policy = User::with('policies')->where('id', '=', $userId)->firstOrFail();	
 
 		$data = 
 		[
 			'policy' => $policy,
-			'user' => $user
+			'user' => $user,
+			'userId' => $user
 		];		
 
 		return View::make('users.clientdash')->with($data);
@@ -40,6 +43,7 @@ class UserController extends BaseController
 
 	  //   } else {
 			// dd(Input::all());
+		
 		$user = new User;
 
 
@@ -63,12 +67,12 @@ class UserController extends BaseController
 			$user->zip  		= Input::get('zip');
 			$user->save();
 
+
 			$user = User::findOrFail($user->id);
 			Auth::login($user);
 
 			Session::flash('sucessMessage', 'Sucessfully created your Profile!');
-			return Redirect::to('profile');
-	    // }		
+			return Redirect::to('profile');		
 
 	}
 }
