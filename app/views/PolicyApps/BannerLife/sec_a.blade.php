@@ -9,7 +9,7 @@
 				<div class="form-group">
 					{{ Form::label('first_name', 'First Name:', array('class' => 'control-label')) }}
 					<div class="controls">
-						<div class="input-group">
+						<div class="input-group col-sm-4">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
 							{{ Form::text('first_name', Input::old('first_name'), array('class' => 'form-control', 'placeholder' => 'First Name', 'id' => 'first_name', 'name' => 'first_name')) }}
 						</div>
