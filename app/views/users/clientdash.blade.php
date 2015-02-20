@@ -1,5 +1,11 @@
 @extends('layouts.master')
 
+@section('top-script')
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
+
+@stop
+
 @section('content')
 
 <!-- sidebar -->		
