@@ -64,8 +64,9 @@ Route::group(
 });
 
 Route::resource('user', 'UserController');
-
 Route::controller('password', 'RemindersController');
+
+
 
 Route::group(array('before' => array('auth|admin')), function()
 {
