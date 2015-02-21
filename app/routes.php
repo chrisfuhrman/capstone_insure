@@ -66,8 +66,9 @@ Route::group(
 
 	Route::get('medHistory', ['as' => 'medHistory', 'uses' => 'PolicyAppController@showMedHistory']);
 
-
 });
+
+Route::resource('user', 'UserController');
 
 Route::controller('password', 'RemindersController');
 
