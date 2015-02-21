@@ -59,7 +59,7 @@
 			</div>
 		{{ Form::close() }}
 		<div class="row">
-			<p class="move-right text-muted"><a class="remind text-muted" href="{{{ route('remind') }}}">Forgot your Password?</a>
+			<p class="move-right text-muted"><a class="remind text-muted" href="{{{ action('RemindersController@getRemind') }}}">Forgot your Password?</a>
 		</div>
 
 
@@ -68,6 +68,7 @@
 		</div>
 
 		<p>Don't have a Profile? <a class="create" href="{{{ route('createaccount') }}}"> Create one now.</a>
+
 		<p><a class="remind" href="{{{ action('RemindersController@getRemind') }}}">Forgot your Password?</a>
 			
 
