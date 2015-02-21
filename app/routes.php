@@ -27,7 +27,7 @@ Route::resource('life-quote-results', 'RFQResultsController');
 
 // Authentication Routes
 Route::get('login', ['as' => 'login', 'uses' => 'AuthController@showLogin']);
-Route::post('login', 'AuthController@doLogin');
+Route::post('login', ['as' => 'login', 'uses' => 'AuthController@doLogin']);
 // OAuth Routes
 Route::get('auth/google', 'AuthController@loginWithGoogle');
 Route::get('auth/linkedin', 'AuthController@loginWithLinkedin');
@@ -45,7 +45,6 @@ Route::get('learning', ['as' => 'learning', 'uses' => 'ExtrasController@showLear
 Route::get('calculator', ['as' => 'calculator', 'uses' => 'ExtrasController@showCalculator']);
 
 Route::get('contact', ['as' => 'contact', 'uses' => 'ExtrasController@showContact']);
-Route::post('contact', 'HomeController@sendContactUs');
 
 
 Route::post('createaccount', ['as' => 'createaccount', 'uses' => 'UserController@saveCreateAccount']);
@@ -65,17 +64,12 @@ Route::group(
 	
 	Route::get('logout', ['as' => 'logout', 'uses' => 'AuthController@doLogout']);
 
+	Route::get('medHistory', ['as' => 'medHistory', 'uses' => 'PolicyAppController@showMedHistory']);
+
 
 });
 
-Route::post('remind', ['as' => 'remind', 'uses' => 'RemindersController@postRemind']);
-	
-Route::get('remind', ['as' => 'remind', 'uses' => 'RemindersController@getRemind']);
-
-
-Route::get('password/reset/{token}', ['as' => 'password/reset/{token}', 'uses' => 'RemindersController@getReset']);
-
-Route::post('password/reset/{token}', ['as' => 'password/reset/{token}', 'uses' => 'RemindersController@postReset']);
+Route::controller('password', 'RemindersController');
 
 Route::group(array('before' => array('auth|admin')), function()
 {

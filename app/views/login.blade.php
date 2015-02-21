@@ -62,9 +62,14 @@
 			<p class="move-right text-muted"><a class="remind text-muted" href="{{{ route('remind') }}}">Forgot your Password?</a>
 		</div>
 
+
 		<div class="row">
 			<p class="move-right text-muted">Don't have a Profile? <a class="create text-muted" href="{{{ route('createaccount') }}}"> Create one now.</a>
 		</div>
+
+		<p>Don't have a Profile? <a class="create" href="{{{ route('createaccount') }}}"> Create one now.</a>
+		<p><a class="remind" href="{{{ action('RemindersController@getRemind') }}}">Forgot your Password?</a>
+			
 
 		<a href="auth/google">
 			<img id="google-login" src="/assets/img/google/Red-signin_Long_base_32dp.png">

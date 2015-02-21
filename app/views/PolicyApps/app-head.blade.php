@@ -11,23 +11,26 @@
 				{{{ $user->city }}}, {{{ $user->state }}} {{{ $user->zip }}}<br>
 				</strong>
 			</address>
+
 			<!-- Verify applicants address -->
 			<div class="form-group">
-			<label class="control-label" id="verify-address" for="gender">Is this your home address?</label>
+			<div class="controls">
+				<label class="control-label" for="verify-address">Is this your home address?</label>
 				<div class="input-group col-sm-4 input-group-2">
 				<div class="btn-group" id="verify-address">
-					<label id="address-confirm-yes" class="btn-verify-address btn btn-mini btn-default" for="">
+					<label class="btn-verify-address btn btn-mini btn-info" id="address-confirm-yes" for="">
 						{{Form::radio('verify-address', 'yes') }} Yes
 					</label>
-						<label id="address-confirm-no" class="btn-verify-address btn btn-mini btn-info" for="">
-						{{Form::radio('verify-address', 'no', true) }} No
+						<label class="btn-verify-address btn btn-mini btn-default" id="address-confirm-no" for="">
+						{{Form::radio('verify-address', 'no') }} No
 					</label>
 				</div>
 				</div>
 			</div>
+			</div>
 			<!-- if address needs updating, dispaly address fields -->
 			<!-- Address -->
-		<div id="verify-address-block" class="hide-this">
+		<div id="verify-address-block">
 			<div class="form-group">
 				{{ Form::label('address', 'Address:', array('class' => 'control-label')) }}
 				<div class="input-group col-sm-6">
