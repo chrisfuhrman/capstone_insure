@@ -220,30 +220,29 @@
 
 	<script>
 
-	// var female = $('#gender-female');
-	// var male = $('#gender-male');
-	// var btngroup = $('.btn-gender');
-	
-	// function swapRadio(btngroup, female, male)
+	// function swapRadio(female, male)
 	// {
 	// 	var idName = btngroup.attr('id');
 	// 	var id = $('#'+idName);
 	// 	var classNames = id.attr('class');
 
 	// 	var isHilighted = (classNames.search('btn-info') != -1) ? true : false;
-	// 	var otherBtn = (idName == 'gender-female') ? $('#gender-male') : $('#gender-female');
+	// 	var otherBtn = (idName == female) ? male : female;
 
 	// 	if(!isHilighted) {
 	// 		id.removeClass('btn-default').addClass('btn-info');
 	// 		otherBtn.addClass('btn-default').removeClass('btn-info');
 	// 	}
-	// 	return this;
+	// 	// what do I return????????????????
 	// };
 
-	// swapRadio(btngroup, female, male);
+	// // call swapRadio function
+	// var btngroup = $('.btn-gender');
+	// var female = $('#gender-female');
+	// var male = $('#gender-male');
+	// $(btngroup).swapRadio(female, male);
 
 
-		// $('#my_div').swapRadio($gender-female, $gender-male);
 
 	 $(document).ready(function () {
 

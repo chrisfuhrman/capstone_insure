@@ -1,5 +1,7 @@
 /bootstrap/compiled.php
 /public/cgi-bin
+public/images/
+app/views/usmain.html
 /vendor
 composer.phar
 .env.*.php
