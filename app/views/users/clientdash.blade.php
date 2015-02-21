@@ -137,11 +137,11 @@
 										<h1 class="white"><i class="fa fa-exchange"></i> Request Edit of Application</h1>
 										<div class="col-md-4">
 											<form>
-											  <div class="form-horizontal">
+											  <div class="form-group">
 											    <input type="email" class="form-control" id="InputEmail" placeholder="Enter email">
 											  </div>
 											 	<textarea class="form-control" rows="2" placeholder="Type your requested changes here."></textarea>
-											  <button type="submit" class="btn btn-default">Send Request</button>
+											  <button type="submit" class="btn btn-primary margin-tiny-top">Send Request</button>
 											</form>
 										</div>
 									</div>
@@ -194,6 +194,14 @@
 							<! -- section 07 -->
 		                    <div class="hide-this" id="section-07">
 								<h1 class="white"><i class="fa fa-cogs"></i> Account Settings</h1>
+								<button class="btn btn-primary">Change Password</button>
+								<button class="btn btn-primary">Change Username</button>
+								<button class="btn btn-primary">Change e-mail Address</button>
+								<button class="btn btn-primary">Edit Application</button>
+								<button class="btn btn-warning">Delete Account</button>
+								<div class="row col-md-6">
+									<p class="white margin-top">Here on your Account Settings page you can change your username, password, and e-mail address. You can also edit your application or completely delete your account.</p>
+								</div>
 							</div>
 							<! -- end section 07 -->
 

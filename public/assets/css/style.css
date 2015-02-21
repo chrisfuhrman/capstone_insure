@@ -5168,24 +5168,41 @@ Create Account Mini-Containers
 
 .clipboard-container {
   overflow: scroll;
-  height: 950px;
+  height: 1300px;
   /*width: 400px; */
-  background-image: url("/assets/img/clipboard_blue.png");
+  background-image: url("/assets/img/clipboard_blue_squared.png");
   background-repeat: no-repeat;
   text-align: left;
   background-size: 100%;
 }
 
 .inner-clipboard {
-  overflow: scroll;
-  margin-top: 160px;
-  margin-left: 90px;
-  height: 700px;
-  /*width: 350px;*/
+/*  overflow: scroll;*/
+  margin-top: 210px;
+  margin-left: 120px;
+  height: 780px;
+  width: 680px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+ 
 
 }
 
 .homepage-padding-left {
   padding-left: 40px;
 }
+
+.dark-blue {
+  background-color: #285F7C;
+  width: 100%;
+}
+
+.highlighted {
+  background-color: #3C90C4;
+}
+
+
+
+
+
 

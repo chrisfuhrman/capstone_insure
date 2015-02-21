@@ -1,5 +1,5 @@
 <div class="inner-section">
-	<div class="container ">
+	<div class="">
 		<div>
 			<h4>Please verify your information:</h4>
 			<address>
