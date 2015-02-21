@@ -272,13 +272,6 @@
 				var isHilighted = (classNames.search('btn-info') != -1) ? true : false;
 
 				// $(innerInputs).attr('checked', false);
-
-
-				
-				
-				
-
-			
 				
 				var otherBtn = (idName == 'address-confirm-no') ? $('#address-confirm-yes') : $('#address-confirm-no');
 
