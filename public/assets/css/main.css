@@ -430,3 +430,72 @@ h3 {font-size: 18px;}
 	margin-top: 20px;
 }
 
+
+/* 
+	===============================
+	LOGIN PAGE
+	===============================
+*/
+
+.login-main {
+	margin-top: 110px;
+	margin-bottom: 25px;
+	font-size: 68px;
+}
+
+.login-container {
+	background-color: white;
+	padding-top: 35px;
+	padding: 35px;
+	border-color: #E4E6EB;
+}
+
+.btn-login {
+	width: 100% !important;
+	display: inline-block !important;
+}
+
+.move-right {
+	margin-left: 20px;
+}
+
+.pad-right {
+	padding-left: 20px;
+}
+
+.big-label {
+	font-size: 18px;
+}
+
+.margin-top {
+	margin-top: 40px;
+}
+
+.margin-tiny-top {
+	margin-top: 10px;
+}
+
+/* 
+===================================
+About Us
+===================================
+*/
+
+.picture-chris {
+  height: 30%;
+  width: 30%;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  
+}
+
+.picture-travis {
+   height: 25%;
+  width: 25%;
+}
+
+.picture-marissa {
+  height: 25%;
+  width: 25%;
+}

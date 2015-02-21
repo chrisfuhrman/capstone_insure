@@ -81,3 +81,4 @@ Route::group(array('before' => array('auth|admin')), function()
 
 Route::get('createaccount', ['as' => 'createaccount', 'uses' => 'UserController@showCreateAccount']);
 
+Route::get('about', ['as' => 'about', 'uses' => 'ExtrasController@showAbout']);

@@ -21,4 +21,9 @@ class ExtrasController extends BaseController {
 		
 		return View::make('extras.contact');
 	}
+
+	public function showAbout(){
+		
+		return View::make('extras.about');
+	}
 }
