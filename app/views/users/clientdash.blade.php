@@ -70,13 +70,13 @@
 												</div>
 												<div class="panel-body">
 
-													@foreach($user->policies as $policy)
+												{{--	@foreach($user->policies as $policy)
 														<? setlocale(LC_MONETARY, 'en_US'); ?>
 												    	<p class="text-center">{{{ money_format('$%i', $policy->coverage_amount) }}} {{{ $policy->coverage_duration }}}yr.</p>
 												    	<p class="text-center">Term Policy</p>
 												    	<p class="text-center">Expires on: 02/22/25</p>
 
-													@endforeach
+													@endforeach --}}
 												    
 												</div>
 											</div>
