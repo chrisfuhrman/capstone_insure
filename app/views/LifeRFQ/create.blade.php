@@ -302,6 +302,13 @@
 			}
 		});
 
+
+		$( ".btn-gender" ).on('click', function(){
+				var value = $('input:radio[name=gender]:checked').val();
+
+				console.log(value);
+
+		});
 		    // $(this).find('.btn').toggleClass('active');
 		    // var classNames = $(this).find('.btn').attr('class');
 		    // console.log(classNames);

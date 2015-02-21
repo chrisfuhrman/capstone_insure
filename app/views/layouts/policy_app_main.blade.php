@@ -88,7 +88,10 @@
 
 </div>
 
+<!-- start: JavaScript-->
+	<!--[if !IE]>-->
 
+			<script src="assets/js/jquery-2.1.0.min.js"></script>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
@@ -97,10 +100,7 @@
 
 
 
-<!-- start: JavaScript-->
-	<!--[if !IE]>-->
 
-			<script src="assets/js/jquery-2.1.0.min.js"></script>
 
 	<!--<![endif]-->
 
@@ -176,6 +176,8 @@
 
 		$(document).ready(function() {
 
+			$('#address-confirm-yes').children().attr('checked', true);
+
 
               jQuery(function($) {              
                   $('.breadcrumb').stickUp();
@@ -187,6 +189,7 @@
 
 			$('.tobacco_extra').hide();
 			$('.citizen_extra').hide();
+			$('#verify-address-block').hide();
 			$('.emp_extra').show();
 
 			function empVal () {
@@ -237,10 +240,80 @@
 
 				});		
 				
+			// $( "#verify-address" ).on('click', function(){
+			// 	var value = $('input:radio[name=correct_address]:checked').val();
+			// 	console.log('test');
+			// 	if (value == 'Yes'){
+
+			// 		$('#verify-address-block').slideDown(900);
+
+			// 	} else {
+
+			// 		$('#verify-address-block').slideUp(900);
+
+			// 	}
+			// });
+
+			// $('.btn-toggle').click(function() {
+
+			//     $(this).find('.btn').toggleClass('active');  
+			    
+			//     if ($(this).find('.btn-primary').size()>0) {
+			//     	$(this).find('.btn').toggleClass('btn-primary');
+			//     }
+			//     if ($(this).find('.btn-danger').size()>0) {
+			//     	$(this).find('.btn').toggleClass('btn-danger');
+			//     }
+			//     if ($(this).find('.btn-success').size()>0) {
+			//     	$(this).find('.btn').toggleClass('btn-success');
+			//     }
+			//     if ($(this).find('.btn-info').size()>0) {
+			//     	$(this).find('.btn').toggleClass('btn-info');
+			//     }
+			    
+			//     $(this).find('.btn').toggleClass('btn-default');
+			       
+			// });
+
+			// 
+
+			 $('#address-confirm-yes').click(function() {
+					$('#address-confirm-yes').children().attr('checked', true);
+					$('#address-confirm-no').children().attr('checked', false);
+				});
+
+			 $('#address-confirm-no').click(function() {
+
+					$('#address-confirm-no').children().attr('checked', true);					
+					$('#address-confirm-yes').children().attr('checked', false);
+				});
+
+			$('.btn-verify-address').click(function() {
+
+				var idName = $(this).attr('id');
+				var id = $('#'+idName);
+				var classNames = id.attr('class');
+
+
+				var isHilighted = (classNames.search('btn-info') != -1) ? true : false;
+
+				// $(innerInputs).attr('checked', false);
+				
+				var otherBtn = (idName == 'address-confirm-no') ? $('#address-confirm-yes') : $('#address-confirm-no');
+
+				if(!isHilighted) {
+
+					id.removeClass('btn-default').addClass('btn-info');
+					otherBtn.addClass('btn-default').removeClass('btn-info');
+
+				}
+			});	
+
 			$( "#verify-address" ).on('click', function(){
-				var value = $('input:radio[name=correct_address]:checked').val();
-				console.log('test');
-				if (value == 'Yes'){
+				var value = $('input:radio[name=verify-address]:checked').val();
+
+				console.log(value);
+				if (value == 'no'){
 
 					$('#verify-address-block').slideDown(900);
 
@@ -249,44 +322,7 @@
 					$('#verify-address-block').slideUp(900);
 
 				}
-			});
-
-			$('.btn-toggle').click(function() {
-
-			    $(this).find('.btn').toggleClass('active');  
-			    
-			    if ($(this).find('.btn-primary').size()>0) {
-			    	$(this).find('.btn').toggleClass('btn-primary');
-			    }
-			    if ($(this).find('.btn-danger').size()>0) {
-			    	$(this).find('.btn').toggleClass('btn-danger');
-			    }
-			    if ($(this).find('.btn-success').size()>0) {
-			    	$(this).find('.btn').toggleClass('btn-success');
-			    }
-			    if ($(this).find('.btn-info').size()>0) {
-			    	$(this).find('.btn').toggleClass('btn-info');
-			    }
-			    
-			    $(this).find('.btn').toggleClass('btn-default');
-			       
-			});
-
-			// 
-			$('.btn-verify-address').click(function() {
-
-				var idName = $(this).attr('id');
-				var id = $('#'+idName);
-				var classNames = id.attr('class');
-
-				var isHilighted = (classNames.search('btn-info') != -1) ? true : false;
-				var otherBtn = (idName == 'address-confirm-no') ? $('#address-confirm-yes') : $('#address-confirm-no');
-
-				if(!isHilighted) {
-					id.removeClass('btn-default').addClass('btn-info');
-					otherBtn.addClass('btn-default').removeClass('btn-info');
-				}
-			});		
+			});	
 
 		});
 

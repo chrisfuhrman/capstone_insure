@@ -152,7 +152,7 @@ class PolicyAppController extends BaseController
 		// by product (basically which duration of term coverage)
 		// by state
 		
-		return View::make('banner_life.bl_form_medical_history');
+		return View::make('PolicyApps.BannerLife.bl_form_medical_history');
 
 
 	}
