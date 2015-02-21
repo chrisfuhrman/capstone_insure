@@ -20,7 +20,6 @@
 <!--content that changes -->
 @yield('content')
 
-
 @include('partials.footer')
 
 
@@ -31,6 +30,8 @@
 
 <script>
 </script>
+
+
 
 @yield('bottom-script')
 
