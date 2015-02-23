@@ -1,8 +1,7 @@
 /*Remove default navbar border-radius*/
 * {
-	border-radius: 0 !important;
-	-moz-border-radius: 0 !important;
 	-webkit-appearance: button-arrow-down;
+
 }
 
 body {
@@ -484,22 +483,74 @@ About Us
 */
 
 .picture-chris {
-  height: 30%;
-  width: 30%;
-  border-radius: 150px;
-  -webkit-border-radius: 150px;
-  -moz-border-radius: 150px;
+  height: 80%;
+  width: 76%;
+  border-radius: 350px;
+  -webkit-border-radius: 350px;
+  -moz-border-radius: 350px;
   
 }
 
 .picture-travis {
-   height: 25%;
-  width: 25%;
+   height: 80%;
+  width: 80%;
+  border-radius: 350px;
+  -webkit-border-radius: 350px;
+  -moz-border-radius: 350px;
+  
 }
 
 .picture-marissa {
-  height: 25%;
-  width: 25%;
+  height: 80%;
+  width: 76%;
+  border-radius: 350px;
+  -webkit-border-radius: 350px;
+  -moz-border-radius: 350px;
+  
+}
+
+.margin-photo-bottom {
+	margin-bottom: 145px;
+}
+
+/* 
+===================================
+Insurance Images
+===================================
+*/
+
+.aig {
+	height: 50%; 
+	width: 50%;
+}
+
+.carousel {
+	width: 120%;
+    height: 150%;
+}
+
+.allied {
+	height: 70%;
+	width: 70%;
+}
+
+.bottom-margin {
+	margin-bottom: 70px;
+}
+
+.carousel-inner{
+    height: 500px;
+}
+
+.carousel-inner>.active{
+    position: relative;
+
+    transform: translateX(-50%);
+}
+.carousel-inner>.next,
+.carousel-inner>.prev{
+
+    transform: translateX(-50%);
 }
 
 
