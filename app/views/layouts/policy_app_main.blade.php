@@ -12,8 +12,8 @@
 
 @include('partials.main_navbar')
 
-<ol class="breadcrumb breadcrumb-no-pad">
-  <li><a href="#" class="active-breadcrumb">Proposed Insured</a></li>
+<ol class="breadcrumb breadcrumb-no-pad dark-blue">
+  <li><a href="#" class="highlighted">Proposed Insured</a></li>
   <li><a href="#">Employment</a></li>
   <li><a href="#">Usage</a></li>
   <li><a href="#">Options</a></li>
@@ -33,44 +33,18 @@
 <!-- end progress bar -->
 
 
-<div id="test-this">
-	<nav class="scroll-nav col-md-2 pull-left" id="test-this" role="navigation">
-		<div class="scroll-nav__wrapper"><span class="scroll-nav__heading">Application ID:</span>
-		<ol class="scroll-nav__list">
-		<li class="scroll-nav__item description active in-view">
-			<a href="#scrollNav-1" class="scroll-nav__link">Proposed Insured</a>
-		</li>
-		<li class="scroll-nav__item features in-view">
-			<a href="#scrollNav-2" class="scroll-nav__link">Employment</a>
-			</li>
-		<li class="scroll-nav__item usage">
-		<a href="#scrollNav-3" class="scroll-nav__link">Usage</a>
-		</li>
-		<li class="scroll-nav__item options">
-			<a href="#scrollNav-4" class="scroll-nav__link">Options</a>
-		</li>
-		<li class="scroll-nav__item errors">
-			<a href="#scrollNav-5" class="scroll-nav__link">Errors</a>
-		</li>
-		<li class="scroll-nav__item issues"><a href="#scrollNav-6" class="scroll-nav__link">Issues</a></li>
-		<li class="scroll-nav__item license">
-			<a href="#scrollNav-7" class="scroll-nav__link">License</a>
-		</li><li class="scroll-nav__item authors">
-		<a href="#scrollNav-8" class="scroll-nav__link">Authors</a></li><li class="scroll-nav__item colophon"><a href="#scrollNav-9" class="scroll-nav__link">Colophon</a></li>
-		</ol>
-		</div>
-	</nav>
+
 	<!-- </div> -->
 
 	<!--content that changes -->
-	<div class="col-md-8 pull-right " id="right-section">
+	<div class="col-md-8 text-center col-md-offset-2">
 
-		<div class="section-heading">
-			<h2>Proposed Insured Information</h2>
-		</div>
 
 		<div class="clipboard-container">
 			<div class="inner-clipboard">
+		<div class="section-heading">
+			<h2>Proposed Insured Information</h2>
+		</div>
 				@yield('content')
 			</div>
 			
@@ -176,8 +150,6 @@
 
 		$(document).ready(function() {
 
-			$('#address-confirm-yes').children().attr('checked', true);
-
 
               jQuery(function($) {              
                   $('.breadcrumb').stickUp();
@@ -277,59 +249,7 @@
 
 			// 
 
-			 $('#address-confirm-yes').click(function() {
-					$('#address-confirm-yes').children().attr('checked', true);
-					$('#address-confirm-no').children().attr('checked', false);
-				});
 
-			 $('#address-confirm-no').click(function() {
-
-					$('#address-confirm-no').children().attr('checked', true);					
-					$('#address-confirm-yes').children().attr('checked', false);
-				});
-
-			$('.btn-verify-address').click(function() {
-
-				var idName = $(this).attr('id');
-				var id = $('#'+idName);
-				var classNames = id.attr('class');
-
-
-				var isHilighted = (classNames.search('btn-info') != -1) ? true : false;
-
-				// $(innerInputs).attr('checked', false);
-
-
-				
-				
-				
-
-			
-				
-				var otherBtn = (idName == 'address-confirm-no') ? $('#address-confirm-yes') : $('#address-confirm-no');
-
-				if(!isHilighted) {
-
-					id.removeClass('btn-default').addClass('btn-info');
-					otherBtn.addClass('btn-default').removeClass('btn-info');
-
-				}
-			});	
-
-			$( "#verify-address" ).on('click', function(){
-				var value = $('input:radio[name=verify-address]:checked').val();
-
-				console.log(value);
-				if (value == 'no'){
-
-					$('#verify-address-block').slideDown(900);
-
-				} else {
-
-					$('#verify-address-block').slideUp(900);
-
-				}
-			});	
 
 		});
 

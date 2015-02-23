@@ -17,7 +17,7 @@ class TestController extends BaseController {
 
 	public function showTest() {
 		
-		return View::make('Testing.testthis');
+		return View::make('test');
 
 	}
 

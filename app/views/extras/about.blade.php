@@ -3,6 +3,7 @@
 
 <div class="container">
 	<div class="row">
+<<<<<<< HEAD
 	  <div class="col-sm-4 col-md-4">
 	    <div class="thumbnail margin-top">
 	      <img src="/assets/img/ChrisF.jpg" alt="..." class="picture-chris">
@@ -33,6 +34,24 @@
 	      </div>
 	    </div>
 	  </div>
+=======
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<img src="/assets/img/ChrisF.jpg" class="picture-chris">
+						<div class="col-md-5">
+						<h1>Chris Fuhrman</h1>
+						<h3 class="">Chris was the idea behind InsureJoy.</h3>
+						</div>
+				</div>		
+			</div>
+			<img src="/assets/img/TravisF.jpg" class="picture-travis">
+				<p>About Travis</p>
+			
+			<img src="/assets/img/MarissaV.jpg" class="picture-marissa">
+				<p>About Marissa</p>
+		</div>
+>>>>>>> d6c111184f4c70ed3b250545dbe4422313362fae
 	</div>
 </div>
 

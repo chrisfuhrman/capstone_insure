@@ -7,6 +7,8 @@ class RemindersController extends Controller {
 	 *
 	 * @return Response
 	 */
+
+
 	public function getRemind()
 	{
 		return View::make('User.password_remind');
