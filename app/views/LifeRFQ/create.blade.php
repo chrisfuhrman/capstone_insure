@@ -486,7 +486,7 @@ code for your categories -->
 </td>
 </tr> -->
 
-				<div class="default_header">
+				<div class="default_header" id="instant-btn">
 					<input type="submit" name="CqsComparison" value="Instant Quote" class="btn btn-info">
 				</div>
 
