@@ -34,7 +34,7 @@ class HomeController extends BaseController {
 			Mail::send('emails.contact_us', 
 				['name' => $name, 'email_address' => $email_address, 'content' => $content], 
 				function($message) {
-		    		$message->to('chrisfuhrman@gmail.com', 'I am awesome!')->subject('InsureJoy Contact Request');
+		    		$message->to('chrisfuhrman@gmail.com', 'InsureJoy Support')->subject('InsureJoy Contact Request');
 				});
 			
 		} catch (Exception $e) {

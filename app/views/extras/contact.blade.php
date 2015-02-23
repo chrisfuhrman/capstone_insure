@@ -9,30 +9,30 @@
 	</div>
 	<div class="row">
 		<div class="col-md-12">
-			<form action="{{{ action('HomeController@sendContactUs') }}}" class="form-horizontal" method="post">
+			{{ Form::open(['action' => 'HomeController@sendContactUs'], ['class' => 'form-horizontal']) }}
 				<div class="col-md-5 col-md-offset-3">
 					<div class="form-group">
 						<div class="col-sm-10 col-sm-offset-2">
-							<input name="name" type="text" class="form-control" id="inputName" placeholder="Name">
+						{{ Form::text('name', Input::old('name'), array('class' => 'form-control', 'placeholder' => 'Name', 'id' => 'inputName', 'required')) }}
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="col-sm-10 col-sm-offset-2">
-							<input name="email_address" type="email" class="form-control" id="inputEmail" placeholder="Email">
+							{{ Form::email('email_address', Input::old('email_address'), array('class' => 'form-control', 'placeholder' => 'Email', 'id' => 'inputEmail', 'required')) }}
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="col-sm-10 col-sm-offset-2">
-							<textarea name="content" class="form-control" rows="3" placeholder="Write your question here."></textarea>
+							{{ Form::textarea('content', Input::old('email_address'), array('class' => 'form-control', 'rows' => "3", 'placeholder' => 'Write your question here', 'id' => 'inputEmail', 'required')) }}
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="col-sm-10 col-sm-offset-2">
-							<button type="submit" class="btn btn-default">Send</button>
+							{{ Form::submit('Send', array('class' => 'form-control btn btn-info')) }}
 						</div>
 					</div>
 				</div>
-			</form>
+			{{ Form::close() }}
 		</div>
 	</div>
 </div>

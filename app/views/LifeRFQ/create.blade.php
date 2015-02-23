@@ -2,6 +2,9 @@
 
 @section('content')
 
+
+
+				<form name="startform" action="/cgi-bin/cqsl.cgi" method="POST">
 <div class="quote-section">
 	<div class="container">
 		<div class="col-lg-10 col-sm-11">
@@ -17,9 +20,6 @@
 					</h4>
 				</div>
 				<div class="clear-fix"></div>
-
-
-				<form name="startform" action="/cgi-bin/cqsl.cgi" method="POST">
 
 
 <!-- uncomment the UserLocation line if you want to use a different directory for 
@@ -55,7 +55,7 @@ Hint: It will match your Template File name with an "H" in front of the value --
 <!-- <td style="text-align:right;" class="gray_cell"><b>State:</b>&nbsp;</td> -->
 
 				<!-- Name -->
-				<div class="wrap">
+				{{-- <div class="wrap"> --}}
 				<div class="form-group">
 					<label class="control-label" for="first name">First Name</label>
 					<div class="controls">
@@ -65,7 +65,7 @@ Hint: It will match your Template File name with an "H" in front of the value --
 						</div>
 					</div>
 				</div>		
-				</div>
+		{{-- 		</div> --}}
 				<!-- State -->
 				<div class="form-group">
 					<label class="control-label" for="duration">State</label>
@@ -285,10 +285,10 @@ Hint: It will match your Template File name with an "H" in front of the value --
 					<div class="controls" id="btn-gender">
 						<div class="input-group col-sm-4 input-group-2">
 						<label id="gender-male" class="btn-gender btn btn-mini btn-default" for="">
-							Male<input type="radio" name="Sex" value="M">
+							<input type="radio" name="Sex" value="M">Male
 						</label>
 						<label id="gender-female" class="btn-gender btn btn-mini btn-info" for="">
-							Female<input type="radio" name="Sex" value="F">
+							<input type="radio" name="Sex" value="F">Female
 						</label>
 						</div>
 					</div>
@@ -493,12 +493,12 @@ code for your categories -->
 				</div>
 
 
-				</form>
 
 			</div><!--/row-->		
 		</div><!-- end: Content -->
 	</div>
 </div>
+				</form>
 
 @stop()
 
