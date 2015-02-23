@@ -120,13 +120,13 @@
 				<label class="control-label" for="gender">Gender</label>
 				<div class="input-group col-sm-5">
 				<div class="wrap">	
-					<div class="btn-group">
+					<div class="btn-group" id="gender">
 						<span class="input-group-addon gender-icon"><i class="fa fa-user"></i></span>
-						<label id="gender-male" class="btn-gender btn btn-mini btn-default" for="" data-swap="inactive">
+						<label id="gender-male" class="btn-gender btn btn-mini btn-default" for="">
 							{{Form::radio('gender', 'male') }} Male
 						</label>
-							<label id="gender-female" class="btn-gender btn btn-mini btn-info" for="" data-swap="active">
-							{{Form::radio('gender', 'female', true) }} Female
+							<label id="gender-female" class="btn-gender btn btn-mini btn-info" for="">
+							{{Form::radio('gender', 'female') }} Female
 						</label>
 					</div>
 				</div>
@@ -294,19 +294,12 @@
 
 <script>
 
-$('.btn-gender').click(function() {
-			var idName = $(this).attr('id');
-			var id = $('#'+idName);
-			var classNames = id.attr('class');
+	$('.btn-gender').click({item1: 'gender-male', item2: 'gender-female'}, swapRadio);
 
-			var isHilighted = (classNames.search('btn-info') != -1) ? true : false;
-			var otherBtn = (idName == 'gender-female') ? $('#gender-male') : $('#gender-female');
-
-			if(!isHilighted) {
-				id.removeClass('btn-default').addClass('btn-info');
-				otherBtn.addClass('btn-default').removeClass('btn-info');
-			}
-		});	
+	$( "#gender" ).on('click', function(){
+		var value = $('input:radio[name=gender]:checked').val();
+		console.log(value);
+	});	
 
 </script>
 

@@ -25,7 +25,7 @@
 					<label class="btn-verify-address btn btn-mini btn-info" id="address-confirm-yes" for="">
 						{{Form::radio('verify-address', 'yes') }} Yes
 					</label>
-						<label class="btn-verify-address btn btn-mini btn-default" id="address-confirm-no" for="">
+					<label class="btn-verify-address btn btn-mini btn-default" id="address-confirm-no" for="">
 						{{Form::radio('verify-address', 'no') }} No
 					</label>
 				</div>

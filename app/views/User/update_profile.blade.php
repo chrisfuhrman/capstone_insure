@@ -4,6 +4,12 @@
 @section('content')
 
 
+<style>
+	.btn-gender input[type="radio"], .btn-smoke input[type="radio"] {
+    display: none;
+}
+</style>
+
 @include('User.profile-head')
 
 <div class="row">
@@ -60,14 +66,14 @@
 
 				<div class="form-group">
 				<div class="controls">
-					<label class="control-label" for="gender">Gender</label>
+					<label class="control-label" for="verify-gender">Gender</label>
 					<div class="input-group col-sm-4 input-group-2">
-					<div class="btn-group" id="gender">
-						<label class="btn-verify-gender btn btn-mini btn-info" for="" id="gender-male">
-							{{Form::radio('gender', 'M') }} Male
+					<div class="btn-group" id="verify-gender">
+						<label class="btn-gender btn btn-mini btn-info" id="gender-confirm-male" for="">
+							{{Form::radio('verify-gender', 'M') }} Male
 						</label>
-						<label class="btn-verify-gender btn btn-mini btn-default" for="" id="gender-female">
-							{{Form::radio('gender', 'F') }} Female
+						<label class="btn-gender btn btn-mini btn-default" id="gender-confirm-female" for="">
+							{{Form::radio('verify-gender', 'F') }} Female
 						</label>
 					</div>
 					</div>
@@ -199,96 +205,29 @@
 	<!-- end: JavaScript-->
 
 
+<script>
 
-	<script>
+	$('#verify-address-block').hide();
 
-		$(document).ready(function() {
-			$('#verify-address-block').hide();
+	$( "#verify-address" ).on('click', function(){
+		var value = $('input:radio[name=verify-address]:checked').val();
 
+		if (value == 'no'){
 
-			$('#gender-male').children().attr('checked', true);
-			$('#address-confirm-yes').children().attr('checked', true);
+			$('#verify-address-block').slideDown(900);
 
+		} else {
 
+			$('#verify-address-block').slideUp(900);
 
-			 $('#address-confirm-yes').click(function() {
-					$('#address-confirm-yes').children().attr('checked', true);
-					$('#address-confirm-no').children().attr('checked', false);
-				});
+		}
+	});
 
-			 $('#address-confirm-no').click(function() {
+	$('.btn-gender').click({item1: 'gender-confirm-male', item2: 'gender-confirm-female'}, swapRadio);
+	$('.btn-verify-address').click({item1: 'address-confirm-yes', item2: 'address-confirm-no'}, swapRadio);
 
-					$('#address-confirm-no').children().attr('checked', true);					
-					$('#address-confirm-yes').children().attr('checked', false);
-				});
+</script>	
 
-			 $('#gender-female').click(function() {
-					$('#gender-female').children().attr('checked', true);
-					$('#gender-male').children().attr('checked', false);
-				});
-
-			 $('#gender-male').click(function() {
-
-					$('#gender-male').children().attr('checked', true);					
-					$('#gender-female').children().attr('checked', false);
-				});
-
-
-			$('.btn-verify-address').click(function() {
-
-				var idName = $(this).attr('id');
-				var id = $('#'+idName);
-				var classNames = id.attr('class');
-
-				var isHilighted = (classNames.search('btn-info') != -1) ? true : false;
-				
-				var otherBtn = (idName == 'address-confirm-no') ? $('#address-confirm-yes') : $('#address-confirm-no');
-
-				if(!isHilighted) {
-
-					id.removeClass('btn-default').addClass('btn-info');
-					otherBtn.addClass('btn-default').removeClass('btn-info');
-
-				}
-			});	
-
-			$('.btn-verify-gender').click(function() {
-
-				var idName = $(this).attr('id');
-				var id = $('#'+idName);
-				var classNames = id.attr('class');
-
-				var isHilighted = (classNames.search('btn-info') != -1) ? true : false;
-
-				
-				var otherBtn = (idName == '#gender-female') ? $('#gender-male') : $('#gender-female');
-				console.log(otherBtn);
-
-				if(!isHilighted) {
-
-					id.removeClass('btn-default').addClass('btn-info');
-					otherBtn.addClass('btn-default').removeClass('btn-info');
-
-				}
-			});	
-
-			$( "#verify-address" ).on('click', function(){
-				var value = $('input:radio[name=verify-address]:checked').val();
-
-				if (value == 'no'){
-
-					$('#verify-address-block').slideDown(900);
-
-				} else {
-
-					$('#verify-address-block').slideUp(900);
-
-				}
-			});	
-		});	
-
-
-</script>
 
 
 
