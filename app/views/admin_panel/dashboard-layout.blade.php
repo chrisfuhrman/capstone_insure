@@ -343,22 +343,22 @@
 						<li>
 							<a class="dropmenu" href="/admin#"><i class="fa fa-eye"></i><span class="hidden-sm">Marketing</span> <span class="label">3</span></a>
 							<ul>
-								<li><a class="submenu" href="ui-sliders-progress.html"><i class="fa fa-circle"></i><span class="hidden-sm">Section 1</span></a></li>
-								<li><a class="submenu" href="ui-nestable-list.html"><i class="fa fa-circle"></i><span class="hidden-sm">Section 2</span></a></li>
-								<li><a class="submenu" href="ui-elements.html"><i class="fa fa-circle"></i><span class="hidden-sm">Section 3</span></a></li>
+								<li><a class="submenu" href="admin#3"><i class="fa fa-circle"></i><span class="hidden-sm">Section 1</span></a></li>
+								<li><a class="submenu" href="admin#2"><i class="fa fa-circle"></i><span class="hidden-sm">Section 2</span></a></li>
+								<li><a class="submenu" href="admin#1"><i class="fa fa-circle"></i><span class="hidden-sm">Section 3</span></a></li>
 							</ul>
 						</li>
 						<!-- Support Section -->
 						<li>
 							<a class="dropmenu" href="/admin#"><i class="fa fa-ticket"></i><span class="hidden-sm">Support</span> <span class="label">3</span></a>
 							<ul>
-								<li><a class="submenu" href="ui-sliders-progress.html"><i class="fa fa-circle"></i><span class="hidden-sm">Review</span></a></li>
-								<li><a class="submenu" href="ui-nestable-list.html"><i class="fa fa-circle"></i><span class="hidden-sm">Pending</span></a></li>
-								<li><a class="submenu" href="ui-elements.html"><i class="fa fa-circle"></i><span class="hidden-sm">Section 3</span></a></li>
+								<li><a class="submenu" href="admin#33"><i class="fa fa-circle"></i><span class="hidden-sm">Review</span></a></li>
+								<li><a class="submenu" href="admin#5"><i class="fa fa-circle"></i><span class="hidden-sm">Pending</span></a></li>
+								<li><a class="submenu" href="admin#6"><i class="fa fa-circle"></i><span class="hidden-sm">Section 3</span></a></li>
 							</ul>
 						</li>
 						<!--  -->
-						<li>
+				{{-- 		<li>
 							<a class="dropmenu" href="/admin#"><i class="fa fa-folder-o"></i><span class="hidden-sm">Another Section</span> <span class="label">3</span></a>
 							<ul>
 								<li><a class="submenu" href="page-infrastructure.html"><i class="fa fa-hdd-o"></i><span class="hidden-sm"> Infrastructure</span></a></li>
@@ -368,7 +368,7 @@
 								<li><a class="submenu" href="page-profile.html"><i class="fa fa-male"></i><span class="hidden-sm"> User Profile</span></a></li>
 								-->
 							</ul>	
-						</li>
+						</li> --}}
 						
 					</ul>
 				</div>

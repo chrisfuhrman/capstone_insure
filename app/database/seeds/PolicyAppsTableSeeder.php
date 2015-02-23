@@ -55,7 +55,9 @@ class PolicyAppsTableSeeder extends Seeder
 				'coverage_duration' => $faker->numberBetween($min = 10, $max = 30),
 				'yearly_premium' => $faker->numberBetween($min = 420, $max = 1800),
 				'monthly_premium' => $faker->numberBetween($min = 35, $max = 150),
+				
 				'policy_rev' => $faker->numberBetween($min = 420, $max = 1800),
+				
 				'policy_in_force' => $policy_in_force,
 				'policy_status' => $policy_status,
 				// DATES

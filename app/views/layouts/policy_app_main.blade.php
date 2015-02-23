@@ -150,8 +150,6 @@
 
 		$(document).ready(function() {
 
-			$('#address-confirm-yes').children().attr('checked', true);
-
 
               jQuery(function($) {              
                   $('.breadcrumb').stickUp();
@@ -251,59 +249,7 @@
 
 			// 
 
-			 $('#address-confirm-yes').click(function() {
-					$('#address-confirm-yes').children().attr('checked', true);
-					$('#address-confirm-no').children().attr('checked', false);
-				});
 
-			 $('#address-confirm-no').click(function() {
-
-					$('#address-confirm-no').children().attr('checked', true);					
-					$('#address-confirm-yes').children().attr('checked', false);
-				});
-
-			$('.btn-verify-address').click(function() {
-
-				var idName = $(this).attr('id');
-				var id = $('#'+idName);
-				var classNames = id.attr('class');
-
-
-				var isHilighted = (classNames.search('btn-info') != -1) ? true : false;
-
-				// $(innerInputs).attr('checked', false);
-
-
-				
-				
-				
-
-			
-				
-				var otherBtn = (idName == 'address-confirm-no') ? $('#address-confirm-yes') : $('#address-confirm-no');
-
-				if(!isHilighted) {
-
-					id.removeClass('btn-default').addClass('btn-info');
-					otherBtn.addClass('btn-default').removeClass('btn-info');
-
-				}
-			});	
-
-			$( "#verify-address" ).on('click', function(){
-				var value = $('input:radio[name=verify-address]:checked').val();
-
-				console.log(value);
-				if (value == 'no'){
-
-					$('#verify-address-block').slideDown(900);
-
-				} else {
-
-					$('#verify-address-block').slideUp(900);
-
-				}
-			});	
 
 		});
 

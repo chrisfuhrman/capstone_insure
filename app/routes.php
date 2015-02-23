@@ -13,14 +13,13 @@
 
 Route::get('', ['as' => 'home', 'uses' => 'HomeController@showHome']);
 
-
 // Routes for Life RFQ
 // Route::get('life-quote', ['as' => 'lifeRFQ', 'uses' => 'RFQController@showLifeRFQ']);
 // Route::post('life-quote', ['as' => 'lifeRFQ', 'uses' => 'RFQController@showLifeRFQ']);
 
 Route::resource('life-quote', 'LifeRFQController');
 
-Route::resource('life-quote-results', 'RFQResultsController');
+// Route::resource('life-quote-results', 'RFQResultsController');
 
 // Route::get('life-quote-results', ['as' => 'lifeRFQResults', 'uses' => 'RFQResultsController@showLifeResults']);
 
@@ -32,12 +31,8 @@ Route::post('login', ['as' => 'login', 'uses' => 'AuthController@doLogin']);
 Route::get('auth/google', 'AuthController@loginWithGoogle');
 Route::get('auth/linkedin', 'AuthController@loginWithLinkedin');
 
-Route::get('theme', ['as' => 'theme', 'uses' => 'ThemeController@showTheme']);
-
-Route::get('test', ['as' => 'test', 'uses' => 'TestController@showTest']);
 
 // Following Routes added by Marissa for the Extras pages
-
 Route::get('products', ['as' => 'products', 'uses' => 'ExtrasController@showProducts']);
 
 Route::get('learning', ['as' => 'learning', 'uses' => 'ExtrasController@showLearning']);
@@ -45,6 +40,7 @@ Route::get('learning', ['as' => 'learning', 'uses' => 'ExtrasController@showLear
 Route::get('calculator', ['as' => 'calculator', 'uses' => 'ExtrasController@showCalculator']);
 
 Route::get('contact', ['as' => 'contact', 'uses' => 'ExtrasController@showContact']);
+Route::post('contact', ['as' => 'contact', 'uses' => 'HomeController@sendContactUs']);
 
 
 Route::post('createaccount', ['as' => 'createaccount', 'uses' => 'UserController@saveCreateAccount']);
@@ -55,8 +51,9 @@ Route::group(
 	Route::get('profile', ['as' => 'clientdash', 'uses' => 'UserController@showClientDashboard']);
 
 	Route::get('life-policy-app-bl',   ['as' => 'life-app-bl',   'uses' => 'PolicyAppController@showLifeAppBL']);
-	
 	Route::post('life-policy-app-bl',   ['as' => 'life-app-bl',   'uses' => 'PolicyAppController@showLifeAppBL']);
+	
+	Route::get('life-policy-app-bl/Protective Life Insurance Company', 'PolicyAppController@showLifeAppBL');
 
 	Route::get('fileUpload', ['as' => 'fileUpload', 'uses' => 'PolicyAppController@showFileUpload']);
 
@@ -66,10 +63,12 @@ Route::group(
 
 	Route::get('medHistory', ['as' => 'medHistory', 'uses' => 'PolicyAppController@showMedHistory']);
 
-
 });
 
+Route::resource('user', 'UserController');
 Route::controller('password', 'RemindersController');
+
+
 
 Route::group(array('before' => array('auth|admin')), function()
 {

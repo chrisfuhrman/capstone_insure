@@ -16,7 +16,7 @@
 				<div class="boxchart">1,2,6,4,0,8,2,4,5,3,1,7,5</div>
 			</div>	
 			<span class="">Avg Premium</span><br>
-			<span class="value">{{{ '$' . $avgPrem }}}</span>
+			<span class="value">${{ round($avgPrem, 2) }}</span>
 		</div>
 	</div><!--/col-->
 	

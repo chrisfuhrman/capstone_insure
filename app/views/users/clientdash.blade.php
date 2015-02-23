@@ -76,7 +76,7 @@
 												    	<p class="text-center">Term Policy</p>
 												    	<p class="text-center">Expires on: 02/22/25</p>
 
-													@endforeach
+													@endforeach 
 												    
 												</div>
 											</div>
