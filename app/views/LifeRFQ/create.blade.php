@@ -282,7 +282,7 @@ Hint: It will match your Template File name with an "H" in front of the value --
 					<label class="control-label" for="gender">Gender</label>
 					<div class="controls" id="btn-gender">
 						<div class="input-group col-sm-4 input-group-2">
-						<label id="gender-male" class="btn-gender btn btn-mini btn-default" for="">
+						<label id="gender-male" class="btn-gender btn-spec btn btn-mini btn-default" for="">
 							<input type="radio" name="Sex" value="M">Male
 						</label>
 						<label id="gender-female" class="btn-gender btn btn-mini btn-info" for="">
@@ -299,7 +299,7 @@ Hint: It will match your Template File name with an "H" in front of the value --
 						<label id="smoke-yes" class="btn-smoke btn btn-mini btn-default" data-swap="inactive" for="">
 							Yes<input type="radio" name="Smoker" value="Y">
 						</label>
-						<label id="smoke-no" class="btn-smoke btn btn-mini btn-info" data-swap="active" for="">
+						<label id="smoke-no" class="btn-spec btn-smoke btn btn-mini btn-info" data-swap="active" for="">
 							No<input type="radio" name="Smoker" value="N" checked>
 						</label>
 						</div>
