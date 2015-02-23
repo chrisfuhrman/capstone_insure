@@ -5,6 +5,7 @@
 
 
 				<form name="startform" action="/cgi-bin/cqsl.cgi" method="POST">
+
 <div class="quote-section">
 	<div class="container">
 		<div class="col-lg-10 col-sm-11">
@@ -52,10 +53,8 @@ TEMPLATE_MORE_INFO.HTM
 Hint: It will match your Template File name with an "H" in front of the value -->
 				<input type="hidden" name="HTEMPLATEFILE" value="HTEMPLATE.HTM">
 
-<!-- <td style="text-align:right;" class="gray_cell"><b>State:</b>&nbsp;</td> -->
 
 				<!-- Name -->
-				{{-- <div class="wrap"> --}}
 				<div class="form-group">
 					<label class="control-label" for="first name">First Name</label>
 					<div class="controls">
@@ -65,7 +64,6 @@ Hint: It will match your Template File name with an "H" in front of the value --
 						</div>
 					</div>
 				</div>		
-		{{-- 		</div> --}}
 				<!-- State -->
 				<div class="form-group">
 					<label class="control-label" for="duration">State</label>
