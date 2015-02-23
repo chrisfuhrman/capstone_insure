@@ -40,6 +40,7 @@ Route::get('learning', ['as' => 'learning', 'uses' => 'ExtrasController@showLear
 Route::get('calculator', ['as' => 'calculator', 'uses' => 'ExtrasController@showCalculator']);
 
 Route::get('contact', ['as' => 'contact', 'uses' => 'ExtrasController@showContact']);
+Route::post('contact', ['as' => 'contact', 'uses' => 'HomeController@sendContactUs']);
 
 
 Route::post('createaccount', ['as' => 'createaccount', 'uses' => 'UserController@saveCreateAccount']);
@@ -50,8 +51,9 @@ Route::group(
 	Route::get('profile', ['as' => 'clientdash', 'uses' => 'UserController@showClientDashboard']);
 
 	Route::get('life-policy-app-bl',   ['as' => 'life-app-bl',   'uses' => 'PolicyAppController@showLifeAppBL']);
-	
 	Route::post('life-policy-app-bl',   ['as' => 'life-app-bl',   'uses' => 'PolicyAppController@showLifeAppBL']);
+	
+	Route::get('life-policy-app-bl/Protective Life Insurance Company', 'PolicyAppController@showLifeAppBL');
 
 	Route::get('fileUpload', ['as' => 'fileUpload', 'uses' => 'PolicyAppController@showFileUpload']);
 

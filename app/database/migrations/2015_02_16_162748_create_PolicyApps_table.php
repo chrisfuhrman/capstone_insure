@@ -34,7 +34,9 @@ class CreatePolicyAppsTable extends Migration
 			$table->string('length_of_residence');
 			$table->string('work_phone')->nullable();
 			$table->string('home_phone');
-			$table->string('coverage_amount');
+
+			$table->decimal('coverage_amount', 10, 2);
+			
 			$table->string('coverage_duration');
 			$table->string('yearly_premium');
 			$table->string('monthly_premium');

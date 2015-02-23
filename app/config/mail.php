@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'noreply@insurejoy.com', 'name' => 'Travis French'),
+	'from' => array('address' => 'noreply@insurejoy.com', 'name' => 'InsureJoy'),
 
 	/*
 	|--------------------------------------------------------------------------
