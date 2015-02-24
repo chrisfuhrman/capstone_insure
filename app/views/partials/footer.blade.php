@@ -6,9 +6,9 @@
 			<div class="col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1">
 				<h4>More Information</h4>
 				<ul class="footer-links">
-					<li><a href="http://cnn.com">Support</a></li>
-					<li><a href="http://cnn.com">Press</a></li>
-					<li><a href="http://cnn.com">Developers</a></li>
+					<li><a href="#">Support</a></li>
+					<li><a href="#">Press</a></li>
+					<li><a href="#">Developers</a></li>
 				</ul>
 			</div>
 
@@ -16,8 +16,8 @@
 				<h4>For Employees</h4>
 				<ul class="footer-links">
 					<li><a href="{{{ url('admin') }}}">Employee Login</a></li>
-					<li><a href="http://cnn.com">Careers</a></li>
-					<li><a href="http://cnn.com">Helpful Links</a></li>
+					<li><a href="#">Careers</a></li>
+					<li><a href="#">Helpful Links</a></li>
 				</ul>
 			</div>
 		</div>

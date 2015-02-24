@@ -2,7 +2,7 @@
 
 @include('partials.header')
 
-@include('partials.navbar')
+{{-- @include('partials.navbar') --}}
 @include('partials.main_navbar')
 
 @if (Session::has('successMessage'))

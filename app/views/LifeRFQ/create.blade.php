@@ -52,7 +52,7 @@ TEMPLATE_LOGO_2.HTM
 TEMPLATE_MORE_INFO.HTM
 -->
 
-				<input type="hidden" name="TEMPLATEFILE" value="INSUREJOYTEMPLATE.PHP">
+				<input type="hidden" name="TEMPLATEFILE" value="INSUREJOYTEMPLATE.HTM">
 <!-- Select a Health Template File For Your Results
 
 Hint: It will match your Template File name with an "H" in front of the value -->

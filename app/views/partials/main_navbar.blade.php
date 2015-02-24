@@ -14,7 +14,7 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-left">
-					<li><a href="{{{ action('ExtrasController@showAbout') }}}">About Us</a></li>
+					<li><a href="{{{ action('ExtrasController@showAbout') }}}">About Us		</a></li>
 					<li><a href="#">Blog</a></li>
 
 				</ul>
