@@ -19,9 +19,9 @@ class CreatePolicyAppsTable extends Migration
 		Schema::create('policy_apps', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('first_name');
+			$table->string('first_name')->nullable();
 			$table->string('middle_name')->nullable();
-			$table->string('last_name');
+			$table->string('last_name')->nullable();
 			$table->string('maiden_name')->nullable();
 			// $table->string('gender');
 			// $table->date('dob');
@@ -35,15 +35,15 @@ class CreatePolicyAppsTable extends Migration
 			$table->string('work_phone')->nullable();
 			// $table->string('home_phone');
 
-			$table->decimal('coverage_amount', 10, 2);
+			$table->decimal('coverage_amount', 10, 2)->nullable();
 			
-			$table->string('coverage_duration');
-			$table->string('yearly_premium');
-			$table->string('monthly_premium');
-			$table->string('policy_rev');
-			$table->string('policy_in_force');
-			$table->string('policy_status');
-			$table->string('date_approved');
+			$table->string('coverage_duration')->nullable();
+			$table->string('yearly_premium')->nullable();
+			$table->string('monthly_premium')->nullable();
+			$table->string('policy_rev')->nullable();
+			$table->string('policy_in_force')->nullable();
+			$table->string('policy_status')->nullable();
+			$table->string('date_approved')->nullable();
 
 		
 		
