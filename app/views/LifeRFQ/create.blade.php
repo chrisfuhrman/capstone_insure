@@ -287,10 +287,10 @@ Hint: It will match your Template File name with an "H" in front of the value --
 					<label class="control-label" for="gender">Gender</label>
 					<div class="controls" id="btn-gender">
 						<div class="input-group col-sm-4 input-group-2">
-						<label id="gender-male" class="btn-gender btn btn-mini btn-default" for="">
+						<label id="gender-male" class="btn-gender btn-spec btn btn-mini btn-default" for="">
 							<input type="radio" name="Sex" value="M">Male
 						</label>
-						<label id="gender-female" class="btn-gender btn btn-mini btn-info" for="">
+						<label id="gender-female" class="btn-gender btn-spec btn btn-mini btn-info" for="">
 							<input type="radio" name="Sex" value="F">Female
 						</label>
 						</div>
@@ -304,7 +304,7 @@ Hint: It will match your Template File name with an "H" in front of the value --
 						<label id="smoke-yes" class="btn-smoke btn btn-mini btn-default" data-swap="inactive" for="">
 							Yes<input type="radio" name="Smoker" value="Y">
 						</label>
-						<label id="smoke-no" class="btn-smoke btn btn-mini btn-info" data-swap="active" for="">
+						<label id="smoke-no" class="btn-spec btn-smoke btn btn-mini btn-info" data-swap="active" for="">
 							No<input type="radio" name="Smoker" value="N" checked>
 						</label>
 						</div>
@@ -491,7 +491,7 @@ code for your categories -->
 </td>
 </tr> -->
 
-				<div class="default_header">
+				<div class="default_header" id="instant-btn">
 					<input type="submit" name="CqsComparison" value="Instant Quote" class="btn btn-info">
 				</div>
 
@@ -507,18 +507,20 @@ code for your categories -->
 
 @section('bottom-script')
 
-<script>
+	<script>
 
-	$('.btn-gender').click({item1: 'gender-male', item2: 'gender-female'}, swapRadio);
-	$('.btn-smoke').click({item1: 'smoke-yes', item2: 'smoke-no'}, swapRadio);
-	
+		$('#gender-female').children().attr('checked', true);
 
-	$('#btn-gender').click(function() {
-		var value = $('input:radio[name=Sex]:checked').val();
-		console.log(value);
-	});
+		$('.btn-gender').click({item1: 'gender-male', item2: 'gender-female'}, swapRadio);
+		$('.btn-smoke').click({item1: 'smoke-yes', item2: 'smoke-no'}, swapRadio);
+		
 
-</script>
+		$('#btn-gender').click(function() {
+			var value = $('input:radio[name=Sex]:checked').val();
+			console.log(value);
+		});
+
+	</script>
 
 	
 @stop()

@@ -1,6 +1,5 @@
 
 @include('partials.app-header')
-<link rel="stylesheet" href="/assets/css/style.css"> 
 
 <style type="text/css">
 
@@ -37,21 +36,22 @@
 	<!-- </div> -->
 
 	<!--content that changes -->
-	<div class="col-md-8 text-center col-md-offset-2">
+	<div class="col-md-8 col-md-offset-2">
 
 
-		<div class="clipboard-container">
-			<div class="inner-clipboard">
-		<div class="section-heading">
-			<h2>Proposed Insured Information</h2>
+	{{-- 	<div class="clipboard-container">
+			<div class="inner-clipboard"> --}}
+		<div class="container" id="app-content">
+				<div class="section-heading">
+					<h2>Proposed Insured Information</h2>
+				</div>
+
+					@yield('content')
 		</div>
-				@yield('content')
-			</div>
 			
-		</div>
-
-
 	</div>
+
+
 
 	
 
@@ -65,7 +65,7 @@
 <!-- start: JavaScript-->
 	<!--[if !IE]>-->
 
-			<script src="assets/js/jquery-2.1.0.min.js"></script>
+			<script src="/assets/js/jquery-2.1.0.min.js"></script>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
@@ -99,40 +99,40 @@
 		</script>
 		
 	<![endif]-->
-	<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="/assets/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="/assets/js/bootstrap.min.js"></script>
 	
 		
 	
 	
 	<!-- page scripts -->
-	<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
-	<script src="assets/js/jquery.sparkline.min.js"></script>
-	<script src="assets/js/jquery.chosen.min.js"></script>
-	<script src="assets/js/jquery.cleditor.min.js"></script>
-	<script src="assets/js/jquery.autosize.min.js"></script>
-	<script src="assets/js/jquery.placeholder.min.js"></script>
-	<script src="assets/js/jquery.maskedinput.min.js"></script>
-	<script src="assets/js/jquery.inputlimiter.1.3.1.min.js"></script>
-	<script src="assets/js/bootstrap-datepicker.min.js"></script>
-	<script src="assets/js/bootstrap-timepicker.min.js"></script>
-	<script src="assets/js/moment.min.js"></script>
-	<script src="assets/js/daterangepicker.min.js"></script>
-	<script src="assets/js/jquery.hotkeys.min.js"></script>
-	<script src="assets/js/bootstrap-wysiwyg.min.js"></script>
-	<script src="assets/js/bootstrap-colorpicker.min.js"></script>
+	<script src="/assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="/assets/js/jquery.sparkline.min.js"></script>
+	<script src="/assets/js/jquery.chosen.min.js"></script>
+	<script src="/assets/js/jquery.cleditor.min.js"></script>
+	<script src="/assets/js/jquery.autosize.min.js"></script>
+	<script src="/assets/js/jquery.placeholder.min.js"></script>
+	<script src="/assets/js/jquery.maskedinput.min.js"></script>
+	<script src="/assets/js/jquery.inputlimiter.1.3.1.min.js"></script>
+	<script src="/assets/js/bootstrap-datepicker.min.js"></script>
+	<script src="/assets/js/bootstrap-timepicker.min.js"></script>
+	<script src="/assets/js/moment.min.js"></script>
+	<script src="/assets/js/daterangepicker.min.js"></script>
+	<script src="/assets/js/jquery.hotkeys.min.js"></script>
+	<script src="/assets/js/bootstrap-wysiwyg.min.js"></script>
+	<script src="/assets/js/bootstrap-colorpicker.min.js"></script>
 	
 
 	<script src="/assets/js/stickUp.min.js"></script>
 	<!-- inline scripts related to this page -->
-	<script src="assets/js/pages/ui-sliders-progress.js"></script>
+	<script src="/assets/js/pages/ui-sliders-progress.js"></script>
 	
 	<!-- theme scripts -->
-	<script src="assets/js/custom.min.js"></script>
-	<script src="assets/js/core.min.js"></script>
+	<script src="/assets/js/custom.min.js"></script>
+	<script src="/assets/js/core.min.js"></script>
 	
 	<!-- inline scripts related to this page -->
-	<script src="assets/js/pages/form-elements.js"></script>
+	<script src="/assets/js/pages/form-elements.js"></script>
 	
 	<!-- end: JavaScript-->
 
@@ -142,7 +142,6 @@
 		}
 	</style>
 
-	<script src="assets/js/custom-xcharts.js"></script>
 
 	
 
@@ -153,7 +152,13 @@
 
               jQuery(function($) {              
                   $('.breadcrumb').stickUp();
-              }); 
+              });     
+
+              // jQuery(function($) {              
+              //     $('.section-heading').stickUp();
+              // }); 
+
+
 
               // jQuery(function($) {              
               //     $('.clipboard-container').stickUp();

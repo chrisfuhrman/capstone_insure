@@ -121,8 +121,7 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-		'Artdarek\OAuth\OAuthServiceProvider',
-		'Way\Generators\GeneratorsServiceProvider'
+		'Artdarek\OAuth\OAuthServiceProvider'
 
 	),
 

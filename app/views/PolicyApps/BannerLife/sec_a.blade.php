@@ -1,15 +1,14 @@
-<div class="">
 	<!-- SECTION A PROPOSED INSURED -->
-	<div class="row">
+	{{-- <div class="row"> --}}
 		<div class="col-lg-12">
 			<div class="">
 
 				<h5>Full Legal Name</h5>
 
 				<div class="form-group">
-					{{ Form::label('first_name', 'First Name:', array('class' => 'control-label')) }}
+		{{-- 			{{ Form::label('first_name', 'First Name:', array('class' => 'control-label')) }} --}}
 					<div class="controls">
-						<div class="input-group col-sm-4">
+						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
 							{{ Form::text('first_name', Input::old('first_name'), array('class' => 'form-control', 'placeholder' => 'First Name', 'id' => 'first_name', 'name' => 'first_name')) }}
 						</div>
@@ -18,9 +17,9 @@
 				</div>	
 
 				<div class="form-group">
-					{{ Form::label('middle_name', 'Middle Name:', array('class' => 'control-label')) }}
+		{{-- 			{{ Form::label('middle_name', 'Middle Name:', array('class' => 'control-label')) }} --}}
 					<div class="controls">
-						<div class="input-group col-sm-4">
+						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
 							{{ Form::text('middle_name', Input::old('middle_name'), array('class' => 'form-control', 'placeholder' => 'Middle Name', 'id' => 'middle_name', 'name' => 'middle_name')) }}
 						</div>
@@ -29,9 +28,9 @@
 				</div>
 
 				<div class="form-group">
-					{{ Form::label('last_name', 'Last Name:', array('class' => 'control-label')) }}
+				{{-- 	{{ Form::label('last_name', 'Last Name:', array('class' => 'control-label')) }} --}}
 					<div class="controls">
-						<div class="input-group col-sm-4">
+						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
 							{{ Form::text('last_name', Input::old('last_name'), array('class' => 'form-control', 'placeholder' => 'Last Name', 'id' => 'last_name', 'name' => 'last_name')) }}
 						</div>
@@ -40,9 +39,9 @@
 				</div>
 
 				<div class="form-group">
-					{{ Form::label('maiden_name', 'Maiden Name:', array('class' => 'control-label')) }}
+	{{-- 				{{ Form::label('maiden_name', 'Maiden Name:', array('class' => 'control-label')) }} --}}
 					<div class="controls">
-						<div class="input-group col-sm-4">
+						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-male"></i></span>
 							{{ Form::text('maiden_name', Input::old('maiden_name'), array('class' => 'form-control', 'placeholder' => 'Maiden Name', 'id' => 'maiden_name', 'name' => 'maiden_name')) }}
 						</div>
@@ -98,7 +97,7 @@
 
 				<!-- 5. b. How Long -->
 
-				<div class="form-group">
+			{{-- 	<div class="form-group">
 					{{ Form::label('length_of_residence', 'How Long:', array('class' => 'control-label')) }}
 					<div class="controls">
 						<div class="input-group col-sm-4">
@@ -107,7 +106,7 @@
 						</div>
 					</div>
 					{{ $errors->first('length_of_residence', '<span class="help-block">:message</span>') }}
-				</div>
+				</div> --}}
 
 				<!-- 6. Phone Numbers  -->
 
@@ -161,7 +160,7 @@
 					{{ $errors->first('birth_country', '<span class="help-block">:message</span>') }}
 				</div>
 
-				<!-- 8. U.S. Citizen  Yes  No  -->
+				{{-- <!-- 8. U.S. Citizen  Yes  No  -->
 
 				<div class="form-group">
 					<div>
@@ -539,12 +538,13 @@
 						</div>
 						{{ $errors->first('other_frequency', '<span class="help-block">:message</span>') }}
 					</div>
-				</div>
+				</div> --}}
+
+				<a class="btn btn-success pull-right" id="save-cont" href="">Save & Continue</a>
 
 
 			</div>
 		</div>
-	</div>
+	{{-- </div> --}}
 
 
-</div>
