@@ -25,6 +25,9 @@
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="account" aria-expanded="false"><i class="glyphicon glyphicon-user"></i> {{{ Auth::user()->username }}} <span class="caret"></span></a>
 						<ul class="dropdown-menu" aria-labelledby="account">
 							<li><a href="/profile">My Account</a></li>
+							@if(Auth::user()->isAdmin())
+							<li><a href="/admin">Admin</a></li>
+							@endif
 							<li class="divider"></li>
 							<li><a id="login-in-a" class="dropdown-toggle" href="{{{ url('logout') }}}"><span id="sign-out"><i class="glyphicon glyphicon-log-out"></i></span>Logout</a></li>
 						</ul>

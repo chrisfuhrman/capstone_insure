@@ -58,14 +58,12 @@ class RemindersController extends Controller {
 		$credentials = Input::only(
 			'email', 'password', 'password_confirmation', 'token'
 		);
-
 		$response = Password::reset($credentials, function($user, $password)
 		{
 			$user->password = Hash::make($password);
-
 			$user->save();
 		});
-
+		
 		switch ($response)
 		{
 			case Password::INVALID_PASSWORD:
@@ -74,6 +72,8 @@ class RemindersController extends Controller {
 				return Redirect::back()->with('error', Lang::get($response));
 
 			case Password::PASSWORD_RESET:
+
+			dd('im here');
 
 				Session::flash('sucessMessage', 'Password Reset Sucessful!');
 
