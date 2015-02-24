@@ -154,7 +154,7 @@ or background color for dropdown when active*/
 	color: #fff;
 
 	padding-top: 50px;
-	/*width: 750px;*/
+	width: 80%;
 
 }
 #hero-subheadline {
@@ -560,4 +560,7 @@ Insurance Images
 
 #instant-btn {
 	margin-bottom: 15px;
+}
+#home-btn {
+	margin-top: 75px;
 }
