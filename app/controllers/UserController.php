@@ -82,6 +82,8 @@ class UserController extends BaseController
 		
 		$user = new User;
 
+		
+
 
 		$dob = strtotime(Input::get('dob'));
 
@@ -94,6 +96,13 @@ class UserController extends BaseController
 			$user->email 		= Input::get('email');
 			$user->state 		= Input::get('state');
 			$user->save();
+
+			$user->roles()->attach(1);
+			$user->save();
+
+
+
+
 
 
 			$user = User::findOrFail($user->id);
