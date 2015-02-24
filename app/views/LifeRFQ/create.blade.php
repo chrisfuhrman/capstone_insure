@@ -52,7 +52,7 @@ TEMPLATE_LOGO_2.HTM
 TEMPLATE_MORE_INFO.HTM
 -->
 
-				<input type="hidden" name="TEMPLATEFILE" value="INSUREJOYTEMPLATE.HTM">
+				<input type="hidden" name="TEMPLATEFILE" value="INSUREJOYTEMPLATE.PHP">
 <!-- Select a Health Template File For Your Results
 
 Hint: It will match your Template File name with an "H" in front of the value -->
@@ -290,7 +290,7 @@ Hint: It will match your Template File name with an "H" in front of the value --
 						<label id="gender-male" class="btn-gender btn-spec btn btn-mini btn-default" for="">
 							<input type="radio" name="Sex" value="M">Male
 						</label>
-						<label id="gender-female" class="btn-gender btn btn-mini btn-info" for="">
+						<label id="gender-female" class="btn-gender btn-spec btn btn-mini btn-info" for="">
 							<input type="radio" name="Sex" value="F">Female
 						</label>
 						</div>
@@ -507,18 +507,20 @@ code for your categories -->
 
 @section('bottom-script')
 
-<script>
+	<script>
 
-	$('.btn-gender').click({item1: 'gender-male', item2: 'gender-female'}, swapRadio);
-	$('.btn-smoke').click({item1: 'smoke-yes', item2: 'smoke-no'}, swapRadio);
-	
+		$('#gender-female').children().attr('checked', true);
 
-	$('#btn-gender').click(function() {
-		var value = $('input:radio[name=Sex]:checked').val();
-		console.log(value);
-	});
+		$('.btn-gender').click({item1: 'gender-male', item2: 'gender-female'}, swapRadio);
+		$('.btn-smoke').click({item1: 'smoke-yes', item2: 'smoke-no'}, swapRadio);
+		
 
-</script>
+		$('#btn-gender').click(function() {
+			var value = $('input:radio[name=Sex]:checked').val();
+			console.log(value);
+		});
+
+	</script>
 
 	
 @stop()
