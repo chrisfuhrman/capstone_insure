@@ -25,7 +25,7 @@ class CreatePolicyAppsTable extends Migration
 			$table->string('maiden_name')->nullable();
 			$table->string('gender');
 			$table->date('dob');
-			$table->string('ssn');
+			$table->string('ssn')->nullable();
 			$table->string('address');
 			$table->string('address2')->nullable();
 			$table->string('city');
