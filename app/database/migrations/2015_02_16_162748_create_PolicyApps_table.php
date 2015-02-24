@@ -23,17 +23,17 @@ class CreatePolicyAppsTable extends Migration
 			$table->string('middle_name')->nullable();
 			$table->string('last_name');
 			$table->string('maiden_name')->nullable();
-			$table->string('gender');
-			$table->date('dob');
+			// $table->string('gender');
+			// $table->date('dob');
 			// $table->string('ssn')->nullable();
-			$table->string('address');
-			$table->string('address2')->nullable();
-			$table->string('city');
-			$table->string('state');
-			$table->string('zip');
-			$table->string('length_of_residence');
+			// $table->string('address');
+			// $table->string('address2')->nullable();
+			// $table->string('city');
+			// $table->string('state');
+			// $table->string('zip');
+			// $table->string('length_of_residence');
 			$table->string('work_phone')->nullable();
-			$table->string('home_phone');
+			// $table->string('home_phone');
 
 			$table->decimal('coverage_amount', 10, 2);
 			
