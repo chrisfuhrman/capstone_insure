@@ -209,6 +209,9 @@
 
 	$('#verify-address-block').hide();
 
+$('#btn-confirm-male').children().attr('checked', true);
+$('#address-confirm-yes').children().attr('checked', true);
+
 	$( "#verify-address" ).on('click', function(){
 		var value = $('input:radio[name=verify-address]:checked').val();
 
