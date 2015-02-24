@@ -1,8 +1,13 @@
 @extends('layouts.master')
 
 @section('content')
+<style>
+	
+.btn-gender input[type="radio"], .btn-smoke input[type="radio"] {
+    display: none; 
+}
 
-
+</style>
 
 				<form name="startform" action="/cgi-bin/cqsl.cgi" method="POST">
 
@@ -504,52 +509,14 @@ code for your categories -->
 
 <script>
 
-
-	var genderMale = $('#gender-male');
-	var genderFemale = $('#gender-female');
-	
-	genderFemale.children().attr('checked', true);
-// 
-	genderMale.click(function() {
-			genderMale.children().attr('checked', true);
-			genderFemale.children().attr('checked', false);
-		});
-
-	genderFemale.click(function() {
-
-		genderFemale.children().attr('checked', true);					
-		genderMale.children().attr('checked', false);
-
-		});
-
-
-	$('.btn-gender').click(function() {
-		
-
-		var idName = $(this).attr('id');
-		var id = $('#'+idName);
-		var classNames = id.attr('class');
-
-
-		var isHilighted = (classNames.search('btn-info') != -1) ? true : false;
-		// $(innerInputs).attr('checked', false);
-		
-		var otherBtn = (idName == 'gender-female') 
-			? $('#gender-male') : $('#gender-female');
-
-		if(!isHilighted) {
-
-			id.removeClass('btn-default').addClass('btn-info');
-			otherBtn.addClass('btn-default').removeClass('btn-info');
-
-		}
-	});	
+	$('.btn-gender').click({item1: 'gender-male', item2: 'gender-female'}, swapRadio);
+	$('.btn-smoke').click({item1: 'smoke-yes', item2: 'smoke-no'}, swapRadio);
 	
 
-$('#btn-gender').click(function() {
-			var value = $('input:radio[name=Sex]:checked').val();
-			console.log(value);
-		});
+	$('#btn-gender').click(function() {
+		var value = $('input:radio[name=Sex]:checked').val();
+		console.log(value);
+	});
 
 </script>
 
