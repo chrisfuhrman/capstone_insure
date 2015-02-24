@@ -72,7 +72,9 @@ or background color for dropdown when active*/
 	position: ;
 	margin-right: 10px;
 }
-
+.navbar-left {
+	margin-left: 200px;
+}
 
 
 /*END NAVBAR RIGHT*/
@@ -152,7 +154,7 @@ or background color for dropdown when active*/
 	color: #fff;
 
 	padding-top: 50px;
-	width: 750px;
+	/*width: 750px;*/
 
 }
 #hero-subheadline {
@@ -366,7 +368,7 @@ h3 {font-size: 18px;}
 }
 
 .quote-header {
-	width: 1200px;
+	/*width: 1200px;*/
 	padding-bottom: 30px;
 }
 
