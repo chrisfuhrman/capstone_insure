@@ -19,21 +19,21 @@ class CreateUsersTable extends Migration {
                   $table->rememberToken();
 
                   $table->string('email')->unique();
-                  $table->string('first_name');
-                  $table->string('middle_name');
-                  $table->string('last_name');
+                  $table->string('first_name')->nullable;
+                  $table->string('middle_name')->nullable;
+                  $table->string('last_name')->nullable;
                   $table->string('maiden_name')->nullable;
-                  $table->date('dob');
-                  $table->string('gender', 1);
+                  $table->date('dob')->nullable;
+                  $table->string('gender', 1)->nullable;
 
-                  $table->string('home_phone');
-                  $table->string('work_phone');
+                  $table->string('home_phone')->nullable;
+                  $table->string('work_phone')->nullable;
                   
-                  $table->string('address');
-                  $table->string('address2');
-                  $table->string('city');
-                  $table->string('state');
-                  $table->string('zip');
+                  $table->string('address')->nullable;
+                  $table->string('address2')->nullable;
+                  $table->string('city')->nullable;
+                  $table->string('state')->nullable;
+                  $table->string('zip')->nullable;
 
                   $table->timestamps();
             });
