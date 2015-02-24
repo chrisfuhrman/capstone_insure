@@ -11,3 +11,29 @@
 .hide-this {
 	display: none;
 }
+
+#p-footer {
+	padding: 0px !important;
+	margin: 0px !important;
+}
+.btn-lg {
+
+}
+
+#apply-now-btn {
+		margin: 0px !important;
+}
+
+.section-heading {
+	margin-top: 50px;
+}
+
+#app-content {
+	background-color: #fff;
+
+}
+
+#save-cont {
+	margin-bottom: 10px;
+
+}

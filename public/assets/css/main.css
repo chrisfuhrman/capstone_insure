@@ -305,7 +305,7 @@ h3 {font-size: 18px;}
 	padding-bottom: 14px;
 }
 
-.btn-default, .btn-info {
+.btn-spec {
 	float: left;
 	overflow: hidden;
 	display: block;
@@ -551,4 +551,11 @@ Insurance Images
 .carousel-inner>.prev{
 
     transform: translateX(-50%);
+}
+
+
+
+
+#instant-btn {
+	margin-bottom: 15px;
 }

@@ -2,9 +2,5 @@
 
 
 @section('content')
-<div>
-
-	@include('PolicyApps.BannerLife.sec_a')
-	
-</div>
+		@include('PolicyApps.BannerLife.sec_a')
 @stop
