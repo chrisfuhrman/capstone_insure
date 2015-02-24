@@ -28,7 +28,7 @@ class PolicyAppController extends BaseController
 				
 			return View::make('PolicyApps.BannerLife.banner-life-app');
 			
-		// }else return Redirect::action('UserController@edit', $userId);
+		// } else return Redirect::action('UserController@edit', $userId);
 	}	
 
 	
