@@ -293,13 +293,9 @@
 	<script src="/assets/js/pages/form-elements.js"></script>
 
 <script>
+	$('#gender-male').children().attr('checked', true);
 
 	$('.btn-gender').click({item1: 'gender-male', item2: 'gender-female'}, swapRadio);
-
-	$( "#gender" ).on('click', function(){
-		var value = $('input:radio[name=gender]:checked').val();
-		console.log(value);
-	});	
 
 </script>
 

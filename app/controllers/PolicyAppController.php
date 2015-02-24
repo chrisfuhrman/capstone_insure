@@ -10,7 +10,7 @@ class PolicyAppController extends BaseController
 		$user = Auth::user();
 		$userId = $user->id;
 
-		if (!empty($user->address) && !empty($user->city) && !empty($user->state) && !empty($user->zip) && !empty($user->first_name) && !empty($user->middle_name) && !empty($user->maiden_name) && !empty($user->last_name) && !empty($user->dob) && !empty($user->home_phone) && !empty($user->address) && !empty($user->address2) && !empty($user->city) && !empty($user->state) && !empty($user->zip) && !empty($user->gender)){
+		// if (!empty($user->address) && !empty($user->city) && !empty($user->state) && !empty($user->zip) && !empty($user->first_name) && !empty($user->middle_name) && !empty($user->maiden_name) && !empty($user->last_name) && !empty($user->dob) && !empty($user->home_phone) && !empty($user->address) && !empty($user->address2) && !empty($user->city) && !empty($user->state) && !empty($user->zip) && !empty($user->gender)){
 
 			// $usersPolicy = User::with('policies')->where('user_id', '=', $userId)->firstOrFail();
 			$usersPolicy = Policy::with('user')->where('user_id', '=', $userId)->firstOrFail();
@@ -28,7 +28,7 @@ class PolicyAppController extends BaseController
 				
 			return View::make('PolicyApps.BannerLife.banner-life-app')->with($data);
 			
-		}else return Redirect::action('UserController@edit', $userId);
+		// }else return Redirect::action('UserController@edit', $userId);
 	}	
 
 	
