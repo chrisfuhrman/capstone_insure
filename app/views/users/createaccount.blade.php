@@ -123,10 +123,10 @@
 					<div class="btn-group" id="gender">
 						<span class="input-group-addon gender-icon"><i class="fa fa-user"></i></span>
 						<label id="gender-male" class="btn-gender btn btn-mini btn-default" for="">
-							{{Form::radio('gender', 'male') }} Male
+							{{Form::radio('gender', 'm') }} Male
 						</label>
 							<label id="gender-female" class="btn-gender btn btn-mini btn-info" for="">
-							{{Form::radio('gender', 'female') }} Female
+							{{Form::radio('gender', 'f') }} Female
 						</label>
 					</div>
 				</div>

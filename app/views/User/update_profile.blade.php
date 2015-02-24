@@ -70,10 +70,10 @@
 					<div class="input-group col-sm-4 input-group-2">
 					<div class="btn-group" id="verify-gender">
 						<label class="btn-gender btn btn-mini btn-info" id="gender-confirm-male" for="">
-							{{Form::radio('verify-gender', 'M') }} Male
+							{{Form::radio('verify-gender', 'm') }} Male
 						</label>
 						<label class="btn-gender btn btn-mini btn-default" id="gender-confirm-female" for="">
-							{{Form::radio('verify-gender', 'F') }} Female
+							{{Form::radio('verify-gender', 'f') }} Female
 						</label>
 					</div>
 					</div>
