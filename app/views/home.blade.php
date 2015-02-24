@@ -41,7 +41,7 @@
 			<h3 class="white">Get insurance comparison quotes in minutes.</h3>
 			
 		</div>
-			<span class="float-right"><a href="{{{ action('LifeRFQController@create') }}}" class="btn btn-success btn-lg" type="button">Get Your No Hassle Quote</a></span>
+			<span id="home-btn"><a href="{{{ action('LifeRFQController@create') }}}" class="btn btn-success btn-lg" type="button">Get Your No Hassle Quote</a></span>
 	</div>
 </div>
 
